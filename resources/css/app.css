@@ -1,0 +1,17 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+
+
+h2.basics {
+        color: nw-blue-50;
+        background-color: nw-blue-700;
+        font-size:1.5 em;
+
+}
