@@ -12,34 +12,72 @@
             </div>
             <!-- Navigation Links in the middle-->
             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                <x-nav-link href="{{ route('data_collection') }}" :active="request()->routeIs('data_collection')">
+                {{--  --------------------------  Get Data  DROPDOWN --------------------------------- --}}
+                {{--  anything to do with data  --}}
+                <x-dropdown2>
+                    <x-slot name="trigger">
+                        {{ __('Get Data') }}
+                    </x-slot>
+                    <x-slot name="content">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
+                            {{ __('Data Collection') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link  href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}" >
+                            {{ __('Agri-modelling') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
+                            {{ __('Metdata Live') }}
+                        </x-dropdown-link>
+                    </x-slot>
+                </x-dropdown2>
+                {{--  This is an ecxample of link without drop down
+                <x-nav-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}" :active="request()->routeIs('data_collection')">
                     {{ __('Get Data') }}
-                </x-nav-link>
-                <x-nav-link href="{{ route('key_findings') }}" :active="request()->routeIs('key_findings')">
+                </x-nav-link> --}}
+
+                  {{--  --------------------------  Get Data  DROPDOWN --------------------------------- --}}
+                {{--  anything to do with data  --}}
+                <x-dropdown2>
+                    <x-slot name="trigger">
+                        {{ __('Impact') }}
+                    </x-slot>
+                    <x-slot name="content">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
+                            {{ __('Publications') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link  href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}" >
+                            {{ __('Agri-modelling') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
+                            {{ __('Metdata Live') }}
+                        </x-dropdown-link>
+                    </x-slot>
+                </x-dropdown2>
+                <x-nav-link href="{{ route('content.with.page', ['page' => 'key_findings']) }}" :active="request()->routeIs('key_findings')">
                     {{ __('Impact') }}
                 </x-nav-link>
-                <x-nav-link href="{{ route('content') }}" :active="request()->routeIs('content')">
+                <x-nav-link href="{{ route('content.with.page', ['page' => 'index']) }}" :active="request()->routeIs('content')">
                     {{ __('Engage') }}
                 </x-nav-link>
-
+                {{--  --------------------------  ABOUT DROPDOWN --------------------------------- --}}
                 <x-dropdown2>
                     <x-slot name="trigger">
                         {{ __('About') }}
                     </x-slot>
                     <x-slot name="content">
-                        <x-dropdown-link href="{{ route('content') }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'index']) }}">
                             {{ __('Content') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('agri_modelling') }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
                             {{ __('Agri-modelling') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('facilities') }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
                             {{ __('Facilities') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('guides') }}">
+                        <x-dropdown-link href="{{ route('nw-guides') }}">
                             {{ __('Guides') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('contacts') }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'contacts']) }}">
                             {{ __('The Team') }}
                         </x-dropdown-link>
                     </x-slot>
@@ -213,13 +251,13 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
 
-            <x-responsive-nav-link href="{{ route('content') }}" :active="request()->routeIs('content')">
+            <x-responsive-nav-link href="{{ route('content.with.page', ['page' => 'index']) }}" :active="request()->routeIs('content')">
                 {{ __('Area 2') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('content') }}" :active="request()->routeIs('content')">
+            <x-responsive-nav-link href="{{ route('content.with.page', ['page' => 'index']) }}" :active="request()->routeIs('content')">
                 {{ __('Area 3') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('content') }}" :active="request()->routeIs('content')">
+            <x-responsive-nav-link href="{{ route('content.with.page', ['page' => 'index']) }}" :active="request()->routeIs('content')">
                 {{ __('Area 4') }}
             </x-responsive-nav-link>
         </div>

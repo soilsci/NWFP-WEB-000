@@ -57,7 +57,9 @@
             </span> heading 2 with a pill of color 500
         </h2>
         <div class="p-3">
-
+            (<a
+            class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+            href="mailto:paul.harris@rothamsted.ac.uk)">paul.harris@rothamsted.ac.uk)</a>
         </div>
     </div>
 

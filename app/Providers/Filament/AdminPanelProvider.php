@@ -17,6 +17,9 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Navigation\NavigationGroup;
+use Filament\Navigation\NavigationItem;
+
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -26,7 +29,14 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->brandLogo('/logos/logo.gif')
             ->login()
+            ->navigationItems([
+                NavigationItem::make('Home')
+                    ->url('/', shouldOpenInNewTab: false)
+                    ->icon('heroicon-o-home')
+                    ->sort(1),
+            ])
             ->colors([
                 'primary' => Color::Teal,
             ])

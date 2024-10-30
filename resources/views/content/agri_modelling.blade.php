@@ -121,7 +121,7 @@
                 for all the
                 datasets available on the portal in dedicated <a
                     class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="{{ route('guides') }}">User Guides</a> page such as:
+                    href="{{ route('nw-guides') }}">User Guides</a> page such as:
             </x-li-dot>
             <ul class="m-5 space-y-3">
 
@@ -163,7 +163,7 @@
             <x-li-dot class="bg-nw-blue-700">
                 Check the <a
                     class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="{{ route('guides') }}">User Guides'</a> webpage
+                    href="{{ route('nw-guides') }}">User Guides'</a> webpage
                 <span class="px-2 font-semibold"> Known Issues and Workarounds </span> section for known problems with
                 using
                 the data portal .
@@ -312,7 +312,7 @@
     <div class="p-3">
         Extra data which may be useful in modelling is to be found on the <a
             class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-            href="{{ route('guides') }}">
+            href="{{ route('nw-guides') }}">
             Guides, Information, Data Portal Updates and External Links</a>
         webpage in the '<span class="font-bold">Supplementary Data, Information and File Downloads'
         </span>section. This supplementary file store is very useful for models using a daily
@@ -362,8 +362,8 @@
                 integration of a 3D root architecture component to carbon, nitrogen and water cycling -
                 model description. <span class="italic">Ecol. Model</span>. 200, 343-359. (<a
                     class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="https://www.sciencedirect.com/science/article/abs/pii/S0304380006003802?via%3Dihub"
-                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">doi:10.1016/j.ecolmodel.2006.08.010</a>)
+                    href="https://doi.org/10.1016/j.ecolmodel.2006.08.010"
+                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">doi:https://doi.org/10.1016/j.ecolmodel.2006.08.010</a>)
             </p>
         </div>
         <h3 class="mt-4 text-lg font-medium text-nw-blue-900 underline underline-offset-4"><span
@@ -417,9 +417,9 @@
                 record of pasture soil water and the influence of the North Atlantic Oscillation in
                 south-west England. Hydrology Research. (<a
                     class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="https://iwaponline.com/hr/article/48/1/277/1702/Historic-record-of-pasture-soil-water-and-the"
+                    href="https://doi.org/10.2166/nh.2016.195"
                     onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">doi:
-                    https://doiorg/10.2166/nh.2016.195</a>)
+                    https://doi.org/10.2166/nh.2016.195</a>)
             </p>
         </div>
     </div>

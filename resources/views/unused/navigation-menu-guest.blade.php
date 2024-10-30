@@ -11,10 +11,9 @@
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('contacts') }}" :active="request()->routeIs('contacts')">
-                        {{ __('Contacts') }}
+                    <x-nav-link href="{{ route('content.with.page', ['page' => 'contacts']) }}" :active="request()->routeIs('content.with.page', ['page' => 'contacts'])">
                     </x-nav-link>
-                    <x-nav-link href="{{ route('content') }}" :active="request()->routeIs('content')">
+                    <x-nav-link href="{{ route('content.with.page', ['page' => 'index']) }}" :active="request()->routeIs('content')">
                         {{ __('Content') }}
                     </x-nav-link>
                 </div>
