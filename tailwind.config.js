@@ -18,9 +18,9 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             backgroundImage: {
-                bg01: "url('https://www.era.rothamsted.ac.uk/images/metadata/NorthWyke/herbage.jpg')",
-                bg02: "url('https://www.era.rothamsted.ac.uk/images/metadata/NorthWyke/bg02.jpg')",
-                bg02muted: "url('https://www.era.rothamsted.ac.uk/images/metadata/NorthWyke/bg02-muted.jpg')",
+                bg01: "url('/public/images/herbage.jpg')",
+                bg02: "url('/public/images/bg02.jpg')",
+                bg02muted: "url('/public/images/bg02-muted.jpg')",
               },
 
 
