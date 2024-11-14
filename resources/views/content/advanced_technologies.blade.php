@@ -10,7 +10,6 @@
     </x-slot>
 
     <div class="p-3">
-        <p>THIS IS A TEST</p>
         <p>In addition to the IoT network of water flow and water quality sensors installed throughout the
             Farm Platform, we are testing a variety of sensor and sensor communication technologies. Some
             that provide data at a local data collection level and those that can be fully integrated using
