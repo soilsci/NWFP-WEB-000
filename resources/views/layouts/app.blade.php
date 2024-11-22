@@ -23,35 +23,34 @@
     <x-banner />
 
     <div class="min-h-screen bg-gray-100">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            @include('layouts.navigation-menu')
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="bg-white shadow">
+                    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
 
-        @include('layouts.navigation-menu')
-        <!-- Page Heading -->
-        @if (isset($header))
-            <header class="bg-white shadow">
-                <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endif
-
-        <!-- Page Content -->
+            <!-- Page Content -->
             <!-- Page Content -->
             <main>
-                <div class="py-12  bg-bg02muted bg-no-repeat bg-center bg-cover backdrop-opacity-10  ">
-                    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
-                            {{ $slot }}
-                        </div>
+                <div class="bg-bg02muted bg-cover bg-center bg-no-repeat py-12 backdrop-opacity-10">
+
+                    <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
+                        {{ $slot }}
                     </div>
 
                 </div>
             </main>
 
-
-        <!-- Page Footer-->
-    <footer>
-        @include('layouts.footer')
-    </footer>
+            <!-- Page Footer-->
+            <footer>
+                @include('layouts.footer')
+            </footer>
+        </div>
     </div>
 
     @stack('modals')
