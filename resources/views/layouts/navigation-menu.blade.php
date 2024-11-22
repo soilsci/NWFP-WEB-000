@@ -1,20 +1,14 @@
 <nav class="border-b-8 border-b-nw-blue-600 bg-nw-blue-50" x-data="{ open: false }">
-    <!-- Primary Navigation Menu -->
-    <div class="mx-auto px-4 sm:px-6 lg:px-8">
-
+    <div class="mx-auto px-4 sm:px-6 lg:px-8">{{-- Primary Navigation Menu  --}}
         <div class="flex h-20 justify-between">
-
-            <!-- Logo - click on LOGO - GO Home-->
-            <div class="flex shrink-0 items-center">
+            <div class="flex shrink-0 items-center">{{-- Logo - click on LOGO - GO Home--}}
                 <a href="{{ route('home') }}">
                     <x-application-logo class="block h-12" />
                 </a>
             </div>
-            <!-- Navigation Links in the middle-->
-            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                {{--  --------------------------  Get Data  DROPDOWN --------------------------------- --}}
-                {{--  anything to do with data  --}}
-                <x-dropdown2>
+            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">{{--  Navigation --}}
+                <x-dropdown2> {{--  --------- Get Data --------- --}}
+                    {{--  anything to do with data  --}}
                     <x-slot name="trigger">
                         {{ __('Get Data') }}
                     </x-slot>
@@ -22,7 +16,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
                             {{ __('Data Collection') }}
                         </x-dropdown-link>
-                        <x-dropdown-link  href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}" >
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
                             {{ __('Agri-modelling') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
@@ -30,14 +24,8 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
-                {{--  This is an ecxample of link without drop down
-                <x-nav-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}" :active="request()->routeIs('data_collection')">
-                    {{ __('Get Data') }}
-                </x-nav-link> --}}
-
-                  {{--  --------------------------  Get Data  DROPDOWN --------------------------------- --}}
-                {{--  anything to do with data  --}}
-                <x-dropdown2>
+                <x-dropdown2> {{--  --------- Impact --------- --}}
+                    {{--  anything to do with data  --}}
                     <x-slot name="trigger">
                         {{ __('Impact') }}
                     </x-slot>
@@ -45,7 +33,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
                             {{ __('Publications') }}
                         </x-dropdown-link>
-                        <x-dropdown-link  href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}" >
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
                             {{ __('Agri-modelling') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
@@ -53,14 +41,25 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
-                <x-nav-link href="{{ route('content.with.page', ['page' => 'key_findings']) }}" :active="request()->routeIs('key_findings')">
-                    {{ __('Impact') }}
-                </x-nav-link>
-                <x-nav-link href="{{ route('content.with.page', ['page' => 'index']) }}" :active="request()->routeIs('content')">
-                    {{ __('Engage') }}
-                </x-nav-link>
-                {{--  --------------------------  ABOUT DROPDOWN --------------------------------- --}}
-                <x-dropdown2>
+                <x-dropdown2> {{--  --------- Engage --------- --}}
+                    {{--  anything to do with data  --}}
+                    <x-slot name="trigger">
+                        {{ __('Engage') }}
+                    </x-slot>
+                    <x-slot name="content">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
+                            {{ __('Visit us') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
+                            {{ __('Agri-modelling') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
+                            {{ __('Metdata Live') }}
+                        </x-dropdown-link>
+                    </x-slot>
+                </x-dropdown2>
+                <x-dropdown2> {{--  --------- ABOUT --------- --}}
+                    {{--  the usual contacts, team, maps and so on  --}}
                     <x-slot name="trigger">
                         {{ __('About') }}
                     </x-slot>
@@ -82,25 +81,22 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
-
-
-                @if (Route::has('login'))
-                    <!-- Extra Linnks when logged in -->
-                    @auth
-                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('My Platform') }}
-                        </x-nav-link>
-                    @else
-                    @endauth
-                @endif
-            </div>
-
-            <!-- Right Side: search and logged area -->
-            <div class="hidden space-x-8 sm:ms-6 sm:flex sm:items-center">
-
-                <div class="relative flex">
-                    <x-dropdown align="right" width="70">
-                        <x-slot name="trigger">
+                <x-dropdown2> {{--  ---------  Search that does not work --------- --}}
+                    <x-slot name="trigger">
+                        <span
+                            class="dark:border-neutral-400 flex items-center whitespace-nowrap px-3 py-[0.25rem] text-nw-blue-700 dark:text-white [&>svg]:h-5 [&>svg]:w-5"
+                            id="button-addon2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </span>
+                    </x-slot>
+                    <x-slot name="content">
+                        <div class="justify-middle flex">
+                            <x-input class="ml-2 mt-1 block w-full" id="examplesearch" type="search"
+                                placeholder="Search" />
                             <span
                                 class="dark:border-neutral-400 flex items-center whitespace-nowrap px-3 py-[0.25rem] text-nw-blue-700 dark:text-white [&>svg]:h-5 [&>svg]:w-5"
                                 id="button-addon2">
@@ -110,40 +106,19 @@
                                         d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                                 </svg>
                             </span>
-                        </x-slot>
-                        <x-slot name="content">
-                            <div class="flex justify-middle">
-                            <x-input class="ml-2 mt-1 block w-full" id="examplesearch" type="search" placeholder="Search" />
-                            <span
-                                class="dark:border-neutral-400 flex items-center whitespace-nowrap px-3 py-[0.25rem] text-nw-blue-700 dark:text-white [&>svg]:h-5 [&>svg]:w-5"
-                                id="button-addon2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                                </svg>
-                            </span>
-                            </div>
-                        </x-slot>
-                    </x-dropdown>
-
-                </div>
-
-                @if (Route::has('login'))
-
+                        </div>
+                    </x-slot>
+                </x-dropdown2>
+                @if (Route::has('login')) {{--  ---------  Profile Picture of the logged in person --------- --}}
                     @auth
-
-                        <div class="relative ms-3">
-                            <x-dropdown align="right" width="48">
+                            <x-dropdown2>
                                 <x-slot name="trigger">
                                     @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                         <button
                                             class="flex rounded-full border-2 border-transparent text-sm transition focus:border-nw-blue-200 focus:outline-none">
-
                                             <img class="aspect-square h-16 rounded-full border-4 border-nw-blue-600 object-scale-down p-1"
                                                 src="{{ Auth::user()->profile_photo_url }}"
                                                 alt="{{ Auth::user()->name }}" />
-
                                         </button>
                                     @else
                                         <span class="inline-flex rounded-md">
@@ -162,16 +137,15 @@
                                         </span>
                                     @endif
                                 </x-slot>
-
                                 <x-slot name="content">
                                     <x-dropdown-link href="{{ route('dashboard') }}">
                                         {{ __('My Platform') }}
                                     </x-dropdown-link>
                                     <!-- Account Management
-                                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                                {{ __('Manage Account') }}
-                                            </div>
-                                        -->
+                                                        <div class="block px-4 py-2 text-xs text-gray-400">
+                                                            {{ __('Manage Account') }}
+                                                        </div>
+                                                    -->
 
                                     <x-dropdown-link href="{{ route('profile.show') }}">
                                         {{ __('Profile') }}
@@ -185,7 +159,6 @@
                                     <x-dropdown-link href="{{ env('FILAMENT_PATH') }}">
                                         {{ __('Admin') }}
                                     </x-dropdown-link>
-
                                     <div class="border-t border-nw-blue-700"></div>
 
                                     <!-- Authentication -->
@@ -197,25 +170,11 @@
                                         </x-dropdown-link>
                                     </form>
                                 </x-slot>
-                            </x-dropdown>
-                        </div>
-                    @else
-                        <x-button-link href="{{ route('login') }}" :active="request()->routeIs('login')">
-                            {{ __('Log in') }}
-                            </x-button>
-                            <x-button-link href="{{ route('register') }}" :active="request()->routeIs('register')">
-                                {{ __('Register') }}
-                            </x-button-link>
-
-                        @endauth
-
+                            </x-dropdown2>
+                    @endauth
                 @endif
-                <!-- Settings Dropdown -->
-
             </div>
-
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
+            <div class="-me-2 flex items-center sm:hidden">{{--  Hamberger Menu Don't gorget to update--}}
                 <button
                     class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-100 hover:text-gray-500 focus:bg-gray-100 focus:text-gray-500 focus:outline-none"
                     @click="open = ! open">
@@ -230,9 +189,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div class="hidden sm:hidden" :class="{ 'block': open, 'hidden': !open }">
+    <div class="hidden sm:hidden" :class="{ 'block': open, 'hidden': !open }">{{-- Responsive Navigation Menu --}}
         <div class="space-y-1 pb-3 pt-2">
             <div class="relative flex border-b border-gray-200 py-2">
                 <x-input class="mt-1 block w-full" id="examplesearch" type="search" placeholder="Search" />
@@ -305,5 +262,8 @@
             </div>
         @endif
     </div>
-
+    {{--  This is an ecxample of link without drop down
+                <x-nav-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}" :active="request()->routeIs('data_collection')">
+                    {{ __('Get Data') }}
+                </x-nav-link> --}}
 </nav>
