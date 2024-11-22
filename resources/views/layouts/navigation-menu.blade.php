@@ -54,8 +54,8 @@
                         {{ __('Engage') }}
                     </x-slot>
                     <x-slot name="content">
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
-                            {{ __('Publications') }}
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
+                            {{ __('Visit us') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
                             {{ __('Agri-modelling') }}
@@ -65,7 +65,6 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
-
 
                 <x-dropdown2>{{--  --------------------------  ABOUT DROPDOWN --------------------------------- --}}
                     {{--  the usual contacts, team, maps and so on  --}}
@@ -103,7 +102,6 @@
                     @endif
                 --}}
 
-
                 <x-dropdown2>
                     <x-slot name="trigger">
                         <span
@@ -132,6 +130,74 @@
                         </div>
                     </x-slot>
                 </x-dropdown2>
+                @if (Route::has('login'))
+                    @auth
+
+                            <x-dropdown2>
+                                <x-slot name="trigger">
+                                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                                        <button
+                                            class="flex rounded-full border-2 border-transparent text-sm transition focus:border-nw-blue-200 focus:outline-none">
+
+                                            <img class="aspect-square h-16 rounded-full border-4 border-nw-blue-600 object-scale-down p-1"
+                                                src="{{ Auth::user()->profile_photo_url }}"
+                                                alt="{{ Auth::user()->name }}" />
+
+                                        </button>
+                                    @else
+                                        <span class="inline-flex rounded-md">
+                                            <button
+                                                class="inline-flex items-center rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:bg-gray-50 focus:outline-none active:bg-gray-50"
+                                                type="button">
+                                                {{ Auth::user()->name }}
+
+                                                <svg class="-me-0.5 ms-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                                </svg>
+                                            </button>
+                                        </span>
+                                    @endif
+                                </x-slot>
+                                <x-slot name="content">
+                                    <x-dropdown-link href="{{ route('dashboard') }}">
+                                        {{ __('My Platform') }}
+                                    </x-dropdown-link>
+                                    <!-- Account Management
+                                                        <div class="block px-4 py-2 text-xs text-gray-400">
+                                                            {{ __('Manage Account') }}
+                                                        </div>
+                                                    -->
+
+                                    <x-dropdown-link href="{{ route('profile.show') }}">
+                                        {{ __('Profile') }}
+                                    </x-dropdown-link>
+                                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                                        <x-dropdown-link href="{{ route('api-tokens.index') }}">
+                                            {{ __('API Tokens') }}
+                                        </x-dropdown-link>
+                                    @endif
+                                    <div class="border-t border-nw-blue-700"></div>
+                                    <x-dropdown-link href="{{ env('FILAMENT_PATH') }}">
+                                        {{ __('Admin') }}
+                                    </x-dropdown-link>
+
+                                    <div class="border-t border-nw-blue-700"></div>
+
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                        @csrf
+
+                                        <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                            {{ __('Log Out') }}
+                                        </x-dropdown-link>
+                                    </form>
+                                </x-slot>
+                            </x-dropdown>
+                    @endauth
+                @endif
             </div>
 
             <!-- Hamburger -->
@@ -225,11 +291,11 @@
             </div>
         @endif
     </div>
-{{--  This is an ecxample of link without drop down
+    {{--  This is an ecxample of link without drop down
                 <x-nav-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}" :active="request()->routeIs('data_collection')">
                     {{ __('Get Data') }}
                 </x-nav-link> --}}
 
-                {{--  --------------------------  Impact  DROPDOWN --------------------------------- --}}
-                {{--  anything to do with Impact - results, papers, news, and so on --}}
+    {{--  --------------------------  Impact  DROPDOWN --------------------------------- --}}
+    {{--  anything to do with Impact - results, papers, news, and so on --}}
 </nav>
