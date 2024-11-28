@@ -42,6 +42,9 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'key_findings']) }}">
                             {{ __('Key Findings') }}
                         </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('publications') }}">
+                            {{ __('Publications') }}
+                        </x-dropdown-link>
 
 
                     </x-slot>
