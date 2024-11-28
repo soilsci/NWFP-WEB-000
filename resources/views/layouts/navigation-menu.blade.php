@@ -14,13 +14,16 @@
                     </x-slot>
                     <x-slot name="content">
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
-                            {{ __('Data Collection') }}
+                            {{ __('Datasets available and record counts') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
-                            {{ __('Agri-modelling') }}
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'information']) }}">
+                            {{ __('Known Issues and Workarounds') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
                             {{ __('Metdata Live') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('nw-guides') }}">
+                            {{ __('Guides') }}
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
@@ -30,15 +33,17 @@
                         {{ __('Impact') }}
                     </x-slot>
                     <x-slot name="content">
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
-                            {{ __('Publications') }}
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'advanced_technologies']) }}">
+                            {{ __('Advanced Technologies') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
                             {{ __('Agri-modelling') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
-                            {{ __('Metdata Live') }}
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'key_findings']) }}">
+                            {{ __('Key Findings') }}
                         </x-dropdown-link>
+
+
                     </x-slot>
                 </x-dropdown2>
                 <x-dropdown2> {{--  --------- Engage --------- --}}
@@ -49,12 +54,6 @@
                     <x-slot name="content">
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
                             {{ __('Visit us') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
-                            {{ __('Agri-modelling') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
-                            {{ __('Metdata Live') }}
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
@@ -67,8 +66,11 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'index']) }}">
                             {{ __('Content') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'agri_modelling']) }}">
-                            {{ __('Agri-modelling') }}
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'map']) }}">
+                            {{ __('Map of the platform') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'overview']) }}">
+                            {{ __('Overview and Hypothesis') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
                             {{ __('Facilities') }}
