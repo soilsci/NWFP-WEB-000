@@ -12,7 +12,10 @@
                     <x-slot name="trigger">
                         {{ __('Get Data') }}
                     </x-slot>
-                    <x-slot name="content">
+                    <x-slot name="content">]
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_shop']) }}">
+                            {{ __('Where to gat Data') }}
+                        </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
                             {{ __('Datasets available and record counts') }}
                         </x-dropdown-link>

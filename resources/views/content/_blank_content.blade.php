@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Title of the page') }}
+            {{ __('Where to get Data') }}
         </h2>
     </x-slot>
 
