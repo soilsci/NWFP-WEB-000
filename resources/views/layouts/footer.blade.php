@@ -36,12 +36,9 @@
                     href="/contact">Contact us</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="/news">News</a></p>
-            <p><a class="twitter-follow-button" data-size="large" data-show-count="false"
-                    href="https://twitter.com/twitter?ref_src=twsrc%5Etfw">Follow @twitter</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </p>
-            <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
-                    href="">Social Network2</a></p>
+
+            <p class="inline-block align middle"><a target="_blank"  class="inline-block align middle hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
+                href="https://bsky.app/profile/thefarmplatform.bsky.social"> <img src="/logos/bluesky-LOGO.svg" class="inline-block align middle"> thefarmplatform.bsky</a></p>
 
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
