@@ -14,7 +14,7 @@
                     </x-slot>
                     <x-slot name="content">]
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_shop']) }}">
-                            {{ __('Where to gat Data') }}
+                            {{ __('Where to get Data') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
                             {{ __('Datasets available and record counts') }}
