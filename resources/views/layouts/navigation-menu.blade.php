@@ -26,7 +26,7 @@
                             {{ __('Metdata Live') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('nw-guides') }}">
-                            {{ __('Guides') }}
+                            {{ __('Data Guides') }}
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
@@ -82,7 +82,7 @@
                             {{ __('Facilities') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('nw-guides') }}">
-                            {{ __('Guides') }}
+                            {{ __('Data Guides') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'contacts']) }}">
                             {{ __('The Team') }}
