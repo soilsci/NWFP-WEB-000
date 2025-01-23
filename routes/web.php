@@ -14,6 +14,9 @@ Route::get('content/{page}', function ($page) {
     return view('content.'.$page);
 })->name('content.with.page');
 
+Route::get('/information', function () {
+    return view('content.information');
+})->name('information');
 
 
 Route::get('/nw-guides', function () {

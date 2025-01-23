@@ -7,7 +7,8 @@
             <x-share-on-x></x-share-on-x>
         </div>
     </x-slot>
-        <div class="sticky top-0 border-b-4 border-nw-blue-700">
+    
+    <div class="sticky top-0 border-b-4 border-nw-blue-700">
         <h2 class="h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Download Request Forms</h2>
         <div class="p-3">
             <ul>

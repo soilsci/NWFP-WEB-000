@@ -9,14 +9,14 @@
         </div>
     </x-slot>
 
-    <div class="p-3">
+    <div style="text-align: justify" class="p-3">
         <p>In addition to the IoT network of water flow and water quality sensors installed throughout the
             Farm Platform, we are testing a variety of sensor and sensor communication technologies. Some
             that provide data at a local data collection level and those that can be fully integrated using
             various communication approaches such as Low Power, Wide Area (LPWA) networking using the
-            LoRaWAN protocol or Narrow Band. Some examples of current sensor deployments are given below,
-            and </p>
-        <p>For further details or enquiries on using North Wyke and the Farm Platform to test sensors,
+            LoRaWAN protocol or Narrow Band. Some examples of current sensor deployments are given below</p>
+            <br>
+            <p>For further details or enquiries on using North Wyke and the Farm Platform to test sensors,
             please contact Paul Harris (<a
                 class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                 href="mailto:paul.harris@rothamsted.ac.uk)">paul.harris@rothamsted.ac.uk)</a>

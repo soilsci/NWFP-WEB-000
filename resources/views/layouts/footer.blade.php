@@ -1,5 +1,5 @@
 <div class="bg-nw-blue-900 text-nw-blue-50">
-    <div class="flex justify-center px-8 py-16">
+    <div class="flex justify-center px-8 py-2">
         <div class="overflow-visible px-20 text-left text-sm">
             <h2 class="font-mono text-2xl font-semibold">Our sponsors</h2>
             <div class="rounded-full bg-white">

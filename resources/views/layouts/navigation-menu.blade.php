@@ -7,10 +7,11 @@
                 </a>
             </div>
             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">{{--  Navigation --}}
+                
                 <x-dropdown2> {{--  --------- Get Data --------- --}}
                     {{--  anything to do with data  --}}
                     <x-slot name="trigger">
-                        {{ __('Get Data') }}
+                        {{ __('Data') }}
                     </x-slot>
                     <x-slot name="content">
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_shop']) }}">
@@ -19,17 +20,19 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
                             {{ __('Datasets available and record counts') }}
                         </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('nw-guides') }}">
+                            {{ __('Data Guides') }}
+                        </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'information']) }}">
                             {{ __('Known Issues and Workarounds') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
                             {{ __('Metdata Live') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('nw-guides') }}">
-                            {{ __('Data Guides') }}
-                        </x-dropdown-link>
+                        
                     </x-slot>
                 </x-dropdown2>
+
                 <x-dropdown2> {{--  --------- Impact --------- --}}
                     {{--  anything to do with data  --}}
                     <x-slot name="trigger">
@@ -49,7 +52,6 @@
                             {{ __('Publications') }}
                         </x-dropdown-link>
 
-
                     </x-slot>
                 </x-dropdown2>
                 <x-dropdown2> {{--  --------- Engage --------- --}}
@@ -61,8 +63,13 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
                             {{ __('Visit us') }}
                         </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
+                            {{ __('Postgrad Student Projects') }}
+                        </x-dropdown-link>
+
                     </x-slot>
                 </x-dropdown2>
+                
                 <x-dropdown2> {{--  --------- ABOUT --------- --}}
                     {{--  the usual contacts, team, maps and so on  --}}
                     <x-slot name="trigger">
@@ -80,9 +87,6 @@
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
                             {{ __('Facilities') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('nw-guides') }}">
-                            {{ __('Data Guides') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'contacts']) }}">
                             {{ __('The Team') }}

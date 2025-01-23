@@ -4,23 +4,21 @@
             {{ __('The Teams') }}
         </h2>
     </x-slot>
-    <div class="p-3">
-        <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-5">
-            <p>Contact for all NWFP data queries:
-                <a
-                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="mailto:nw.farmplatform@rothamsted.ac.uk">
-                    nw.farmplatform@rothamsted.ac.uk </a>
+    <div class="p-1">
+        <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-4">
+            <p>Please contact 
+                <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="mailto:nw.farmplatform@rothamsted.ac.uk">
+                    <u>nw.farmplatform@rothamsted.ac.uk</u>
+                </a>
+            for all NWFP data queries.
             </p>
         </div>
 
     </div>
-    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Farm Platform
-        Team
-    </h2>
+    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Farm Platform Team</h2>
     <div class="md:grid-col-3 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
         <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Principal
-                Investigator:</h3>
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Principal Investigator:</h3>
             <!-- ------------------------ One People Card -------------------   -->
             <a href="https://www.rothamsted.ac.uk/people/paul-harris"
                 onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
@@ -31,7 +29,8 @@
                         <div>
                             Paul Harris
                         </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">Project Leader - North Wyke Farm Platform
+                        <div class="text-sm text-gray-500 dark:text-gray-400">
+                            Project Leader
                         </div>
                     </div>
                 </div>
@@ -39,9 +38,7 @@
 
         </div>
         <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">
-                Co-Investigator:</h3>
-            </p>
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4"> Co-Investigators:</h3>
 
             <!-- ------------------------ One People Card -------------------   -->
             <a
@@ -77,27 +74,22 @@
                     </div>
                 </div>
             </a>
-
         </div>
     </div>
 
-    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Work Package
-        Team</h2>
+    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Work Package Team</h2>
     <div class="md:grid-col-3 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Farm and Design
             </h3>
             <!-- ------------------------ One People Card -------------------   -->
-            <a href="https://www.rothamsted.ac.uk/people/bruce-griffith"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/bruce-griffith">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50"><img
                         class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/bruce-griffith.jpg">
                     <div class="font-medium dark:text-white">
                         <div>
                             Bruce Griffith
-
                         </div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
                             Research Farm Manager
@@ -105,27 +97,10 @@
                     </div>
                 </div>
             </a>
-            <!-- ------------------------ One People Card -------------------   -->
-            <a href="https://www.rothamsted.ac.uk/people/jordana-rivero"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50"><img
-                        class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                        src="/profile-photos/jordana-rivero.jpg">
-                    <div class="font-medium dark:text-white">
-                        <div>
+            
 
-                            Jordana Rivero
-
-                        </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Grazing Lievstock Systems Specialist
-                        </div>
-                    </div>
-                </div>
-            </a>
             <!-- ------------------------ One People Card -------------------   -->
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/andy-jones">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/andy-jones">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50"><img
                         class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/andy-jones.jpg">
@@ -134,20 +109,37 @@
                             Andy Jones
                         </div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Small Ruminant Experimental Manager
+                            Small Ruminant Facility Experimental Manager
                         </div>
                     </div>
                 </div>
-
             </a>
+            <!-- ------------------------ One People Card With Initials -------------------   -->
+
+            <div class="flex items-center gap-4 p-3">
+                <div
+                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
+                    <span class="font-medium text-gray-600 dark:text-gray-300">VP</span>
+                </div>
+                <div class="font-medium dark:text-white">
+                    <div>
+                        Vacant Position
+                    </div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        Grazing Livestock Systems
+                    </div>
+                </div>
+            </div>
+        
         </div>
+        
         <div>
+            
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Soils</h3>
             <!-- ------------------------ One People Card -------------------   -->
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/martin-blackwell">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/martin-blackwell">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                    <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                        <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/martin-blackwell.jpg">
                     <div class="font-medium dark:text-white">
                         <div>
@@ -158,23 +150,22 @@
                         </div>
                     </div>
                 </div>
-
             </a>
-            <!-- ------------------------ One People Card With Initials -------------------   -->
-            <div class="flex items-center gap-4 p-3">
-                <div
-                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
-                    <span class="font-medium text-gray-600 dark:text-gray-300">AN</span>
-                </div>
-                <div class="font-medium dark:text-white">
-                    <div>
+            <!-- ------------------------ One People Card -------------------   -->
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/andrew-neal">
+                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
+                    <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                    src="/profile-photos/andrew-neal.jpg">
+                    <div class="font-medium dark:text-white">
+                        <div>
                         Andy Neal
-                    </div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        </div>
+                        <div class="text-sm text-gray-500 dark:text-gray-400">
                         Soil Scientist
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div>
@@ -182,8 +173,7 @@
                 Biodiversity
             </h3>
             <!-- ------------------------ One People Card -------------------   -->
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/deborah-beaumont">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/deborah-beaumont">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/deborah-beaumont.jpg">
@@ -196,12 +186,10 @@
                         </div>
                     </div>
                 </div>
-
             </a>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/jonathan-storkey">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/jonathan-storkey">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/jonathan-storkey.jpg">
@@ -213,7 +201,6 @@
                         </div>
                     </div>
                 </div>
-
             </a>
         </div>
 
@@ -221,8 +208,7 @@
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Water</h3>
 
             <!-- ------------------------ One People Card -------------------   -->
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/adie-collins">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/adie-collins">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/adie-collins.jpg">
@@ -235,12 +221,10 @@
                         </div>
                     </div>
                 </div>
-
             </a>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/bruce-griffith">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/bruce-griffith">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/bruce-griffith.jpg">
@@ -253,31 +237,13 @@
                     </div>
                 </div>
             </a>
-            <!-- ------------------------ One People Card -------------------   -->
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
-                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                    <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                        src="/profile-photos/louise-olde.jpg">
-                    <div class="font-medium dark:text-white">
-                        <div>
-                            Louise Olde
-                        </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Field Technician
-                        </div>
-                    </div>
-                </div>
-
-            </a>
-
         </div>
+
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Gases</h3>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/laura-cardenas">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/laura-cardenas">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/laura-cardenas.jpg">
@@ -289,12 +255,10 @@
                         </div>
                     </div>
                 </div>
-
             </a>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/nadine-loick">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/nadine-loick">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/nadine-loick.jpg">
@@ -306,40 +270,34 @@
                         </div>
                     </div>
                 </div>
-
-            </a>
-            <!-- ------------------------ One People Card -------------------   -->
-
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
-                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                    <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                        src="/profile-photos/louise-olde.jpg">
-                    <div class="font-medium dark:text-white">
-                        <div>Louise Olde
-                        </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Field Technician
-                        </div>
-                    </div>
-                </div>
-
             </a>
         </div>
+
         <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Remote
-                Sensing</h3>
-
-
-
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Remote Sensing</h3>
+            <!-- ------------------------ One People Card With Initials -------------------   -->
+            
+            <div class="flex items-center gap-4 p-3">
+                <div
+                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
+                    <span class="font-medium text-gray-600 dark:text-gray-300">VP</span>
+                </div>
+                <div class="font-medium dark:text-white">
+                    <div>
+                        Vacant Position
+                    </div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Data</h3>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/hadewij-sint">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/hadewij-sint">
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                         src="/profile-photos/hadewij-sint.jpg">
@@ -347,16 +305,14 @@
                         <div>Hadewij Sint
                         </div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
-                            GIS and Data Specialist
+                            <p>GIS &amp;</p><p> Data Specialist</p>
                         </div>
                     </div>
                 </div>
-
             </a>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/jane-hawkins">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/jane-hawkins">
 
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
@@ -365,16 +321,14 @@
                         <div>Jane Hawkins
                         </div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Biogeochemist
+                            <p>Biogeochemist &amp;</p> <p>Data Specialist</>
                         </div>
                     </div>
                 </div>
-
             </a>
             <!-- ------------------------ One People Card -------------------   -->
 
-            <a
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/tegan-darch">
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/tegan-darch">
 
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                     <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
@@ -390,9 +344,11 @@
 
             </a>
         </div>
+        
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Digital Science</h3>
             <!-- ------------------------ One People Card With Initials -------------------   -->
+            
             <div class="flex items-center gap-4 p-3">
                 <div
                     class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
@@ -400,7 +356,7 @@
                 </div>
                 <div class="font-medium dark:text-white">
                     <div>
-                        Nazeem
+                        Hazem Nureldin
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
                         Digital Twin
@@ -411,22 +367,19 @@
 
     </div>
 
-    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Technical
-        Team</h2>
+    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Technical Team</h2>
     <div class="md:grid-col-3 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
 
         <!-- ------------------------ One People Card -------------------   -->
-
-        <a
-            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/helena-taylor">
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
             <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                 <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                    src="/profile-photos/helena-taylor.jpg">
+                    src="/profile-photos/louise-olde.jpg">
                 <div class="font-medium dark:text-white">
-                    <div>Helena Taylor
+                    <div>Louise Olde
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Soil and Plant Laboratory Technician
+                        Science Technician
                     </div>
                 </div>
             </div>
@@ -434,8 +387,7 @@
         </a>
         <!-- ------------------------ One People Card -------------------   -->
 
-        <a
-            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/chris-powe">
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/chris-powe">
             <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                 <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                     src="/profile-photos/chris-powe.jpg">
@@ -465,16 +417,29 @@
             </div>
         </div>
 
+        <!-- ------------------------ One People Card -------------------   -->
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/helena-taylor">
+            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
+                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                    src="/profile-photos/helena-taylor.jpg">
+                <div class="font-medium dark:text-white">
+                    <div>Helena Taylor
+                    </div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        <p>Soil &amp; Plant</p><p>Laboratory Technician</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    
     </div>
 
-    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Statistical
-        Support</h2>
+    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Statistical Support</h2>
     <div class="md:grid-col-3 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
 
         <!-- ------------------------ One People Card -------------------   -->
 
-        <a
-            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/andrew-mead">
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/andrew-mead">
             <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
                 <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                     src="/profile-photos/andrew-mead.jpg">
@@ -505,13 +470,10 @@
         </div>
     </div>
 
-    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">External
-        Relations, <strong>Knowledge </strong>Exchange &amp;
-        Commercialisation:</h2>
+    <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">External Relations, Knowledge Exchange &amp; Commercialisation</h2>
     <!-- ------------------------ One People Card -------------------   -->
 
-    <a
-        onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/melanie-wright">
+    <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/melanie-wright">
         <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
             <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
                 src="/profile-photos/melanie-wright.jpg">
