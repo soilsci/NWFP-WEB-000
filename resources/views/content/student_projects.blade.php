@@ -5,8 +5,8 @@
                 {{ __('Postgraduate Student Projects') }}
             </h2>
         </x-slot>
-        <div class="p-1">
-            <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-3">
+        <div class="p-3">
+            <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-5">
                 <p>The North Wyke Farm Platform is an exceptional resource for research student projects.
                 </p> 
                 <p>Research projects can take place on the farm platform or our long term data sets 
@@ -17,9 +17,9 @@
                 </p>
             </div>
             <br>
-        <div style="text-align:justify;padding-right:0px" class="p-3">
-            <p><strong>We are excited to support projects from a wide range of disciplines. Recent collaborations at Masters and PhD level include:-</strong></p>
-            <div class="p-3">
+            <div style="text-align:justify;padding-right:0px" class="p-5">
+            <b>We are excited to support projects from a wide range of disciplines. Recent collaborations at Masters and PhD level include:-</b>
+            <div class="p-5">
                 <ul class="space-y-1">
                     <x-li-arrow>
                         AI and Machine Learning
@@ -62,9 +62,8 @@
         </div>
 
     <div class="items-top justify-beween flex border-y-4 border-nw-blue-700 p-1">
-        
         <div class="md:grid-col-4 grid gap-4 sm:grid-cols-1 lg:grid-cols-2 p-5">
-            <p><strong>Click the relevant button below to access resources</strong></p>
+            <p><strong>For further information please click the relevant button below</strong></p>
             <br>
             <p class="px-0 pt-1"> 
             <x-button-link href="/content/student_resources" target="_blank" class="btn-primary">

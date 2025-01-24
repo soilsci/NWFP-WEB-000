@@ -9,21 +9,22 @@
     Introduction</h2>
     
     
-    <div style="text-align:justify" class="p-3">The North Wyke Farm Platform and wider facilities has a 
+    <div style="text-align:justify" class="p-3">
+        <p>The North Wyke Farm Platform and wider facilities has a 
         long track record of supporting post graduate research projects. 
         One of the purposes of the farm platform is to provide exceptional resources and data for academics from any discipline and location to use. 
-        Data is readily available and quality controlled meaning that projects can be initiated rapidly, with little cost.
-        You can access this data for your students or for your own study immediately and for free by registering on the 
-        
-        <a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-        href="https://nwfp.rothamsted.ac.uk/">NWFP Data Portal.</a>
+        Data is readily available and quality controlled meaning that projects can be initiated rapidly, with little cost.</p>
         <br>
+        <p>You can access this data for your students or for your own study immediately and for free by registering on the NWFP Data Portal
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;" href="https://nwfp.rothamsted.ac.uk/">
+            <u style="color:red;">here</u></a>.
+        </p>
         <br>
-        We are happy to discuss your ideas on projects and do anything that might be required to help. This can be anything form a conversation 
+        We are happy to discuss your ideas on projects and do anything that might be required to help. This can be anything from a conversation 
         through to co-development of funding proposals.
         
     </div>
-    
+    <div style="color:red;" class="p-3"><b>NEED TO ADD CONTENT HERE e.g.</></div>
     <div class="p-3">
         <ul>
             <x-li-dot class="bg-nw-blue-500">Video testimonies (imperial, cambridge) and Photographs - add links here or add to page?</x-li-dot>
@@ -41,8 +42,8 @@
     
 <div class="p-1">
     <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-3">
-        <p><strong>Please contact</strong>
-            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="mailto:nw.farmplatform@rothamsted.ac.uk">
+        <b>Please contact</b>
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;" href="mailto:nw.farmplatform@rothamsted.ac.uk">
                 <u>nw.farmplatform@rothamsted.ac.uk</u>
             </a>for enquiries.
         </p>
