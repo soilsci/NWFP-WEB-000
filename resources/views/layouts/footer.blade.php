@@ -31,7 +31,7 @@
 
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
-            <h2 class="font-mono text-2xl font-semibold">Connect</h2>
+            <h2 class="font-mono text-2xl font-semibold">Connect with us</h2>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="/contact">Contact us</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
