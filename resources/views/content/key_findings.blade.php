@@ -71,7 +71,7 @@
 
                 <p>Infrequent spot sampling commonplace in the industry is unlikely to
                     provide useful information.</p>
-                <p>[Takahashi <span class="italic">et al.</span>,2018, European Federation of
+                <p>[Takahashi <span class="italic">et al.</span>, 2018, European Federation of
                     Animal Science].</p>
             </div>
         </div>
