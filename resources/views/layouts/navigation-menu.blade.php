@@ -8,6 +8,27 @@
             </div>
             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">{{--  Navigation --}}
                 
+                <x-dropdown2> {{--  --------- TEST PAGES --------- --}}
+                    {{--  anything to do with data  --}}
+                    <x-slot name="trigger">
+                        {{ __('Test Landing Pages') }}
+                    </x-slot>
+                    <x-slot name="content">
+                        
+                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'test1']) }}">
+                        {{ __('TestPage1') }}
+                    </x-dropdown-link>
+
+                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'test2']) }}">
+                        {{ __('TestPage2') }}
+                    </x-dropdown-link>
+                    
+                </x-slot>
+
+                </x-dropdown2>
+
+
+
                 <x-dropdown2> {{--  --------- Get Data --------- --}}
                     {{--  anything to do with data  --}}
                     <x-slot name="trigger">
