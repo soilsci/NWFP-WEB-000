@@ -2,7 +2,7 @@
     <div>
         <x-slot name="header">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                {{ __('Postgraduate Student Projects') }}
+                {{ __('Student Projects') }}
             </h2>
         </x-slot>
         <div class="p-3">
@@ -13,7 +13,7 @@
                 can be used as the basis for research projects.
                 </p>
                 <p>As well as being open to your own ideas we have a list of suggested projects that we'd 
-                be happy to discuss with you whether you are a postgraduate student or a Director of Studies or Supervisor. 
+                be happy to discuss with you whether you are a undergraduate/postgraduate student or a Director of Studies or Supervisor. 
                 </p>
             </div>
             <br>
@@ -63,16 +63,14 @@
 
     <div class="items-top justify-beween flex border-y-4 border-nw-blue-700 p-1">
         <div class="md:grid-col-4 grid gap-4 sm:grid-cols-1 lg:grid-cols-2 p-5">
-            <p><strong>For further information please click the relevant button below</strong></p>
-            <br>
             <p class="px-0 pt-1"> 
-            <x-button-link href="/content/student_resources" target="_blank" class="btn-primary">
+            <x-button-link href="/content/student_resources" class="btn-primary">
             Information for Students
             </x-button-link>
             </p>
 
             <p class="px-0 pt-1">
-            <x-button-link href="/content/supervisor_resources" target="_blank" class="btn-primary">
+            <x-button-link href="/content/supervisor_resources" class="btn-primary">
             Information for Supervisors
             </x-button-link></p>
         </div>
