@@ -37,14 +37,14 @@
             </div>
          </div>
       </div>
-
-      
+     
       <div class="-mx-4 flex flex-wrap justify-center">
          <div class="w-full px-4">
             <ul class="mb-12 flex flex-wrap justify-center space-x-1">
             </ul>
          </div>
       </div>
+      
       <div class="-mx-4 flex flex-wrap">
          {{-- Card 1 --}}
          <div
@@ -142,7 +142,7 @@
             </div>
          </div>
 
-         {{-- Card 3 --}}
+         {{-- Card 4 --}}
 
          
       </div>
