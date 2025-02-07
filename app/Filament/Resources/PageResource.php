@@ -10,11 +10,17 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+
+
 
 class PageResource extends Resource
 {
@@ -39,8 +45,9 @@ class PageResource extends Resource
                     'Draft' => 'Draft',
                     'Reviewing' => 'Reviewing',
                     'Published' => 'Published',
-    ])
-
+                ]),
+                Toggle::make('isOnHomePage'),
+                Toggle::make('isPinned'),
 
             ]);
     }
@@ -49,22 +56,42 @@ class PageResource extends Resource
     {
         return $table
                 ->columns([
-                Tables\Columns\TextColumn::make('name')->label('Filename'),
-                Tables\Columns\TextColumn::make('imagefile')->label('Image Filename (incl .ext)'),
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('status'),
-
-
-
-            // ...
+                    TextColumn::make('title')->wrap(80),
+                    IconColumn::make('status')
+                        ->icon(fn (string $state): string => match ($state) {
+                        'Draft' => 'heroicon-o-pencil',
+                        'Reviewing' => 'heroicon-o-clock',
+                        'Published' => 'heroicon-o-check-badge',
+                        })
+                        ->color(fn (string $state): string => match ($state) {
+                            'Draft' => 'info',
+                            'Reviewing' => 'warning',
+                            'Published' => 'success',
+                            default => 'gray',
+                        }),
+                        IconColumn::make('isOnHomePage')
+                            ->boolean()
+                            ->trueIcon('heroicon-o-check-badge')
+                            ->falseIcon('heroicon-o-x-mark')
+                            ->label('on Home Page'),
+                        IconColumn::make('isPinned')
+                            ->boolean()
+                            ->trueIcon('heroicon-m-bookmark-square')
+                            ->falseIcon('heroicon-o-x-mark')
+                            ->label('Pinned'),
+                    TextColumn::make('name')->label('Filename'),
+                    ImageColumn::make('imagefile')->disk('images')->label('Image')
+                        ->checkFileExistence(false),
+                    TextColumn::make('description')->label('Summary')->wrap(100),
         ])
             ->filters([
-                //
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
             ])
+
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
@@ -85,6 +112,7 @@ class PageResource extends Resource
             'index' => Pages\ListPages::route('/'),
             'create' => Pages\CreatePage::route('/create'),
             'edit' => Pages\EditPage::route('/{record}/edit'),
+            'view'=> Pages\ViewPage::route('/{record}'),
         ];
     }
 }
