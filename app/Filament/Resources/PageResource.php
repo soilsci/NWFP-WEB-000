@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
 
 class PageResource extends Resource
 {
@@ -26,17 +27,20 @@ class PageResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required()
-                ->maxLength(50),
+                ->maxLength(50)->label('Blade name'),
+                TextInput::make('imagefile')->label('Image filename (incl. .ext)')
+                ->maxLength(80),
                 TextInput::make('title')->required()
                 ->maxLength(255),
                 TextInput::make('description')->required()
                 ->maxLength(255),
-                TextInput::make('status')
-                    ->datalist([
-                            'Draft',
-                            'Reviewing',
-                            'Published',
-                ])
+                Select::make('status')
+                ->options([
+                    'Draft' => 'Draft',
+                    'Reviewing' => 'Reviewing',
+                    'Published' => 'Published',
+    ])
+
 
             ]);
     }
@@ -46,6 +50,7 @@ class PageResource extends Resource
         return $table
                 ->columns([
                 Tables\Columns\TextColumn::make('name')->label('Filename'),
+                Tables\Columns\TextColumn::make('imagefile')->label('Image Filename (incl .ext)'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description'),
                 Tables\Columns\TextColumn::make('status'),
