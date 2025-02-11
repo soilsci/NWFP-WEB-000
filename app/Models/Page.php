@@ -9,5 +9,9 @@ class Page extends Model
 {
     use HasFactory;
 
+    public function getFullURLAttribute() {
+        $full_URL = sprintf('<a href="/content/%s">%s</a>', $this->name, $this->title);
+        return $full_URL ;
+        }
 
 }

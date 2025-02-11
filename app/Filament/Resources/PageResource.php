@@ -19,8 +19,11 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
-
-
+use Filament\Infolists\Infolist;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ImageEntry;
+use Filament\Infolists\Components\Grid;
+use Illuminate\Contracts\View\View;
 
 class PageResource extends Resource
 {
@@ -80,6 +83,7 @@ class PageResource extends Resource
                             ->falseIcon('heroicon-o-x-mark')
                             ->label('Pinned'),
                     TextColumn::make('name')->label('Filename'),
+                    TextColumn::make('full_url')->wrap(50)->label('View Page')->html(),
                     ImageColumn::make('imagefile')->disk('images')->label('Image')
                         ->checkFileExistence(false),
                     TextColumn::make('description')->label('Summary')->wrap(100),
@@ -105,6 +109,26 @@ class PageResource extends Resource
             //
         ];
     }
+
+
+
+  #This is for the view, the infolist a - a readonly version
+    public static function infolist(Infolist $infolist): Infolist
+    {
+        return $infolist
+            ->schema([
+                Grid::make(1)->schema([
+                    ImageEntry::make('imagefile')->disk('images')->label('Image')
+                        ->checkFileExistence(false),
+                    TextEntry::make('full_URL')->label('')->html(),
+                    TextEntry::make('title')->label(''),
+                    TextEntry::make('description')->label(''),
+                    TextEntry::make('full_URL')
+
+                ])
+            ]);
+    }
+
 
     public static function getPages(): array
     {
