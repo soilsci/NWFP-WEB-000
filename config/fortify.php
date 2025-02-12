@@ -70,10 +70,10 @@ return [
     | Here you may configure the path where users will get redirected during
     | authentication or password reset when the operations are successful
     | and the user is authenticated. You are free to change this value.
-    |
+    | In our case, the login goes straight into FILAMENT back end as there is no face fronting app for the moment
     */
 
-    'home' => '/dashboard',
+    'home' => '/admin',
 
     /*
     |--------------------------------------------------------------------------

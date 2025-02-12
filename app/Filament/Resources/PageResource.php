@@ -19,11 +19,14 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\FileUpload;
 use Filament\Infolists\Infolist;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\Grid;
 use Illuminate\Contracts\View\View;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\SelectFilter;
 
 class PageResource extends Resource
 {
@@ -49,10 +52,16 @@ class PageResource extends Resource
                     'Reviewing' => 'Reviewing',
                     'Published' => 'Published',
                 ]),
+                Select::make('tags')
+                ->relationship('tags', 'name')
+                ->preload()
+                ->multiple(),
                 Toggle::make('isOnHomePage'),
                 Toggle::make('isPinned'),
-
-            ]);
+                // the fileupload will not work if the disk is on the public directory. When the storage place is available, we can revisit that!
+                // FileUpload::make('imagefile')
+                //     ->disk('images'),
+                ]);
     }
 
     public static function table(Table $table): Table
@@ -83,17 +92,27 @@ class PageResource extends Resource
                             ->falseIcon('heroicon-o-x-mark')
                             ->label('Pinned'),
                     TextColumn::make('name')->label('Filename'),
-                    TextColumn::make('full_url')->wrap(50)->label('View Page')->html(),
+                    #TextColumn::make('full_url')->wrap(50)->label('View Page')->html(),
+                    TextColumn::make('tags.name'),
                     ImageColumn::make('imagefile')->disk('images')->label('Image')
                         ->checkFileExistence(false),
                     TextColumn::make('description')->label('Summary')->wrap(100),
         ])
             ->filters([
-
+                Filter::make('isOnHomePage')
+    ->query(fn (Builder $query): Builder => $query->where('isOnHomePage', true))->toggle(),
+                Filter::make('isPinned')->toggle(),
+                SelectFilter::make('status')->multiple()
+                     ->options([
+                    'Draft' => 'Draft',
+                      'Reviewing' => 'Reviewing',
+                      'Published' => 'Published',
+    ])
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
                 Tables\Actions\ViewAction::make(),
+                Tables\Actions\EditAction::make(),
+
             ])
 
             ->bulkActions([
@@ -120,10 +139,10 @@ class PageResource extends Resource
                 Grid::make(1)->schema([
                     ImageEntry::make('imagefile')->disk('images')->label('Image')
                         ->checkFileExistence(false),
-                    TextEntry::make('full_URL')->label('')->html(),
                     TextEntry::make('title')->label(''),
                     TextEntry::make('description')->label(''),
-                    TextEntry::make('full_URL')
+                    TextEntry::make('full_URL')->label('Go to Page')->html()->color('success'),
+
 
                 ])
             ]);
