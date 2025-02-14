@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\OrganisationResource\Pages;
-use App\Filament\Resources\OrganisationResource\RelationManagers;
-use App\Models\Organisation;
+use App\Filament\Resources\TagResource\Pages;
+use App\Filament\Resources\TagResource\RelationManagers;
+use App\Models\Tag;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,43 +12,29 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 
-class OrganisationResource extends Resource
+class TagResource extends Resource
 {
-    protected static ?string $model = Organisation::class;
+    protected static ?string $model = Tag::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
+    protected static ?string $navigationIcon = 'heroicon-o-tag';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('name')->required()
-                ->maxLength(50),
-                TextInput::make('abbrev')->required()
-                ->maxLength(10),
-                TextInput::make('website')->required()
-                ->maxLength(255),
-                TextInput::make('ror')
-                ->maxLength(20),
-
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-        Tables\Columns\TextColumn::make('name')->label('Institute'),
-        Tables\Columns\TextColumn::make('abbrev'),
-        Tables\Columns\TextColumn::make('website'),
-        Tables\Columns\TextColumn::make('ror'),
-
-
-
-    // ...
-])
+            ->columns([
+                    TextColumn::make('name'),
+            ])
             ->filters([
                 //
             ])
@@ -72,9 +58,9 @@ class OrganisationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListOrganisations::route('/'),
-            'create' => Pages\CreateOrganisation::route('/create'),
-            'edit' => Pages\EditOrganisation::route('/{record}/edit'),
+            'index' => Pages\ListTags::route('/'),
+            'create' => Pages\CreateTag::route('/create'),
+            'edit' => Pages\EditTag::route('/{record}/edit'),
         ];
     }
 }

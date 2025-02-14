@@ -1,16 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\PageResource\Pages;
+namespace App\Filament\Resources\ThemeResource\Pages;
 
-use App\Filament\Resources\PageResource;
+use App\Filament\Resources\ThemeResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-
-
-class ListPages extends ListRecords
+class ListThemes extends ListRecords
 {
-    protected static string $resource = PageResource::class;
+    protected static string $resource = ThemeResource::class;
 
     protected function getHeaderActions(): array
     {
