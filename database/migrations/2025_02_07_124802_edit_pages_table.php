@@ -9,14 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      * - add image file with extension
-     * - tag : home, recent, none: use booleans like isOnHomePage and isPinned
+     * - tag : home, recent, none: use booleans like is_focus and is_pinned
      * - recent is decided by the updated field
      */
     public function up(): void
     {
         Schema::table('pages', function (Blueprint $table) {
-            $table->boolean('isOnHomePage')->comment('To add a link to that page on the Home page')->default(false);
-            $table->boolean('isPinned')->comment('To Pin the page on top of a list of pages')->default(false);
+            $table->boolean('is_focus')->comment('To add a link to that page on the Home page')->default(false);
+            $table->boolean('is_pinned')->comment('To Pin the page on top of a list of pages')->default(false);
             });
     }
 

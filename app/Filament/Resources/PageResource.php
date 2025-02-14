@@ -31,8 +31,12 @@ use Filament\Tables\Filters\SelectFilter;
 class PageResource extends Resource
 {
     protected static ?string $model = Page::class;
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
     public static function form(Form $form): Form
     {
@@ -56,11 +60,11 @@ class PageResource extends Resource
                 ->relationship('tags', 'name')
                 ->preload()
                 ->multiple(),
-                Toggle::make('isOnHomePage'),
-                Toggle::make('isPinned'),
+                Toggle::make('is_focus'),
+                Toggle::make('is_pinned'),
                 // the fileupload will not work if the disk is on the public directory. When the storage place is available, we can revisit that!
-                // FileUpload::make('imagefile')
-                //     ->disk('images'),
+                //FileUpload::make('imagefile')
+                  //   ->disk('images'),
                 ]);
     }
 
@@ -81,12 +85,12 @@ class PageResource extends Resource
                             'Published' => 'success',
                             default => 'gray',
                         }),
-                        IconColumn::make('isOnHomePage')
+                        IconColumn::make('is_focus')
                             ->boolean()
                             ->trueIcon('heroicon-o-check-badge')
                             ->falseIcon('heroicon-o-x-mark')
                             ->label('on Home Page'),
-                        IconColumn::make('isPinned')
+                        IconColumn::make('is_pinned')
                             ->boolean()
                             ->trueIcon('heroicon-m-bookmark-square')
                             ->falseIcon('heroicon-o-x-mark')
@@ -99,9 +103,9 @@ class PageResource extends Resource
                     TextColumn::make('description')->label('Summary')->wrap(100),
         ])
             ->filters([
-                Filter::make('isOnHomePage')
-    ->query(fn (Builder $query): Builder => $query->where('isOnHomePage', true))->toggle(),
-                Filter::make('isPinned')->toggle(),
+                Filter::make('is_focus')
+    ->query(fn (Builder $query): Builder => $query->where('is_focus', true))->toggle(),
+                Filter::make('is_pinned')->toggle(),
                 SelectFilter::make('status')->multiple()
                      ->options([
                     'Draft' => 'Draft',

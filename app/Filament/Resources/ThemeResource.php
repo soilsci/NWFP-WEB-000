@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\TagResource\Pages;
-use App\Filament\Resources\TagResource\RelationManagers;
-use App\Models\Tag;
+use App\Filament\Resources\ThemeResource\Pages;
+use App\Filament\Resources\ThemeResource\RelationManagers;
+use App\Models\Theme;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,20 +12,22 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
+use Filament\Tables\Columns\TextColumn;
 
-class TagResource extends Resource
+class ThemeResource extends Resource
 {
-    protected static ?string $model = Tag::class;
+    protected static ?string $model = Theme::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-tag';
+    protected static ?string $navigationIcon = 'heroicon-c-cursor-arrow-ripple';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                TextInput::make('name')->required()
+                TextInput::make('name')->columnSpan(2) ,
+                RichEditor::make('description')->columnSpan(2) ,
             ]);
     }
 
@@ -33,7 +35,8 @@ class TagResource extends Resource
     {
         return $table
             ->columns([
-                    TextColumn::make('name'),
+                TextColumn::make('name')->wrap(50),
+                TextColumn::make('description')->html(),
             ])
             ->filters([
                 //
@@ -58,9 +61,9 @@ class TagResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListTags::route('/'),
-            'create' => Pages\CreateTag::route('/create'),
-            'edit' => Pages\EditTag::route('/{record}/edit'),
+            'index' => Pages\ListThemes::route('/'),
+            'create' => Pages\CreateTheme::route('/create'),
+            'edit' => Pages\EditTheme::route('/{record}/edit'),
         ];
     }
 }
