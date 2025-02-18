@@ -15,7 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('first_name')->comment('')->nullable(true);
             $table->string('last_name')->comment('')->nullable(false);
-            $table->text('Course_name')->comment('Describe course and level')->default(' ');
+            $table->foreignID('organisation_id')->references('id')->on('organisations');
+            $table->index('organisation_id');
+            $table->text('course_name')->comment('Describe course and level')->default(' ');
             $table->timestamps();
         });
     }

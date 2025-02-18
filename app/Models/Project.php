@@ -19,4 +19,9 @@ class Project extends Model
         {
             return $this->belongsToMany(Tag::class);
         }
+
+    public function students(): BelongsToMany
+        {
+            return $this->belongsToMany(Student::class);
+        }
 }
