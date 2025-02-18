@@ -20,7 +20,10 @@ class TagResource extends Resource
     protected static ?string $model = Tag::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
-
+    public static function getNavigationBadge(): ?string
+        {
+            return static::getModel()::count();
+        }
     public static function form(Form $form): Form
     {
         return $form
@@ -33,8 +36,9 @@ class TagResource extends Resource
     {
         return $table
             ->columns([
-                    TextColumn::make('name'),
+                    TextColumn::make('name')->sortable(),
             ])
+            ->defaultSort('name', 'asc')
             ->filters([
                 //
             ])

@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Models\Project;
-
+use Filament\Tables\Columns\IconColumn;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -14,7 +14,7 @@ use Filament\Forms\Form;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
-
+use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
 
 use Filament\Tables;
@@ -36,6 +36,7 @@ class ProjectResource extends Resource
     {
         return $form
             ->schema([
+                Toggle::make('is_available'),
                 TextInput::make('name')->columnSpan(2) ,
                 RichEditor::make('goal')->columnSpan(2) ,
                 RichEditor::make('description')->columnSpan(2) ,
@@ -52,6 +53,7 @@ class ProjectResource extends Resource
                 ->columnSpanFull()
                 ->preload()
                 ->multiple(),
+                RichEditor::make('additional_data')->columnSpan(2) ,
 
 
             ]);
@@ -61,9 +63,15 @@ class ProjectResource extends Resource
     {
         return $table
             ->columns([
+                IconColumn::make('is_available')
+                ->boolean()
+                ->trueIcon('heroicon-o-check-badge')
+                ->falseIcon('heroicon-o-x-mark')
+                ->label('is Available'),
                 TextColumn::make('name')->limit(50),
                 TextColumn::make('goal')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('description')->limit(50)->lineClamp(2)->html(),
+                TextColumn::make('additional_data')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('themes.name')
                 ->listWithLineBreaks()
                 ->bulleted(),

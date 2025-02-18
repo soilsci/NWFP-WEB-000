@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('data', function (Blueprint $table) {
             $table->id();
             $table->string('name',255)->comment('The name of the data stream');
-            $table->text('description')->comment('A little explanation');
+            $table->text('description')->comment('A little explanation')->nullable();
             $table->timestamps();
         });
     }

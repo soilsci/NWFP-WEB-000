@@ -23,8 +23,10 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('name')->comment('The name of the project');
-            $table->text('goal')->comment('The name of the project');
-            $table->text('description')->comment('The name of the project');
+            $table->text('goal')->comment('The goal of the project');
+            $table->text('description')->comment('The description of the project');
+            $table->text('additional_data')->comment('If there are additional information')->nullable();
+            $table->boolean('is_available')->comment('For future Projects')->default(false);
             $table->timestamps();
         });
     }

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('themes', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255)->comment('The name of the theme');
-            $table->text('description')->comment('we always need a description');
+            $table->text('description')->comment('we always need a description')->nullable();
             $table->timestamps();
         });
     }

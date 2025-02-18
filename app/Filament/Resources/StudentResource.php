@@ -24,18 +24,16 @@ class StudentResource extends Resource
     protected static ?string $model = Student::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    public static function getNavigationBadge(): ?string
+        {
+            return static::getModel()::count();
+        }
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 TextInput::make('first_name'),
                 TextInput::make('last_name'),
-                Select::make('organisation_id')
-                ->label('Institute')
-                ->options(Organisation::all()->pluck('name', 'id'))
-                ->preload()
-                ->searchable(),
                 TextInput::make('course_name'),
             ]);
     }

@@ -38,9 +38,10 @@ class DataResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
+                TextColumn::make('name')->sortable(),
                 TextColumn::make('description')->html(),
             ])
+            ->defaultSort('name', 'asc')
             ->filters([
                 //
             ])

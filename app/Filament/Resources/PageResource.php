@@ -72,7 +72,7 @@ class PageResource extends Resource
     {
         return $table
                 ->columns([
-                    TextColumn::make('title')->wrap(80),
+                    TextColumn::make('title')->wrap(80)->sortable(),
                     IconColumn::make('status')
                         ->icon(fn (string $state): string => match ($state) {
                         'Draft' => 'heroicon-o-pencil',
@@ -102,6 +102,7 @@ class PageResource extends Resource
                         ->checkFileExistence(false),
                     TextColumn::make('description')->label('Summary')->wrap(100),
         ])
+        ->defaultSort('title', 'asc')
             ->filters([
                 Filter::make('is_focus')
     ->query(fn (Builder $query): Builder => $query->where('is_focus', true))->toggle(),
