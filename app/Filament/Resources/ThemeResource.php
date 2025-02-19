@@ -21,7 +21,10 @@ class ThemeResource extends Resource
     protected static ?string $model = Theme::class;
 
     protected static ?string $navigationIcon = 'heroicon-c-cursor-arrow-ripple';
-
+    public static function getNavigationBadge(): ?string
+        {
+            return static::getModel()::count();
+        }
     public static function form(Form $form): Form
     {
         return $form

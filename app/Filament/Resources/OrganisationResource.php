@@ -19,7 +19,10 @@ class OrganisationResource extends Resource
     protected static ?string $model = Organisation::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-building-office-2';
-
+    public static function getNavigationBadge(): ?string
+        {
+            return static::getModel()::count();
+        }
     public static function form(Form $form): Form
     {
         return $form
@@ -40,8 +43,8 @@ class OrganisationResource extends Resource
     {
         return $table
         ->columns([
-        Tables\Columns\TextColumn::make('name')->label('Institute'),
-        Tables\Columns\TextColumn::make('abbrev'),
+        Tables\Columns\TextColumn::make('name')->label('Institute')->sortable(),
+        Tables\Columns\TextColumn::make('abbrev')->sortable(),
         Tables\Columns\TextColumn::make('website'),
         Tables\Columns\TextColumn::make('ror'),
 
@@ -49,6 +52,7 @@ class OrganisationResource extends Resource
 
     // ...
 ])
+->defaultSort('name', 'asc')
             ->filters([
                 //
             ])

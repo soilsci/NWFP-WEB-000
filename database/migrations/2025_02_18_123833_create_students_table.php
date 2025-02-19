@@ -8,17 +8,16 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     * organisation 1 to many
-     * category: 1 to many
      */
     public function up(): void
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name', 255);
-            $table->string('last_name', 255);
-            $table->foreignId('organisation_id')->constrained('organisations');
-            $table->text('course_name')->comment('name of the course and level');
+            $table->string('first_name')->comment('')->nullable(true);
+            $table->string('last_name')->comment('')->nullable(false);
+            $table->foreignID('organisation_id')->references('id')->on('organisations');
+            $table->index('organisation_id');
+            $table->text('course_name')->comment('Describe course and level')->default(' ');
             $table->timestamps();
         });
     }
