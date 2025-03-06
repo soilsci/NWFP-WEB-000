@@ -8,25 +8,31 @@
         <div class="p-3">
             <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-5">
                 <p>If you wish to visit the NWFP please complete the
-                    <span class="font-semibold"><a
+                    <span class="font-semibold">
+                        <a
                             href="https://forms.office.com/pages/responsepage.aspx?id=JTaItkGJQkOw43uMyDkvZLcwcoUWgp9DttNqwK3TGQ1UME9IWTJPMUxIVlNHNFZPMFUxVzRFVjZQWi4u&amp;web=1&amp;wdLOR=c82212539-350C-4D18-BEDE-1A0595854399"
+                            style="color: blue; text-decoration: underline",
                             onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-
                             visit request form
                         </a>.
                     </span>
                     We will assess your request and contact you to arrange a visit or to provide you
                     with details of upcoming open days.
                 </p>
+                <br>
                 <p>
                     <span class="italic">
                         If
                         you want to check in advance of submitting a visit request, please call / email
-                        <a href="https://www.rothamsted.ac.uk/people/melanie-wright"
-                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">Melanie
-                            Wright</a> or <a href="https://www.rothamsted.ac.uk/people/jane-hawkins"
-                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">Jane
-                            Hawkins</a>
+                        <a href="https://www.rothamsted.ac.uk/people/melanie-wright" style="color: blue; text-decoration: underline",
+                        onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">Melanie
+                        Wright
+                        </a> 
+                            or 
+                        <a href="https://www.rothamsted.ac.uk/people/jane-hawkins" style="font-semibold; color: blue; text-decoration: underline",
+                        onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">Jane
+                        Hawkins
+                        </a>.
 
                     </span>
                 </p>
