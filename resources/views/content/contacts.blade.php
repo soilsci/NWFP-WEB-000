@@ -359,7 +359,22 @@
                         Hazem Nureldin
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Digital Twin
+                        Software Engineer - Digital Twin
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-3">
+                <div
+                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
+                    <span class="font-medium text-gray-600 dark:text-gray-300">N</span>
+                </div>
+                <div class="font-medium dark:text-white">
+                    <div>
+                        Ellen Maas
+                    </div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        Digital Twin Scientist
                     </div>
                 </div>
             </div>
