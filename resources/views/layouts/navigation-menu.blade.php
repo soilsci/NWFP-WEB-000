@@ -15,14 +15,18 @@
                     </x-slot>
                     <x-slot name="content">
                         
-                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'test1']) }}">
+                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'testlanding1']) }}">
                         {{ __('TestPage1') }}
                     </x-dropdown-link>
 
-                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'test2']) }}">
+                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'testlanding2']) }}">
                         {{ __('TestPage2') }}
                     </x-dropdown-link>
                     
+                    <x-dropdown-link href="{{ route('content.with.page', ['page' => 'testlanding3']) }}">
+                        {{ __('TestPage3') }}
+                    </x-dropdown-link>
+
                 </x-slot>
 
                 </x-dropdown2>
@@ -85,7 +89,7 @@
                             {{ __('Visit us') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
-                            {{ __('Postgrad Student Projects') }}
+                            {{ __('Student Projects') }}
                         </x-dropdown-link>
 
                     </x-slot>
