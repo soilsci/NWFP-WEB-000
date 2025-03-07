@@ -91,6 +91,10 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'contacts']) }}">
                             {{ __('The Team') }}
                         </x-dropdown-link>
+
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'collaboration']) }}">
+                            {{ __('Test Collaboration') }}
+                        </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
                 <x-dropdown2> {{--  ---------  Search that does not work --------- --}}
