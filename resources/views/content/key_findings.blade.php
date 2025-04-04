@@ -27,7 +27,7 @@
                 </p>
                 <div class="mt-2">
                     <p class="text-sm">[Takahashi <span class="italic">et al</span>., (2018). Animal, 12, 8, 1766-1776.
-                        <a href="https://doi.org/10.1017/S1751731118000502" style="color:blue">(doi:
+                        <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900" href="https://doi.org/10.1017/S1751731118000502" >(doi:
                             10.1017/S1751731118000502)</a>.]
                     </p>
                 </div>
@@ -49,7 +49,7 @@
 
                 <div class="mt-2">
                     <p class="text-sm">[Takahashi <span class="italic">et al</span>., (2018). Animal, 12, 8, 1766-1776.
-                        <a href="https://doi.org/10.1017/S1751731118000502" style="color:blue">(doi:
+                        <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"  href="https://doi.org/10.1017/S1751731118000502" >(doi:
                             10.1017/S1751731118000502)</a>.]
                     </p>
                 </div>
@@ -75,8 +75,8 @@
                 <div class="mt-2">
                     <p class="text-sm">[McAuliffe <span class="italic">et al</span>., (2018). Journal of Cleaner
                         Production, 177, 1672-1680.
-                        <a href="https://doi.org/10.1016/j.jclepro.2017.10.113"
-                            style="color:blue">(doi.org/10.1016/j.jclepro.2017.10.113)</a>.]
+                        <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"  href="https://doi.org/10.1016/j.jclepro.2017.10.113"
+                            >(doi.org/10.1016/j.jclepro.2017.10.113)</a>.]
                     </p>
                 </div>
 
@@ -96,8 +96,8 @@
                 <div class="mt-2">
                     <p class="text-sm">[Takahashi <span class="italic">et al</span>., (2018). European Federation of
                         Animal Science, Book of Abstracts No.24, 422.
-                        <a href="https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf"
-                            style="color:blue">(https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf)</a>.]
+                        <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"  href="https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf"
+                            >(https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf)</a>.]
                     </p>
                 </div>
 
@@ -125,12 +125,12 @@
                 <div class='mt-2'>
                     <p class="text-sm">[McAuliffe <span class="italic">et al</span>., (2018). Journal of Cleaner
                         Production, 177, 1672-1680.
-                        <a href="https://doi.org/10.1016/j.jclepro.2017.10.113"
-                            style="color:blue">(doi.org/10.1016/j.jclepro.2017.10.113)];</a>
+                        <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"  href="https://doi.org/10.1016/j.jclepro.2017.10.113"
+                            >(doi.org/10.1016/j.jclepro.2017.10.113)];</a>
                     </p>
-                    <p class="text-sm">[Balmford <span class="italic">et al.,</span> (2018). Nature Sustainability, 1, 9, 477-485. 
-                        <a href="https://doi.org/10.1038/s41893-018-0138-5"
-                            style="color:blue">(doi.org/10.1038/s41893-018-0138-5)</a>]
+                    <p class="text-sm">[Balmford <span class="italic">et al.,</span> (2018). Nature Sustainability, 1, 9, 477-485.
+                        <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"  href="https://doi.org/10.1038/s41893-018-0138-5"
+                            >(doi.org/10.1038/s41893-018-0138-5)</a>]
                     </p>
                 </div>
 
@@ -154,13 +154,13 @@
                     production (right). </p>
                     <div class='mt-2'>
                         <p class="text-sm">[McAuliffe <span class="italic">et al</span>., (2018). Food and Energy Security, 7, 3, 143.
-                            <a href="https://doi.org/10.1002/fes3.143"
-                                style="color:blue">(doi.org/10.1002/fes3.143)];</a>
+                            <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900" href="https://doi.org/10.1002/fes3.143"
+                                >(doi.org/10.1002/fes3.143)];</a>
                         </p>
                         <p class="text-sm">[Lee <span class="italic">et al.,</span> (2018). European Federation of
                             Animal Science, Book of Abstracts No.24, 339.
-                            <a href="https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf"
-                                style="color:blue">(https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf)</a>]
+                            <a  class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900" href="https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf"
+                                >(https://docs.eaap.org/boa/2018_Dubrovnik_EAAP_Book_Abstracts.pdf)</a>]
                         </p>
                     </div>
 

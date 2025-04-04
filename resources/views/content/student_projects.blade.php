@@ -75,12 +75,12 @@
                 </div>
                 <div class="flex justify-center">
                     <x-button-link href="/content/student_resources" class="btn-primary">
-                        Information for Students
+                        Projects available
                     </x-button-link>
 
                     <x-button-link href="/content/supervisor_resources" class="ml-20 btn-primary">
                         Information for Supervisors
                     </x-button-link>
-                </div>      
+                </div>
         </section>
 </x-guest-layout>
