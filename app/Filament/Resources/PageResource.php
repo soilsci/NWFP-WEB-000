@@ -48,7 +48,7 @@ class PageResource extends Resource
             ->schema([
                 TextInput::make('name')->required()
                 ->maxLength(50)->label('Blade name'),
-                TextInput::make('imagefile')->label('Image filename (incl. .ext)')
+                TextInput::make('imagefile')->label('Image filename (incl. ext)')
                 ->maxLength(80),
                 TextInput::make('title')->required()
                 ->maxLength(255),
@@ -102,8 +102,7 @@ class PageResource extends Resource
                     TextColumn::make('name')->label('Filename')->sortable(),
                     #TextColumn::make('full_url')->wrap(50)->label('View Page')->html(),
                     TextColumn::make('tags.name'),
-                    #ImageColumn::make('imagefile')->disk('images')->label('Image')
-                    #    ->checkFileExistence(false),
+                    TextColumn::make('imagefile')->label('Image filename (inc ext)'),
                     TextColumn::make('description')->label('Summary')->wrap(100),
         ])
         ->defaultSort('title', 'asc')
