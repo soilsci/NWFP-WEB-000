@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">{{--  Navigation --}}
-                
+
                 <x-dropdown2> {{--  --------- Get Data --------- --}}
                     {{--  anything to do with data  --}}
                     <x-slot name="trigger">
@@ -29,7 +29,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
                             {{ __('Metdata Live') }}
                         </x-dropdown-link>
-                        
+
                     </x-slot>
                 </x-dropdown2>
 
@@ -57,19 +57,23 @@
                 <x-dropdown2> {{--  --------- Engage --------- --}}
                     {{--  anything to do with data  --}}
                     <x-slot name="trigger">
-                        {{ __('Engage') }}
+                        {{ __('Collaborate') }}
                     </x-slot>
                     <x-slot name="content">
+
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
+                            {{ __('Study with us') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
+                            {{ __('Work with us') }}
+                        </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
                             {{ __('Visit us') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
-                            {{ __('Student Projects') }}
                         </x-dropdown-link>
 
                     </x-slot>
                 </x-dropdown2>
-                
+
                 <x-dropdown2> {{--  --------- ABOUT --------- --}}
                     {{--  the usual contacts, team, maps and so on  --}}
                     <x-slot name="trigger">

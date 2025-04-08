@@ -14,17 +14,17 @@ Route::get('content/{page}', function ($page) {
     return view('content.'.$page);
 })->name('content.with.page');
 
+# some specifics
 Route::get('/information', function () {
     return view('content.information');
 })->name('information');
 
-
 Route::get('/nw-guides', function () {
-    return view('contentdb.nw-guides');
+    return view('content.nw-guides');
 })->name('nw-guides');
 
 Route::get('/publications', function () {
-    return view('contentdb.publications');
+    return view('content.publications');
 })->name('publications');
 
 

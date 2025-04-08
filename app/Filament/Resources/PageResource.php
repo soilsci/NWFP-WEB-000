@@ -5,28 +5,32 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Filament\Resources\PageResource\RelationManagers;
 use App\Models\Page;
+
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Tables;
-use Filament\Tables\Table;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\ImageColumn;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Form;
 use Filament\Infolists\Infolist;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Components\ImageEntry;
 use Filament\Infolists\Components\Grid;
-use Illuminate\Contracts\View\View;
+
+use Filament\Resources\Resource;
+
 use Filament\Tables\Filters\Filter;
-use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Filters\SelectFilter;use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Table;
+use Filament\Tables\Enums\ActionsPosition;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Contracts\View\View;
 
 class PageResource extends Resource
 {
@@ -44,7 +48,7 @@ class PageResource extends Resource
             ->schema([
                 TextInput::make('name')->required()
                 ->maxLength(50)->label('Blade name'),
-                TextInput::make('imagefile')->label('Image filename (incl. .ext)')
+                TextInput::make('imagefile')->label('Image filename (incl. ext)')
                 ->maxLength(80),
                 TextInput::make('title')->required()
                 ->maxLength(255),
@@ -60,8 +64,8 @@ class PageResource extends Resource
                 ->relationship('tags', 'name')
                 ->preload()
                 ->multiple(),
-                Toggle::make('is_focus'),
-                Toggle::make('is_pinned'),
+                Toggle::make('is_focus')->label('On home page'),
+                Toggle::make('is_pinned')->label('On top'),
                 // the fileupload will not work if the disk is on the public directory. When the storage place is available, we can revisit that!
                 //FileUpload::make('imagefile')
                   //   ->disk('images'),
@@ -85,21 +89,20 @@ class PageResource extends Resource
                             'Published' => 'success',
                             default => 'gray',
                         }),
-                        IconColumn::make('is_focus')
-                            ->boolean()
-                            ->trueIcon('heroicon-o-check-badge')
-                            ->falseIcon('heroicon-o-x-mark')
-                            ->label('on Home Page'),
-                        IconColumn::make('is_pinned')
-                            ->boolean()
-                            ->trueIcon('heroicon-m-bookmark-square')
-                            ->falseIcon('heroicon-o-x-mark')
-                            ->label('Pinned'),
-                    TextColumn::make('name')->label('Filename'),
+                    IconColumn::make('is_focus')
+                        ->boolean()
+                        ->trueIcon('heroicon-o-check-badge')
+                        ->falseIcon('heroicon-o-x-mark')
+                        ->label('on Home Page')->sortable(),
+                    IconColumn::make('is_pinned')
+                        ->boolean()
+                        ->trueIcon('heroicon-m-bookmark-square')
+                        ->falseIcon('heroicon-o-x-mark')
+                        ->label('on Top')->sortable(),
+                    TextColumn::make('name')->label('Filename')->sortable(),
                     #TextColumn::make('full_url')->wrap(50)->label('View Page')->html(),
                     TextColumn::make('tags.name'),
-                    ImageColumn::make('imagefile')->disk('images')->label('Image')
-                        ->checkFileExistence(false),
+                    TextColumn::make('imagefile')->label('Image filename (inc ext)'),
                     TextColumn::make('description')->label('Summary')->wrap(100),
         ])
         ->defaultSort('title', 'asc')
@@ -115,10 +118,10 @@ class PageResource extends Resource
     ])
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
 
-            ])
+                Tables\Actions\EditAction::make()->button(),
+                Tables\Actions\ViewAction::make()->button(),
+            ], position: ActionsPosition::BeforeColumns)
 
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

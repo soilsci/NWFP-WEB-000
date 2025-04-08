@@ -22,7 +22,7 @@
                     <br><br>
               </div>
               <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                <img class="object-cover object-center rounded" alt="hero" src="/images/data2.png">
+                <img class="object-cover object-center rounded" alt="Data imagery" src="/images/data2.png">
               </div>
             </div>
           </section>
@@ -75,12 +75,12 @@
                 </div>
                 <div class="flex justify-center">
                     <x-button-link href="/content/student_resources" class="btn-primary">
-                        Information for Students
+                        Projects available
                     </x-button-link>
 
                     <x-button-link href="/content/supervisor_resources" class="ml-20 btn-primary">
                         Information for Supervisors
                     </x-button-link>
-                </div>      
+                </div>
         </section>
 </x-guest-layout>
