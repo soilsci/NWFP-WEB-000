@@ -19,6 +19,8 @@
 <livewire:list-projects />
 
 
+<livewire:list-publications  keyref="keyRefStudent" />
+
     <section>
         <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
 

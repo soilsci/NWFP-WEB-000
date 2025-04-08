@@ -5,16 +5,11 @@
         </h2>
     </x-slot>
 
-    <h2 class="h-16 content-center text-center bg-nw-blue-700 px-4 text-2xl font-medium text-nw-blue-50">
+    <h2 class="h-16 content-center bg-nw-blue-700 px-4 text-center text-2xl font-medium text-nw-blue-50">
         Introduction</h2>
 
-    <p style="text-align:center" class="px-1 pt-5">
-        <x-button-link href="/content/student_projects" class="btn-primary">
-            Back
-        </x-button-link>
-    </p>
     <section class="m-6">
-        <div style="text-align:justify" class="p-3">
+        <div class="p-3" style="text-align:justify">
             <p>The North Wyke Farm Platform and wider facilities has a
                 long track record of supporting post graduate research projects.
                 One of the purposes of the farm platform is to provide exceptional resources and data for academics from
@@ -25,8 +20,8 @@
                 cost.</p>
             <br>
             <p>You can access this data for your students or for your own study immediately and for free by
-                <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"
-                    href="https://nwfp.rothamsted.ac.uk/">
+                <a href="https://nwfp.rothamsted.ac.uk/"
+                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
                     <u style="color:red;">registering on the NWFP Data Portal</u></a>.
             </p>
             <br>
@@ -36,9 +31,8 @@
         </div>
     </section>
 
-
     <div class="p-0">
-        <h2 class="h-16 content-center text-center bg-nw-blue-700 px-4 text-2xl font-medium text-nw-blue-50">
+        <h2 class="h-16 content-center bg-nw-blue-700 px-4 text-center text-2xl font-medium text-nw-blue-50">
             How we support students</h2>
     </div>
     <section class="mx-0 my-0 bg-white">
@@ -57,25 +51,40 @@
                 document)</x-li-dot>
         </ul>
 
-        <div class="m-10">
-            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=yes,scrollbars=yes,dependent=no'); return false;"
-                href="https://www.youtube.com/watch?v=q_YGPW_T9oM"><u>Video Testimonial [Imperial College,
-                    London]</u><a>
-            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=yes,scrollbars=yes,dependent=no'); return false;"
-                href="https://www.youtube.com/watch?v=FYW_j0rGjkM"><u>Video Testimonial [Imperial College,
-                        London]</u><a>
+
+        <div class="w-100 container mx-auto grid grid-cols-2 gap-4 px-3 lg:w-4/5">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/q_YGPW_T9oM?si=651Ze1SyKp13s4fu" title="YouTube video player"
+                    width="377" height="210" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/FYW_j0rGjkM?si=_orT8xm48xxIVZnb" title="YouTube video player"
+                    width="377" height="210" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </section>
-    
+
     <div class="p-1">
         <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-3">
             <b>Please contact</b>
-            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"
-                href="mailto:nw.farmplatform@rothamsted.ac.uk">
+            <a href="mailto:nw.farmplatform@rothamsted.ac.uk"
+                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
                 <u>nw.farmplatform@rothamsted.ac.uk</u>
             </a>for enquiries.
             </p>
         </div>
     </div>
+    <section class="m-0 bg-gray-100">
+        <div class="flex justify-center p-10">
+
+            <x-button-link class="btn-primary ml-20" href="/content/supervisor_resources">
+                Back to Student's projects
+            </x-button-link>
+        </div>
+    </section>
 
 </x-guest-layout>

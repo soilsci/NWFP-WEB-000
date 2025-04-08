@@ -37,7 +37,9 @@ class ProjectResource extends Resource
         return $form
             ->schema([
                 Toggle::make('is_available'),
+                Toggle::make('is_training'),
                 TextInput::make('name')->columnSpan(2) ,
+                TextInput::make('imagefile')->label('Filename with extension')->columnSpan(2) ,
                 RichEditor::make('goal')->columnSpan(2) ,
                 RichEditor::make('description')->columnSpan(2) ,
                 Select::make('data')
@@ -68,7 +70,13 @@ class ProjectResource extends Resource
                 ->trueIcon('heroicon-o-check-badge')
                 ->falseIcon('heroicon-o-x-mark')
                 ->label('is Available'),
+                IconColumn::make('is_training')
+                ->boolean()
+                ->trueIcon('heroicon-o-check-badge')
+                ->falseIcon('heroicon-o-x-mark')
+                ->label('is Available'),
                 TextColumn::make('name')->limit(50),
+                TextColumn::make('imagefile')->label('Filename with extension')->limit(50),
                 TextColumn::make('goal')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('description')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('additional_data')->limit(50)->lineClamp(2)->html(),
