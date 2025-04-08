@@ -4,22 +4,18 @@
 
         @foreach ($pinned as $pin)
             <!-- card -->
-            <div class="max-w-100 mx-2 mt-4 flex aspect-square w-64 flex-col justify-between overflow-hidden rounded-lg border-l-4 border-orange-400 bg-gray-200 px-6 py-4 text-gray-800 shadow-xl hover:bg-orange-200 hover:shadow-md"
+            <div class="max-w-100 mx-2 mt-4 flex  w-100 flex-col justify-between overflow-hidden rounded-lg  px-6  text-gray-800 "
                 v-for="card in cards">
-
-                <div class="">
-                    <h3 class="truncate text-lg font-semibold leading-tight">{{ $pin->title }}</h3>
-                    <p class="mt-2 text-sm tracking-wide text-gray-700">
-                        {!! $pin->description !!}
-                    </p>
+                <div class="pt-5">
+                    <a  href="{{ route('content.with.page', ['page' => $pin->name]) }}">
+                        <img src="/images/sq-{{ $pin->imagefile }}" class="rounded-full w-64 text-lg text-white bg-orange-400 mx-auto my-5 hover:bg-orange-300 p-5" />
+                    </a>
                 </div>
-                <div class="border-t-4 border-orange-400 pt-5">
-
-                    <x-button-link class="btn-primary" href="{{ route('content.with.page', ['page' => $pin->name]) }}">
-                        More...
-                    </x-button-link>
+                <div class="mx-auto border-t-4 border-orange-400 py-5">
+                    <h3 class="truncate text-lg font-semibold leading-tight mx-auto">{{ $pin->title }}</h3>
 
                 </div>
+
 
             </div><!--/ card-->
         @endforeach

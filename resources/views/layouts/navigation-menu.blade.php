@@ -64,7 +64,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
                             {{ __('Study with us') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
                             {{ __('Work with us') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
