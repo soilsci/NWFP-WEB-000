@@ -64,7 +64,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
                             {{ __('Study with us') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'work_with_us']) }}">
                             {{ __('Work with us') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
@@ -97,7 +97,8 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
-                <x-dropdown2> {{--  ---------  Search that does not work --------- --}}
+                {{-- ---------  Search that has not been implemented yet !  ---------
+                <x-dropdown2>
                     <x-slot name="trigger">
                         <span
                             class="dark:border-neutral-400 flex items-center whitespace-nowrap px-3 py-[0.25rem] text-nw-blue-700 dark:text-white [&>svg]:h-5 [&>svg]:w-5"
@@ -125,6 +126,7 @@
                         </div>
                     </x-slot>
                 </x-dropdown2>
+                --}}
                 @if (Route::has('login')) {{--  ---------  Profile Picture of the logged in person --------- --}}
                     @auth
                             <x-dropdown2>
@@ -207,19 +209,7 @@
     </div>
     <div class="hidden sm:hidden" :class="{ 'block': open, 'hidden': !open }">{{-- Responsive Navigation Menu --}}
         <div class="space-y-1 pb-3 pt-2">
-            <div class="relative flex border-b border-gray-200 py-2">
-                <x-input class="mt-1 block w-full" id="examplesearch" type="search" placeholder="Search" />
 
-                <span
-                    class="dark:border-neutral-400 flex items-center whitespace-nowrap px-3 py-[0.25rem] text-nw-blue-700 dark:text-white [&>svg]:h-5 [&>svg]:w-5"
-                    id="button-addon2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                    </svg>
-                </span>
-            </div>
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
