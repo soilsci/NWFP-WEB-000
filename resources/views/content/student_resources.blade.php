@@ -40,4 +40,24 @@
         </div>
 
     </section>
+    <section>
+        <h2 class="h-16 content-center text-center bg-nw-blue-700 px-4 text-2xl font-medium text-nw-blue-50">
+            Video Testimonies</h2>
+            <p style="text-align:center" class="px-1 pt-5">
+            </p>
+        <div class="w-100 container mx-auto grid grid-cols-2 gap-4 px-3 lg:w-4/5">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/q_YGPW_T9oM?si=651Ze1SyKp13s4fu" title="YouTube video player"
+                    width="377" height="210" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/FYW_j0rGjkM?si=_orT8xm48xxIVZnb" title="YouTube video player"
+                    width="377" height="210" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
 </x-guest-layout>

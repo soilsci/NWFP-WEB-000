@@ -81,7 +81,7 @@
     <section class="m-0 bg-gray-100">
         <div class="flex justify-center p-10">
 
-            <x-button-link class="btn-primary ml-20" href="/content/supervisor_resources">
+            <x-button-link class="btn-primary ml-20" href="/content/student_projects">
                 Back to Student's projects
             </x-button-link>
         </div>

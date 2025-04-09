@@ -5,6 +5,7 @@
                 {{ __('Student Projects') }}
             </h2>
         </x-slot>
+
         <section class="body-font text-gray-600">
             <div class="container mx-auto flex flex-col items-center px-10 py-10 md:flex-row">
                 <div
@@ -21,7 +22,10 @@
                         be happy to discuss with you whether you are a undergraduate/postgraduate student or a Director
                         of
                         Studies or Supervisor.
-                        <br><br>
+                        <br><br></p>
+                        <x-button-link class="btn-primary ml-20" href="/content/supervisor_resources">
+                            Information for Supervisors
+                        </x-button-link>
                 </div>
                 <div class="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
                     <img class="rounded object-cover object-center" src="/images/data2.png" alt="Data imagery">
@@ -98,6 +102,26 @@
             <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
                 Student Publications </h2>
             <livewire:list-publications keyref="keyRefStudent" />
+        </section>
+        <section>
+            <h2 class="h-16 content-center text-center bg-nw-blue-700 px-4 text-2xl font-medium text-nw-blue-50">
+                Video Testimonies</h2>
+                <p style="text-align:center" class="px-1 pt-5">
+                </p>
+            <div class="w-100 container mx-auto grid grid-cols-2 gap-4 px-3 lg:w-4/5">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/q_YGPW_T9oM?si=651Ze1SyKp13s4fu" title="YouTube video player"
+                        width="377" height="210" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/FYW_j0rGjkM?si=_orT8xm48xxIVZnb" title="YouTube video player"
+                        width="377" height="210" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
         <section class="m-0 bg-gray-100">
             <div class="flex justify-center p-10">
