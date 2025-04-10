@@ -1,5 +1,5 @@
 <div class="container">
-    <x-slot name="header">
+    <x-slot name="sub_header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
             {{ __('Testimonies') }}
         </h2>
@@ -17,7 +17,7 @@
             }
         @endphp
         <div class="row {{ $align }} grid justify-items-start">
-            <div class="w-4/5 {{ $align }} mx-2 mt-4  rounded-lg border-l-4 border-nw-blue-700 bg-gray-200 px-6 py-4 text-gray-800 shadow-xl hover:bg-gray-400 hover:shadow-md"
+            <div class="w-4/5  mx-2 m-4   border-2 border-nw-blue-700 bg-gray-200 px-6 py-4 text-gray-800 shadow-xl hover:bg-gray-400 hover:shadow-md"
                 v-for="card in cards">
 
                 <div class="">
@@ -26,7 +26,7 @@
                         {!! $testimony->short !!}
                     </p>
                 </div>
-                <div class="border-t-4 border-nw-blue-700 pt-5">
+                <div class="pt-5">
 
                     <x-button-link class="btn-primary" href="testimonies/{{$testimony->id}}">
                         More...
