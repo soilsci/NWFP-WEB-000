@@ -28,7 +28,7 @@
                 </div>
                 <div class="pt-5">
 
-                    <x-button-link class="btn-primary" href="testimonies/{{$testimony->id}}">
+                    <x-button-link class="btn-primary" href="/testimonies/{{$testimony->id}}">
                         More...
                     </x-button-link>
 
