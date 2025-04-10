@@ -3,6 +3,8 @@
 use App\Http\Controllers\PublicationController;
 use Illuminate\Support\Facades\Route;
 Use App\Livewire\ListUsers;
+Use App\Livewire\Testimonies;
+Use App\Livewire\Testimonies\Show;
 
 Route::get('/', function () {
     return view('index');
@@ -18,6 +20,11 @@ Route::get('content/{page}', function ($page) {
 Route::get('/information', function () {
     return view('content.information');
 })->name('information');
+
+Route::get('testimonies', Testimonies::class)->name('testimonies');
+Route::get('testimonies/{id}', Testimonies\Show::class);
+
+
 
 Route::get('/nw-guides', function () {
     return view('content.nw-guides');

@@ -1,10 +1,10 @@
 <x-guest-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Publications') }}
+            {{ __('Testimonies') }}
         </h2>
     </x-slot>
 
-    <livewire:publications  keyref="" />
+    <livewire:testimonies  />
 
 </x-guest-layout>

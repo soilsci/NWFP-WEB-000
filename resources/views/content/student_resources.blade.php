@@ -16,10 +16,10 @@
         </p>
 
 
-<livewire:list-projects />
+<livewire:projects />
 
 
-<livewire:list-publications  keyref="keyRefStudent" />
+<livewire:publications  keyref="keyRefStudent" />
 
     <section>
         <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
@@ -40,6 +40,7 @@
         </div>
 
     </section>
+
     <section>
         <h2 class="h-16 content-center text-center bg-nw-blue-700 px-4 text-2xl font-medium text-nw-blue-50">
             Video Testimonies</h2>
@@ -60,4 +61,6 @@
             </div>
         </div>
     </section>
+    <livewire:testimonies />
+
 </x-guest-layout>

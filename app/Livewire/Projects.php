@@ -16,7 +16,7 @@ use Filament\Forms\Components\Select;
  * I have started trying to use the filament hasform to have a multislect and I am struggling putting the data in there.,
  * Getting there, but I am still not getting the information to get through
  */
-class ListProjects extends Component implements HasForms
+class Projects extends Component implements HasForms
 {
     use InteractsWithForms;
 
@@ -67,7 +67,7 @@ class ListProjects extends Component implements HasForms
         ->when($this->searchRef !== '', fn(Builder $query) => $query->where('title', 'ilike', '%'. $this->searchRef .'%'))
         ->when($this->searchAuth !== '', fn(Builder $query) => $query->where('authors', 'ilike', '%'. $this->searchAuth .'%'))
         ->get(); */
-        return view('livewire.list-projects', [
+        return view('livewire.projects', [
             'projects' => $this->projects,
             'themes' => $this->themes,
 

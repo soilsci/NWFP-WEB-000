@@ -6,7 +6,7 @@
     </x-slot>
 
 
-    <livewire:list-publications  keyref="KeyRefUserGuide" />
+    <livewire:publications  keyref="KeyRefUserGuide" />
 
 
 </x-guest-layout>

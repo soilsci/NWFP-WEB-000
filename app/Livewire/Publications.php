@@ -6,7 +6,7 @@ use Livewire\Component;
 use Illuminate\Database\Eloquent\Builder;
 use App\Models\Publication;
 
-class ListPublications extends Component
+class Publications extends Component
 {
     public $ref_type;
 
@@ -27,7 +27,7 @@ class ListPublications extends Component
         ->when($this->searchRef !== '', fn(Builder $query) => $query->where('title', 'ilike', '%'. $this->searchRef .'%'))
         ->when($this->searchAuth !== '', fn(Builder $query) => $query->where('authors', 'ilike', '%'. $this->searchAuth .'%'))
         ->get();
-        return view('livewire.list-publications', [
+        return view('livewire.publications', [
             'publications' => $this->publications
         ]);
     }

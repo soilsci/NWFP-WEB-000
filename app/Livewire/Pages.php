@@ -12,7 +12,7 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Components\Select;
 
 
-class ListPages extends Component
+class Pages extends Component
 {   public $pages;
     public $pinned;
 
@@ -28,7 +28,7 @@ class ListPages extends Component
         ->get();
 
 
-        return view('livewire.list-pages', [
+        return view('livewire.pages', [
             'pinned'=> $this->pinned,
             'pages' => $this->pages,
         ]);
