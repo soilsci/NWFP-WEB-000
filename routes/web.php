@@ -22,7 +22,7 @@ Route::get('/information', function () {
 })->name('information');
 
 Route::get('testimonies', Testimonies::class)->name('testimonies');
-Route::get('testimonies/{id}', Testimonies\Show::class);
+Route::get('testimonies/{id}', Testimonies::class);
 
 
 
