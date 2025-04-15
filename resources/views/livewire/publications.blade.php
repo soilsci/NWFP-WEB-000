@@ -1,4 +1,9 @@
 <div>
+    <x-slot name="sub-header">
+        <h2 class="text-xl font-semibold leading-tight text-gray-800">
+            {{ __('Publications') }}
+        </h2>
+    </x-slot>
     <div class="flex flex-col items-center justify-between space-y-3 p-4 md:flex-row md:space-x-4 md:space-y-0">
         <div class="w-full md:w-1/2">
             <form class="flex items-center">

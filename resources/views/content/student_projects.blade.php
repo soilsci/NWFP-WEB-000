@@ -97,11 +97,11 @@
             <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
                 Available Projects</h2>
 
-            <livewire:list-projects />
+            <livewire:projects />
 
             <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
                 Student Publications </h2>
-            <livewire:list-publications keyref="keyRefStudent" />
+            <livewire:publications keyref="keyRefStudent" />
         </section>
         <section>
             <h2 class="h-16 content-center text-center bg-nw-blue-700 px-4 text-2xl font-medium text-nw-blue-50">
@@ -122,6 +122,12 @@
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
+        </section>
+        <section class="pt-3">
+
+        <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
+            Student Testimonies</h2>
+        <livewire:testimonies />
         </section>
         <section class="m-0 bg-gray-100">
             <div class="flex justify-center p-10">

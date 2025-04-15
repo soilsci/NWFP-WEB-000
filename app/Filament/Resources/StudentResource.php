@@ -36,14 +36,14 @@ class StudentResource extends Resource
                 TextInput::make('first_name'),
                 TextInput::make('last_name'),
                 Select::make('organisation_id')
-    ->label('Organisation or Institute')
-    ->options(Organisation::all()->pluck('abbrev', 'id'))
-    ->searchable(),
+                    ->label('Organisation or Institute')
+                    ->options(Organisation::all()->pluck('abbrev', 'id'))
+                    ->searchable(),
                 TextInput::make('course_name'),
                 Select::make('projects')
-                ->relationship('projects', 'name')
-                ->preload()
-                ->multiple(),
+                    ->relationship('projects', 'name')
+                    ->preload()
+                    ->multiple(),
 
             ]);
     }
@@ -56,7 +56,6 @@ class StudentResource extends Resource
                 TextColumn::make('last_name'),
                 TextColumn::make('organisation.abbrev')->label('Institute'),
                 TextColumn::make('course_name'),
-
                 TextColumn::make('projects.name')
                 ->listWithLineBreaks()
                 ->bulleted(),

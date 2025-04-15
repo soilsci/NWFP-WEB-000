@@ -13,6 +13,6 @@
         </p>
  --}}
 
- <livewire:list-pages />
+ <livewire:pages />
 
 </x-guest-layout>
