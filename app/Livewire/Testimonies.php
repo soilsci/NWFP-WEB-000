@@ -22,32 +22,21 @@ class Testimonies extends Component
     public $student;
     public $projects;
     public $project;
+    public $organisation;
     public $id;
     public $data = array();
     public $view = 'livewire.testimonies';
     public $style; // a variable to choose the kind of display
 
-    public function mount() {
-        //
-    }
-
-
-    public function getData() {
-        // This to choose what is sent to which view
-
-    }
-
-    public function render()
-    {
-        $view = 'livewire.testimonies';
-
+    public function mount()
+        {
 
         if ($this -> id == 0 ) {
             // there is no specific ID, so the view is the defaut list for the moment
             $this -> testimonies = Testimony::where('is_visible', TRUE)
             ->get();
-            $this -> students = Student::all(); // if we want to have some list of students
-            $this -> projects = Project::all(); // if we want to list the projects
+            //$this -> students = Student::all(); // if we want to have some list of students
+            //$this -> projects = Project::all(); // if we want to list the projects
             $this -> data = [
                 'id'=> 0,
                 'testimonies' => $this->testimonies,
@@ -56,32 +45,41 @@ class Testimonies extends Component
             ];
             $this -> view= 'livewire.testimonies';
         }
-        else
+        elseif ($this -> id != 0 )
         // this is one testimony so the view is "show" for the moment
         {
             //If you only need a single record, using first() will return an Eloquent
             //model instance instead of a Collection. This method is faster and more efficient
             //when you know you're only fetching one record.
+            $id = $this->id;
+            $this -> testimony = Testimony::where('id', $id)->first();
+            $this -> student = $this -> testimony->student;
 
-            $this -> testimony = Testimony::find($this->id)->first();
-            $this -> student = $this -> testimony->student->first();
-
-            $org = $this -> student->organisation;
-
-
+            $this ->organisation = $this -> student->organisation;
             $this -> view = 'livewire.testimonies.show';
             $this -> data = [
                 'id'=> $this->id,
                 'testimony' => $this -> testimony,
                 'student' => $this -> student,
-                'organisation'=>$org,
-
+                'organisation'=> $this -> organisation,
             ];
 
+
         }
+    }
 
 
-        return view ($this -> view, $this -> data)
+    public function getData() {
+        // This to choose what is sent to which view
+        // I am doing that in mount();
+
+    }
+
+    public function render()
+    {
+        return view (
+            $this -> view, $this
+        -> data )
         ->layout('layouts.guest');
     }
 }
