@@ -10,10 +10,7 @@
             <div class="container mx-auto flex flex-col items-center px-10 py-10 md:flex-row">
                 <div
                     class="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
-                    <h1 class="title-font mb-6 text-3xl font-medium text-gray-900 sm:text-4xl">
-                        Introduction
-                        <br class="hidden lg:inline-block">
-                    </h1>
+
                     <p class="mb-8 leading-relaxed" style = "text-align:justify">
                         The North Wyke Farm Platform is an exceptional resource for research student projects.
                         Research projects can take place on the farm platform or our long term data sets
