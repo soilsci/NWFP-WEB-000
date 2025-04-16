@@ -87,7 +87,14 @@
             </div>
         </section>
 
+        <section class="py-5">
 
+            <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
+                Student Testimonies</h2>
+            <livewire:testimonies />
+
+
+            </section>
 
 
         <section class="body-font text-gray-600">
@@ -101,12 +108,7 @@
             <livewire:publications keyref="keyRefStudent" />
         </section>
 
-        <section class="pt-3">
 
-        <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
-            Student Testimonies</h2>
-        <livewire:testimonies />
-        </section>
         <section class="m-0 bg-gray-100">
             <div class="flex justify-center p-10">
 

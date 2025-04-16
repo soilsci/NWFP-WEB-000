@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div> --}}
-        <div class="mx-auto mt-24 ">
+        <div class="mx-auto mt-12 ">
             <div
                 class="flex items-center justify-start gap-3 overflow-hidden rounded-xl border border-nw-blue-700 bg-white">
 
