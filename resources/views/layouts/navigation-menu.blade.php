@@ -61,7 +61,7 @@
                     </x-slot>
                     <x-slot name="content">
 
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'student_projects']) }}">
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'study_with_us']) }}">
                             {{ __('Study with us') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'work_with_us']) }}">
