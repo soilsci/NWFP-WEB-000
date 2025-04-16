@@ -52,7 +52,7 @@
         </ul>
 
 
-        <div class="w-100 container mx-auto grid grid-cols-2 gap-4 px-3 lg:w-4/5">
+        <div class="w-100 container mx-auto grid grid-cols-2 gap-4 p-10 lg:w-4/5">
             <div class="aspect-w-16 aspect-h-9">
                 <iframe src="https://www.youtube.com/embed/q_YGPW_T9oM?si=651Ze1SyKp13s4fu" title="YouTube video player"
                     width="377" height="210" frameborder="0"
