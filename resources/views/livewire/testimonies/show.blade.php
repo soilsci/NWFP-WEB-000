@@ -15,15 +15,25 @@
         <div class="text-lg">{{ $student -> first_name . ' '  . $student -> last_name  }} - {{ $organisation -> name  }} </div>
     </div>
     <div class="py-5 px-10 text-lg italic text-center ">{!! $testimony -> short !!}</div>
+
+    @if($testimony -> video_id)
+    <div class="flex flex-col items-center bg-gray-300 w-100">
+<div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/{{ $testimony -> video_id }}" title="YouTube video player"
+                        width="400" height="225" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+    @endif
     @if ($testimony -> long)
     <div class="py-3 px-3 border-t-2 border-nw-blue-900">{!! $testimony -> long !!}</div>
-
     @endif
-     <div class="p-5 ">Things to list: as a reminder what we could have here too.
+
+    <div class="p-5 ">
         <ul>
-            <x-li-arrow>Link or frame to external</x-li-arrow>
-            <x-li-arrow>Link to the project refered to </x-li-arrow>
-            <x-li-arrow>Any papers that the student has written?</x-li-arrow>
+            <x-li-arrow>Project : {{ $project -> name }} </x-li-arrow>
+
         </ul>
     </div>
 
