@@ -16,15 +16,17 @@ use Filament\Forms\Components\Select;
 
 class Testimonies extends Component
 {
-    public $testimonies;
-    public $testimony;
-    public $students;
-    public $student;
+    public $id;
+
+    public $data = array();
+    public $organisation;
     public $projects;
     public $project;
-    public $organisation;
-    public $id;
-    public $data = array();
+    public $students;
+    public $student;
+    public $testimonies;
+    public $testimony;
+
     public $view = 'livewire.testimonies';
     public $style; // a variable to choose the kind of display
 
@@ -54,13 +56,17 @@ class Testimonies extends Component
             $id = $this->id;
             $this -> testimony = Testimony::where('id', $id)->first();
             $this -> student = $this -> testimony->student;
+            $this -> project = $this -> testimony->project; //the project associated with that specific testimony
+            $this -> projects = $this -> student -> projects; // the projects that the student has worked on
 
             $this ->organisation = $this -> student->organisation;
             $this -> view = 'livewire.testimonies.show';
             $this -> data = [
                 'id'=> $this->id,
                 'testimony' => $this -> testimony,
+                'project' => $this -> project,
                 'student' => $this -> student,
+                'projects' => $this -> projects,
                 'organisation'=> $this -> organisation,
             ];
 

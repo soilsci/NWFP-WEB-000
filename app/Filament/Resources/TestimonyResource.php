@@ -29,7 +29,10 @@ class TestimonyResource extends Resource
     protected static ?string $model = Testimony::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -48,9 +51,9 @@ class TestimonyResource extends Resource
             Select::make('project_id')
             ->options(Project::all()->pluck('name', 'id'))
             ->preload()
-            ->required()
             ->columnSpan(2),
             TextInput::make('URL')->label('URL to outside video, blog or poster')->columnSpan(2) ,
+            TextInput::make('video_id')->label('CODE to YOUTUBE video')->columnSpan(2) ,
 
         ]);
     }
@@ -67,11 +70,12 @@ class TestimonyResource extends Resource
 
                 TextColumn::make('title')->limit(50),
                 TextColumn::make('URL')->label('URL')->limit(50),
+                TextColumn::make('video_id')->label('Video')->limit(50),
                 TextColumn::make('short')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('long')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('student.first_name'),
                 TextColumn::make('student.last_name'),
-                TextColumn::make('project.title')->label('Project')->limit(50),
+                TextColumn::make('project.name')->label('Project')->limit(50),
 
             ])
             ->filters([
