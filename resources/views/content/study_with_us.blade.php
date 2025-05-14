@@ -19,10 +19,11 @@
                         be happy to discuss with you whether you are a undergraduate/postgraduate student or a Director
                         of
                         Studies or Supervisor.
-                        <br><br></p>
-                        <x-button-link class="btn-primary ml-20" href="/content/supervisor_resources">
-                            Information for Supervisors
-                        </x-button-link>
+                        <br><br>
+                    </p>
+                    <x-button-link class="btn-primary ml-20" href="/content/supervisor_resources">
+                        Information for Supervisors
+                    </x-button-link>
                 </div>
                 <div class="w-5/6 md:w-1/2 lg:w-full lg:max-w-lg">
                     <img class="rounded object-cover object-center" src="/images/data2.png" alt="Data imagery">
@@ -30,7 +31,7 @@
             </div>
         </section>
 
-        <section class="m-0 bg-gray-100 ">
+        <section class="m-0 bg-gray-100">
             <div class="p-10">
                 <div class="p-0" style="text-align:justify;padding-right:0px">
                     <b>We are excited to support projects from a wide range of disciplines. Recent collaborations at
@@ -86,16 +87,69 @@
                 </div>
             </div>
         </section>
+        <section class="py-5">
+            <div class="px-2">
+                <div class="flex justify-center">
+                    <div class="px-2">
 
+                        <div class="max-w-sm overflow-hidden rounded shadow-lg">
+                            <video width="400" height="300" controls muted>
+                                <source src="/videos/NorthWyke_V1.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="px-6 py-4">
+                                <div class="mb-2 text-xl font-bold">Data and the Farm Platform</div>
+                                <p class="text-base text-gray-700">
+                                PUT DESCRIPTION HERE
+                                </p>
+                            </div>
+                            <div class="px-6 pb-2 pt-4">
+                                <span
+                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#data</span>
+                                <span
+                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#farm</span>
+                                <span
+                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#experiment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-2">
+
+                        <div class="max-w-sm overflow-hidden rounded shadow-lg">
+                            <video width="400" height="300" controls muted>
+                                <source src="/videos/Post_Grad_research_overview.mp4" type="video/mp4">
+
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="px-6 py-4">
+                                <div class="mb-2 text-xl font-bold">Farm Platform Research Overview</div>
+                                <p class="text-base text-gray-700">
+                                PUT DESCRIPTION HERE
+                                </p>
+                            </div>
+                            <div class="px-6 pb-2 pt-4">
+                                <span
+                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#this</span>
+                                <span
+                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#could</span>
+                                <span
+                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#disapear</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
         <section class="py-5">
 
-            <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
+            <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
                 Student Testimonies</h2>
             <livewire:testimonies />
 
-
-            </section>
-
+        </section>
 
         <section class="body-font text-gray-600">
             <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
@@ -103,11 +157,11 @@
 
             <livewire:projects />
 
-            <h2 class="h-16 content-center bg-nw-blue-700  text-center text-2xl font-medium text-nw-blue-50">
+            <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
                 Student Publications </h2>
             <livewire:publications keyref="keyRefStudent" />
         </section>
-
+        </section>
 
         <section class="m-0 bg-gray-100">
             <div class="flex justify-center p-10">

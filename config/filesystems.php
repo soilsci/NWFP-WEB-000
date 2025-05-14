@@ -50,7 +50,14 @@ return [
         'url' => env('APP_URL').'/images',
         'visibility' => 'public',
         'throw' => false,
-      ],
+        ],
+        'videos' => [
+        'driver' => 'local',
+        'root' => '/videos',
+        'url' => env('APP_URL').'/videos',
+        'visibility' => 'public',
+        'throw' => false,
+        ],
 
         's3' => [
             'driver' => 's3',
