@@ -59,6 +59,7 @@ class Projects extends Component implements HasForms
     public function render()
     {
         $this -> projects = Project::where('name', 'ilike', '% %')
+        ->where('is_available', TRUE)
         ->when($this->searchProj !== '', fn(Builder $query) => $query->where('name', 'ilike', '%'. $this->searchProj .'%'))
         ->get();
 

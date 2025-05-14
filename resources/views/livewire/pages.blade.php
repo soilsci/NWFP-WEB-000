@@ -8,10 +8,10 @@
                 v-for="card in cards">
                 <div class="pt-5">
                     <a  href="{{ route('content.with.page', ['page' => $pin->name]) }}">
-                        <img src="/images/sq-{{ $pin->imagefile }}" class="rounded-full w-64 text-lg text-white bg-orange-400 mx-auto my-5 hover:bg-orange-300 p-5" />
+                        <img src="/images/sq-{{ $pin->imagefile }}" class="rounded-full w-64 text-lg text-white bg-nw-blue-900 mx-auto my-5 hover:bg-nw-blue-600 p-5" />
                     </a>
                 </div>
-                <div class="mx-auto border-t-4 border-orange-400 py-5">
+                <div class="mx-auto border-t-4 border-nw-blue-900 py-5">
                     <h3 class="truncate text-lg font-semibold leading-tight mx-auto">{{ $pin->title }}</h3>
 
                 </div>

@@ -29,14 +29,14 @@
     @if ($testimony -> long)
     <div class="py-3 px-3 border-t-2 border-nw-blue-900">{!! $testimony -> long !!}</div>
     @endif
-
+@if ($testimony ->project_id)
     <div class="p-5 ">
         <ul>
             <x-li-arrow>Project : {{ $project -> name }} </x-li-arrow>
 
         </ul>
     </div>
-
+@endif
 
 
 </div>
