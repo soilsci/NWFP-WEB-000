@@ -29,6 +29,10 @@
     @if ($testimony -> long)
     <div class="py-3 px-3 border-t-2 border-nw-blue-900">{!! $testimony -> long !!}</div>
     @endif
+
+        @if ($testimony -> video_id == null && $testimony -> URL)
+    <p class="p-2"><a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900" href="{{ $testimony -> URL }}">{{ $testimony -> URL }}</p>
+    @endif
 @if ($testimony ->project_id)
     <div class="p-5 ">
         <ul>
