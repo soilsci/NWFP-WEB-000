@@ -38,7 +38,7 @@
                     <x-lb.element.modal>
 
                         <x-slot name="trigger">
-                            <x-button-link>More...</x-button-link>
+                            <x-button-link>Preview...</x-button-link>
 
                         </x-slot>
 
@@ -49,7 +49,7 @@
                                 <p class="mt-2 border-b-4 border-nw-blue-700 text-sm tracking-wide text-gray-700">
                                     DESCRIPTION:
                                 </p>
-                                {!! $project->description !!}
+                                {!! Str::substr($project->description, 0, 200) !!}...
                                 <p class="mt-2 border-b-4 border-nw-blue-700 text-sm tracking-wide text-gray-700">
                                     THEMES:
                                 </p>
@@ -69,8 +69,11 @@
                             </x-lb.element.modal.body>
 
                             <x-lb.element.modal.footer>
-
+                                <x-button-link href="/projects/{{ $project->id }}">
+                                    View
+                                </x-button-link>
                                 <x-button-link>Close</x-button-link>
+
                             </x-lb.element.modal.footer>
 
                         </x-lb.element.modal.panel>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\PublicationController;
 use Illuminate\Support\Facades\Route;
 Use App\Livewire\ListUsers;
+use App\Livewire\Projects;
 Use App\Livewire\Testimonies;
 Use App\Livewire\Testimonies\Show;
 
@@ -23,6 +24,9 @@ Route::get('/information', function () {
 
 Route::get('testimonies', Testimonies::class)->name('testimonies');
 Route::get('testimonies/{id}', Testimonies::class);
+
+Route::get('projects', Projects::class)->name('projects');
+Route::get('projects/{id}', Projects::class);
 
 
 
