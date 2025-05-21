@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div> --}}
-        <div class="mx-auto mt-12 ">
+        <div class="mx-auto mt-12">
             <div
                 class="flex items-center justify-start gap-3 overflow-hidden rounded-xl border border-nw-blue-700 bg-white">
 
@@ -47,7 +47,13 @@
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
+                    @else
+                        <div class="aspect-w-16 aspect-h-9">
+                            <a href="{{ $testimony->URL }}"><img src="https://picsum.photos/id/159/400/225" title="{{$testimony->URL  }}" width="400"
+                                height="225" frameborder="0" /></a>
+                        </div>
                     @endif
+
                 </div>
 
                 <div class="flex flex-col gap-2 p-2">
