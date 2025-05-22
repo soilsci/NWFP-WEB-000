@@ -11,7 +11,8 @@
     </x-slot>
 
     <div class="bg-nw-blue-900 p-10 text-center text-3xl font-medium text-gray-50">
-        <div class="text-3xl"> {!! $project->name !!}</div>
+        <div class="text-3xl">{!! $project->name !!} <br >
+        <x-button-link  href="{{ url()->previous() }}">Back</x-button-link>  </div>
     </div>
     <div class="px-10 py-5 text-lg italic">{!! $project->goal !!}</div>
 
