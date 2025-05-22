@@ -10,27 +10,11 @@
     </x-slot>
 
     <div class="p-3">
-
-        <span
-            class="me-2 rounded-full border-2 border-nw-blue-900 bg-nw-blue-900 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
-            <a href="#data_use">Data Use</a>
-        </span>
-        <span
-            class="me-2 rounded-full border-2 border-nw-blue-900 bg-nw-blue-900 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
-            <a href ="#input_data">Input Data</a>
-        </span>
-        <span
-            class="me-2 rounded-full border-2 border-nw-blue-900 bg-nw-blue-900 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
-            <a href="#calibration_data">Calibration data</a>
-        </span>
-        <span
-            class="me-2 rounded-full border-2 border-nw-blue-900 bg-nw-blue-900 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
-            <a href="#further_data">Further Data and Resources</a>
-        </span>
-        <span
-            class="me-2 rounded-full border-2 border-nw-blue-900 bg-nw-blue-900 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
-            <a href="#modelled_data">Modelled Data</a>
-        </span>
+        <x-button-link href="#data_use">Data Use</x-button-link>
+        <x-button-link href="#input_data">Input Data</x-button-link>
+        <x-button-link href="#calibration_data">Calibration data</x-button-link>
+        <x-button-link href="#further_data">Further Data and Resources</x-button-link>
+        <x-button-link href="#modelled_data">Modelled Data</x-button-link>
 
     </div>
     <div class="flex">
@@ -49,12 +33,12 @@
         </div>
         <div class="border-3 m-3 border-dotted border-nw-blue-700 p-3">
 
-            <p>Rothamsted North Wyke has a long history of modelling experimental data, for example the 
+            <p>Rothamsted North Wyke has a long history of modelling experimental data, for example the
                 <a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                     href="http://www.sciencedirect.com/science/article/pii/S0048969711005742"
                     onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
                     SIMSDairy
-                </a> 
+                </a>
                 model. Models currently being used with data from the farm platform include:
             </p>
             <ul class="space-y-3">
@@ -86,9 +70,9 @@
         </div>
     </div>
     <br>
-    <h2 id="data_use" class="mt-4 h-12 content-center bg-nw-blue-500 px-4 text-lg font-medium text-nw-blue-50">
+    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id="data_use">
         <span
-            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
+            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
             Data Use
         </span> How to use the Data Portal and User Guides for modelling <a href="#top"><i> (back to top) </i></a>
     </h2>
@@ -138,7 +122,7 @@
                         onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
                         15 Minute Soil Moisture Station Data</a>
                 </x-li-arrow>
-                <x-li-arrow>User Guide to the 
+                <x-li-arrow>User Guide to the
                     <a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                         href="https://repository.rothamsted.ac.uk/item/98y4w/the-north-wyke-farm-platform-fine-resolution-15-minute-meteorological-data"
                         onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
@@ -165,12 +149,12 @@
                 helps the user become familiar with the data format and values.
             </x-li-dot>
             <x-li-dot class="bg-nw-blue-700">
-                Check the 
+                Check the
                 <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="{{ route('information') }}"><span class="font-semibold">Known Issues and Workarounds</span></a>
-                    <a>page for known problems with using the data portal.
+                    href="{{ route('information') }}"><span class="font-semibold">Known Issues and
+                        Workarounds</span></a>
+                <a>page for known problems with using the data portal.
                 </a>
-                  
 
             </x-li-dot>
             <x-li-dot class="bg-nw-blue-700">
@@ -189,7 +173,7 @@
 
     </div>
     <br>
-    <h2 id="input_data" class="mt-4 h-12 content-center bg-nw-blue-600 px-4 text-lg font-medium text-nw-blue-50">
+    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id="input_data">
         <span
             class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
             Input Data
@@ -197,7 +181,8 @@
     </h2>
     <div class="grid grid-cols-2 gap-6 p-3">
         <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Soils information can be gained from:</h3>
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Soils information can
+                be gained from:</h3>
             <ul class="space-y-3">
                 <x-li-arrow>
                     <p><a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
@@ -223,15 +208,16 @@
         </div>
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">
-                Field management data including fertilizer applications and silage cutting operations can be gained from:</h3>
+                Field management data including fertilizer applications and silage cutting operations can be gained
+                from:</h3>
             <ul class="mx-5 space-y-3">
                 <x-li-arrow>
-                    Data Portal 
+                    Data Portal
                 </x-li-arrow>
-                <x-li-arrow> 
-                    Livestock, Field Event &amp; Survey data 
+                <x-li-arrow>
+                    Livestock, Field Event &amp; Survey data
                 </x-li-arrow>
-                <x-li-arrow> 
+                <x-li-arrow>
                     Field Events datasets*.
                 </x-li-arrow>
                 <x-li-arrow>
@@ -250,9 +236,9 @@
                 Stock numbers per field can be gained from:</h3>
             <ul class="mx-5 space-y-3">
                 <x-li-arrow>
-                    Data Portal 
+                    Data Portal
                 </x-li-arrow>
-                <x-li-arrow> 
+                <x-li-arrow>
                     Livestock datasets
                 </x-li-arrow>
             </ul>
@@ -263,16 +249,17 @@
             Fertilizer Manual is useful for conversion. Ready converted fertilizer to elemental
             amounts are included<a
                 class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="/documents/Fertiliser conversion (oxide to element).pdf" 
+                href="/documents/Fertiliser conversion (oxide to element).pdf"
                 onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"><u>here</u>
             </a>for the fertilizer types used on the Farm Platform.</p>
     </div>
-<br>
-    <h2 id ="calibration_data" class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">
+    <br>
+    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id ="calibration_data">
         <span
-            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
+            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
             Calibration data
-        </span> Datasets suitable for process model calibration and validation <a href="#top"><i> (back to top) </i></a>
+        </span> Datasets suitable for process model calibration and validation <a href="#top"><i> (back to top)
+            </i></a>
     </h2>
     <div class="grid grid-cols-2 gap-6 p-3">
         <div>
@@ -313,90 +300,103 @@
             </ul>
         </div>
     </div>
-<br>
-    <h2 id="further_data" class="mt-4 h-12 content-center bg-nw-blue-800 px-4 text-lg font-medium text-nw-blue-50">
+    <br>
+    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id="further_data">
         <span
-            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
+            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
             Further Data and Resources
-        </span> Links to external data repositories and associated organisations <a href="#top"><i> (back to top) </i></a>
+        </span> Links to external data repositories and associated organisations <a href="#top"><i> (back to top)
+            </i></a>
     </h2>
     <div class="p-3">
         Extra data which may be useful in modelling North Wyke Farm Platform daily time-steps can be found on the
         <a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
             href="https://nwfp.rothamsted.ac.uk/fpdownload/"
             onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-            <u>Data Portal file store</u></a><a> since it contains statistical summaries of the 15-minute datasets, including daily
+            <u>Data Portal file store</u></a><a> since it contains statistical summaries of the 15-minute datasets,
+            including daily
             weather data, flume measurements and soil moisture, temperature and field precipitation. The
             file store also contains GIS shape files for the farm platform fields.</a>
 
         <p>Links to additional sources of data, including datasets from the North Wyke Farm Platform:</p>
-        <br>
-        <h2 class="mt-4 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Additional Data Sources</h2>
-        <br>
-        <p><ul class="mx-5 space-y-3">
-            <x-li-dot class="bg-nw-blue-700">
-                <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="https://data.rothamsted.ac.uk/dataset/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <u>Rothamsted Research Data Repository</u></a>(hosted on CKAN)
-            </x-li-dot>
+        <div class="grid grid-cols-2 gap-6 p-3">
+            <div>
+                <h3 class="mt-4 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Additional Data
+                    Sources</h3>
+                <br>
+                <p>
+                <ul class="mx-5 space-y-3">
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://data.rothamsted.ac.uk/dataset/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>Rothamsted Research Data Repository</u></a>(hosted on CKAN)
+                    </x-li-dot>
 
-            <x-li-dot class="bg-nw-blue-700">
-                <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="https://www.agrimetrics.co.uk/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <u>Agrimetrics</u></a>
-            </x-li-dot>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://www.agrimetrics.co.uk/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>Agrimetrics</u></a>
+                    </x-li-dot>
 
-            <x-li-dot class="bg-nw-blue-700">
-                <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="https://ecn.ac.uk/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <u>Environmental Change Network (ECN)</u></a>
-            </x-li-dot>
-        </ul></p>
-            
-       <br>
-        <h2 class="mt-4 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Associated Organisations</h2>
-        <br>    
-            <p><ul class="mx-5 space-y-3">
-            <x-li-dot class="bg-nw-blue-700">
-                    <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="https://www.ukri.org/"
-                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                    <u>UK Research and Innovation (UKRI)</u></a>
-            </x-li-dot>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://ecn.ac.uk/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>Environmental Change Network (ECN)</u></a>
+                    </x-li-dot>
+                </ul>
+                </p>
 
-            <x-li-dot class="bg-nw-blue-700">
-                <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="https://www.ecologicalcontinuitytrust.org/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <u>Ecological Continuity Trust (ECT)</u></a>
-            </x-li-dot>
-            
-            <x-li-dot class="bg-nw-blue-700">
-                <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="https://cosmos.ceh.ac.uk/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <u>Cosmic-ray Soil Moisture Observing System (COSMOS)</u></a>
-            </x-li-dot>
+            </div>
+            <div>
+                <h3 class="mt-4 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Associated
+                    Organisations</h3>
+                <br>
+                <p>
+                <ul class="mx-5 space-y-3">
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://www.ukri.org/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>UK Research and Innovation (UKRI)</u></a>
+                    </x-li-dot>
 
-            <x-li-dot class="bg-nw-blue-700">
-                <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="https://www.agritech-uk.org/ciel-centre-for-innovation-excellence-in-livestock/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <u>Centre for Innovation Excellence in Livestock (CIEL)</u></a>
-            </x-li-dot>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://www.ecologicalcontinuitytrust.org/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>Ecological Continuity Trust (ECT)</u></a>
+                    </x-li-dot>
 
-            </ul></p>
-        
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://cosmos.ceh.ac.uk/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>Cosmic-ray Soil Moisture Observing System (COSMOS)</u></a>
+                    </x-li-dot>
+
+                    <x-li-dot class="bg-nw-blue-700">
+                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                            href="https://www.agritech-uk.org/ciel-centre-for-innovation-excellence-in-livestock/"
+                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                            <u>Centre for Innovation Excellence in Livestock (CIEL)</u></a>
+                    </x-li-dot>
+
+                </ul>
+                </p>
+            </div>
+        </div>
+
     </div>
-<br>
-    <h2 id ="modelled_data" class="mt-4 h-12 content-center bg-nw-blue-900 px-4 text-lg font-medium text-nw-blue-50">
+    <br>
+    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id ="modelled_data">
         <span
-            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-900 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
+            class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
             Modelled Data
-        </span> Results of Process modelling carried out using the data of the Farm Platform <a href="#top"><i> (back to top) </i></a>
+        </span> Results of Process modelling carried out using the data of the Farm Platform <a href="#top"><i>
+                (back to top) </i></a>
     </h2>
     <div class="p-3">
         <h3 class="mt-4 text-lg font-medium text-nw-blue-900 underline underline-offset-4">
@@ -433,7 +433,7 @@
             </p>
         </div>
         <h3 class="mt-4 text-lg font-medium text-nw-blue-900 underline underline-offset-4">
-            DAYCENT 
+            DAYCENT
         </h3>
         <div class="ms-10 pt-5">
             <p>DAYCENT is the daily time-step version of the CENTURY biogeochemical model (Parton et al.,
