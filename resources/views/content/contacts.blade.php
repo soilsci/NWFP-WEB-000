@@ -6,7 +6,7 @@
     </x-slot>
     <div class="p-1">
         <div class="border-2 border-nw-blue-700 bg-nw-blue-50 p-4">
-            <p>Please contact 
+            <p>Please contact
                 <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="mailto:nw.farmplatform@rothamsted.ac.uk">
                     <u>nw.farmplatform@rothamsted.ac.uk</u>
                 </a>
@@ -82,22 +82,8 @@
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Farm and Design
             </h3>
-            <!-- ------------------------ One People Card -------------------   -->
-            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/bruce-griffith">
-                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50"><img
-                        class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                        src="/profile-photos/bruce-griffith.jpg">
-                    <div class="font-medium dark:text-white">
-                        <div>
-                            Bruce Griffith
-                        </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Research Farm Manager
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
+
+
 
             <!-- ------------------------ One People Card -------------------   -->
             <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/andy-jones">
@@ -130,11 +116,11 @@
                     </div>
                 </div>
             </div>
-        
+
         </div>
-        
+
         <div>
-            
+
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Soils</h3>
             <!-- ------------------------ One People Card -------------------   -->
             <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/martin-blackwell">
@@ -223,20 +209,22 @@
                 </div>
             </a>
             <!-- ------------------------ One People Card -------------------   -->
-
-            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/bruce-griffith">
-                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                    <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                        src="/profile-photos/bruce-griffith.jpg">
-                    <div class="font-medium dark:text-white">
-                        <div>Bruce Griffith
-                        </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Research Farm Manager
-                        </div>
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
+            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
+                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                    src="/profile-photos/louise-olde.jpg">
+                <div class="font-medium dark:text-white">
+                    <div>Louise Olde
+                    </div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        Science Technician
                     </div>
                 </div>
-            </a>
+            </div>
+
+        </a>
+
+
         </div>
 
         <div>
@@ -276,7 +264,7 @@
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Remote Sensing</h3>
             <!-- ------------------------ One People Card With Initials -------------------   -->
-            
+
             <div class="flex items-center gap-4 p-3">
                 <div
                     class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
@@ -287,7 +275,7 @@
                         Vacant Position
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
-                        
+
                     </div>
                 </div>
             </div>
@@ -344,11 +332,11 @@
 
             </a>
         </div>
-        
+
         <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Digital Science</h3>
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Data systems</h3>
             <!-- ------------------------ One People Card With Initials -------------------   -->
-            
+
             <div class="flex items-center gap-4 p-3">
                 <div
                     class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
@@ -359,25 +347,27 @@
                         Hazem Nureldin
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Software Engineer - Digital Twin
+                        Software Engineer
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center gap-4 p-3">
-                <div
-                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
-                    <span class="font-medium text-gray-600 dark:text-gray-300">N</span>
-                </div>
-                <div class="font-medium dark:text-white">
-                    <div>
-                        Ellen Maas
+          <!-- ------------------------ One People Card -------------------   -->
+
+            <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/richard-ostler">
+
+                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
+                    <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                        src="/profile-photos/richard-ostler.jpg">
+                    <div class="font-medium dark:text-white">
+                        <div>Richard Ostler
+                        </div>
+                        <div class="text-sm text-gray-500 dark:text-gray-400">
+                            <p>Agri-Informatician &amp;</p> <p>Data Specialist</>
+                        </div>
                     </div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Digital Twin Scientist
-                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
     </div>
@@ -385,21 +375,7 @@
     <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Technical Team</h2>
     <div class="md:grid-col-3 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
 
-        <!-- ------------------------ One People Card -------------------   -->
-        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
-            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                    src="/profile-photos/louise-olde.jpg">
-                <div class="font-medium dark:text-white">
-                    <div>Louise Olde
-                    </div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Science Technician
-                    </div>
-                </div>
-            </div>
 
-        </a>
         <!-- ------------------------ One People Card -------------------   -->
 
         <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/chris-powe">
@@ -446,7 +422,7 @@
                 </div>
             </div>
         </a>
-    
+
     </div>
 
     <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Statistical Support</h2>
