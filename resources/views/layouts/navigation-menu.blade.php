@@ -127,7 +127,7 @@
                     </x-slot>
                 </x-dropdown2>
                 --}}
-                @if (Route::has('login')) {{--  ---------  Profile Picture of the logged in person --------- --}}
+                @if (Route::has('login') && env('FILAMENT_USE') == true) {{--  ---------  Profile Picture of the logged in person --------- --}}
                     @auth
                             <x-dropdown2>
                                 <x-slot name="trigger">

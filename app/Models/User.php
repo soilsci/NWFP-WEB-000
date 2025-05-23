@@ -82,6 +82,8 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        $Filamentlogin = true;
+        if (env('FILAMENT_USE')) {$Filamentlogin = true;} else {$Filamentlogin = false;}
+        return $Filamentlogin ;
     }
 }
