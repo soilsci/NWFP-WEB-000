@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\PublicationController;
-use Illuminate\Support\Facades\Route;
-Use App\Livewire\ListUsers;
 use App\Livewire\Projects;
+Use App\Livewire\ListUsers;
+
+use Illuminate\Support\Facades\Route;
+
 Use App\Livewire\Testimonies;
-Use App\Livewire\Testimonies\Show;
+
 
 Route::get('/', function () {
     return view('index');
@@ -41,6 +43,7 @@ Route::get('/publications', function () {
 
 Route::resource('references', PublicationController::class );
 
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -53,4 +56,6 @@ Route::middleware([
 });
 
 
+
 require __DIR__.'/socialstream.php';
+

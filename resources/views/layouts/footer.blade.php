@@ -65,6 +65,9 @@
         </div>
 
     </div>
+    @if (env('FILAMENT_USE'))
+
+
     <div class="border-1 mx-auto border-t border-nw-blue-50 bg-nw-blue-900 p-4 text-nw-blue-50 sm:p-6 lg:p-8">
         <div class="flex justify-end">
 
@@ -82,5 +85,6 @@
             @endauth
         </div>
     </div>
+    @endif
 </div>
 
