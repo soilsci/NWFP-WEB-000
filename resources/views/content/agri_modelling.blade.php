@@ -14,7 +14,7 @@
         <x-button-link href="#input_data">Input Data</x-button-link>
         <x-button-link href="#calibration_data">Calibration data</x-button-link>
         <x-button-link href="#further_data">Further Data and Resources</x-button-link>
-        <x-button-link href="#modelled_data">Modelled Data</x-button-link>
+        <x-button-link href="#models">Models</x-button-link>
 
     </div>
     <div class="flex">
@@ -357,12 +357,7 @@
                 <br>
                 <p>
                 <ul class="mx-5 space-y-3">
-                    <x-li-dot class="bg-nw-blue-700">
-                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                            href="https://www.ukri.org/"
-                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                            <u>UK Research and Innovation (UKRI)</u></a>
-                    </x-li-dot>
+
 
                     <x-li-dot class="bg-nw-blue-700">
                         <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
@@ -378,12 +373,7 @@
                             <u>Cosmic-ray Soil Moisture Observing System (COSMOS)</u></a>
                     </x-li-dot>
 
-                    <x-li-dot class="bg-nw-blue-700">
-                        <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                            href="https://www.agritech-uk.org/ciel-centre-for-innovation-excellence-in-livestock/"
-                            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                            <u>Centre for Innovation Excellence in Livestock (CIEL)</u></a>
-                    </x-li-dot>
+
 
                 </ul>
                 </p>
@@ -392,11 +382,11 @@
 
     </div>
     <br>
-    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id ="modelled_data">
+    <h2 class="mt-4 h-12 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50" id ="models">
         <span
             class="me-2 rounded-full border-2 border-nw-blue-50 bg-nw-blue-600 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">
-            Modelled Data
-        </span> Results of Process modelling carried out using the data of the Farm Platform <a href="#top"><i>
+            Models
+        </span> Model descriptions <a href="#top"><i>
                 (back to top) </i></a>
     </h2>
     <div class="p-3">
@@ -450,9 +440,16 @@
             <p>Parton, W.J. and Rasmussen, P.E. (1994). Long term effects of crop management in
                 wheat/fallow: II. CENTURY model simulations. <span class="italic">Soil Science Society of America
                     Journal</span> 58:
-                530-536.</p>
+                530-536. (<a
+                    class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                    href="https://doi.org/10.2136/sssaj1994.03615995005800020040x"
+                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">doi:https://doi.org/10.2136/sssaj1994.03615995005800020040x</a>)</p>
+
             <p>Parton, W.J., Hartman, M., Ojima, D., Schimel, D. 1998. DAYCENT and its land surface
-                submodel: description and testing. <span class="italic">Global Planetary Change</span>, 19, 35-48.</p>
+                submodel: description and testing. <span class="italic">Global Planetary Change</span>, 19, 35-48. (<a
+                    class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                    href="https://doi.org/10.1016/S0921-8181(98)00040-X"
+                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">doi:https://doi.org/10.1016/S0921-8181(98)00040-X</a>) </p>
         </div>
         <h3 class="mt-4 text-lg font-medium text-nw-blue-900 underline underline-offset-4">
             SH20-NW

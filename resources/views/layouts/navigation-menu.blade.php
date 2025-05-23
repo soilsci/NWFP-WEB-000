@@ -26,8 +26,8 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'information']) }}">
                             {{ __('Known Issues and Workarounds') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'metdata-live']) }}">
-                            {{ __('Metdata Live') }}
+                        <x-dropdown-link href="http://exadcon.rothamsted.ac.uk/livedata/collection.jsf?template=weather&node=4826&units=metric">
+                            {{ __('Met Data Live') }}
                         </x-dropdown-link>
 
                     </x-slot>
