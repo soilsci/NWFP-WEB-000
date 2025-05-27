@@ -26,7 +26,8 @@
                 system. Each farmlet consists of five component catchments comprising approx. 21 ha in total per
                 farmlet. 2 farmlets (Green and Blue) explore pasture based ruminant production systems, 1 farmlet (Red)
                 allows the investigation of production of crops for the human food chain. The indoor beef finishing unit (Brown)
-                represents typical business as usual commercial beef production. The 15 water flumes and met station sites are shown (dots of relevant colour)
+                represents typical business as usual commercial beef production. The 15 water flumes are shown as dots of the relevant farmlet colour, 
+                and the met station as an orange dot on Top Burrows.
                 <ul class="mt-5">
                     <li class="mt-4 h-12 content-center"><span
                             class="m-2 h-8 w-8 rounded-full bg-red-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-nw-blue-50">

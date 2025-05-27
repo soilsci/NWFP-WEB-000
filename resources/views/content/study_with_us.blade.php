@@ -99,19 +99,20 @@
                                 Your browser does not support the video tag.
                             </video>
                             <div class="px-6 py-4">
-                                <div class="mb-2 text-xl font-bold">Data and the Farm Platform</div>
+                                <div class="mb-2 text-xl font-bold">The Farm Platform Data Collection</div>
                                 <p class="text-base text-gray-700">
-                                PUT DESCRIPTION HERE
+                                An overview of the range of data that the North Wyke Farm Platform openly provides
+                                for teaching, learning, and academic studies.
                                 </p>
                             </div>
-                            <div class="px-6 pb-2 pt-4">
+                            <!---<div class="px-6 pb-2 pt-4">
                                 <span
                                     class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#data</span>
                                 <span
                                     class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#farm</span>
                                 <span
                                     class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#experiment</span>
-                            </div>
+                            </div>--->
                         </div>
                     </div>
                     <div class="px-2">
@@ -123,19 +124,19 @@
                                 Your browser does not support the video tag.
                             </video>
                             <div class="px-6 py-4">
-                                <div class="mb-2 text-xl font-bold">Farm Platform Research Overview</div>
+                                <div class="mb-2 text-xl font-bold">The Farm Platform Overview</div>
                                 <p class="text-base text-gray-700">
-                                PUT DESCRIPTION HERE
+                                An overview of the research and facilities on the North Wyke Farm Platform as a resource for post graduate research and training.
                                 </p>
                             </div>
-                            <div class="px-6 pb-2 pt-4">
+                            <!---<div class="px-6 pb-2 pt-4">
                                 <span
                                     class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#this</span>
                                 <span
                                     class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#could</span>
                                 <span
                                     class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#disapear</span>
-                            </div>
+                            </div>--->
                         </div>
                     </div>
 

@@ -49,7 +49,7 @@
                         </div>
                     @else
                         <div class="aspect-w-16 aspect-h-9">
-                            <a href="{{ $testimony->URL }}"><img src="https://picsum.photos/id/159/400/225" title="{{$testimony->URL  }}" width="400"
+                            <a href="{{ $testimony->URL }}"><img src="https://picsum.photos/id/542/400/225" title="{{$testimony->URL  }}" width="400"
                                 height="225" frameborder="0" /></a>
                         </div>
                     @endif

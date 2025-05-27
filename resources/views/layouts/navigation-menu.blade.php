@@ -39,6 +39,9 @@
                         {{ __('Impact') }}
                     </x-slot>
                     <x-slot name="content">
+                        <x-dropdown-link href="{{ route('publications') }}">
+                            {{ __('Publications') }}
+                        </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'advanced_technologies']) }}">
                             {{ __('Advanced Technologies') }}
                         </x-dropdown-link>
@@ -48,10 +51,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'key_findings']) }}">
                             {{ __('Key Findings') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('publications') }}">
-                            {{ __('Publications') }}
-                        </x-dropdown-link>
-
+                        
                     </x-slot>
                 </x-dropdown2>
                 <x-dropdown2> {{--  --------- Engage --------- --}}
@@ -80,14 +80,14 @@
                         {{ __('About') }}
                     </x-slot>
                     <x-slot name="content">
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'index']) }}">
+                        {{-- <x-dropdown-link href="{{ route('content.with.page', ['page' => 'index']) }}">
                             {{ __('Content') }}
+                        </x-dropdown-link> --}}
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'overview']) }}">
+                            {{ __('Overview and Hypothesis') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'map']) }}">
                             {{ __('Map of the platform') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'overview']) }}">
-                            {{ __('Overview and Hypothesis') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
                             {{ __('Facilities') }}
