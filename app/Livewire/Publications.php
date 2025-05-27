@@ -17,15 +17,15 @@ class Publications extends Component
     public string $searchAuth = "";
     public $guides=1;
     public $years;
-    public $types= ['Journal Article', 'Conference', 'Dataset', 'Report' ];
+    public $types= ['Journal Article', 'Conference', 'Dataset', 'Report', 'Web Page'  ];
 
     /* Computer Program
 Journal Article
 Dataset
-Conference Paper
+Conference Paper and Conference Proceedings >> Conference
 Web Page
 Report
-Conference Proceedings
+
  */
 
     public function render()
