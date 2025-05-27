@@ -40,7 +40,7 @@
         @endif
         <!-- Page Content -->
         <main>
-            <div class="bg-bg02muted bg-cover bg-center bg-no-repeat py-12 backdrop-opacity-10">
+            <div class="bg-bg02muted bg-cover bg-center bg-no-repeat py-12 backdrop-opacity-10 print:bg-none">
                 <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
                         {{ $slot }}

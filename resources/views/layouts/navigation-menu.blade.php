@@ -6,7 +6,7 @@
                     <x-application-logo class="block h-12" />
                 </a>
             </div>
-            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">{{--  Navigation --}}
+            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex  print:hidden">{{--  Navigation --}}
 
                 <x-dropdown2> {{--  --------- Get Data --------- --}}
                     {{--  anything to do with data  --}}
