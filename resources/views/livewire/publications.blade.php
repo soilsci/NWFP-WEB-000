@@ -44,50 +44,55 @@
             </form>
         </div>
     </div>
-    <ul class="space-y-3 p-3">
+    @foreach ($types as $type)
+        <h2 class="py-auto mt-4 h-8 bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">{{ $type }}</h2>
+        @foreach ($years as $year)
+            @php
+                // this removes the empty year headers
+                $i = 0;
 
-        @foreach ($publications as $pub)
-            {{-- id
-ref_type
-authors
-pub_year
-title
-journal
-volume
-issue
-pages
-abstract
-keywords
-doi
-url --}}
+                foreach ($publications as $pub) {
+                    if ((strpos($pub->ref_type, $type) !== FALSE) && $pub->pub_year == $year->pub_year) {
+                        $i = $i + 1;
+                    }
+                }
+            @endphp
+            @if ($i > 0)
+                <h2 class="py-auto mt-4 h-8 bg-gray-300 px-4 font-medium">{{ $year->pub_year }}</h2>
+                <ul class="space-y-3 p-3">
 
-            <li class="list-inside list-disc">
+                    @foreach ($publications as $pub)
+                        @if((strpos($pub->ref_type, $type) !== FALSE) && ($pub->pub_year == $year->pub_year))
+                            <li class="list-inside list-disc">
 
-                {{ $pub->authors }} ({{ $pub->pub_year }})
-                "{{ $pub->title }}",
-                <span class="italic">{{ $pub->journal }}</span>,
-                @if ($pub->volume)
-                    {{ $pub->volume }},
-                @endif
-                @if ($pub->issue)
-                    {{ $pub->issue }},
-                @endif
-                @if ($pub->pages)
-                    {{ $pub->pages }},
-                @endif
-                @if ($pub->doi)
-                    <span class="font-semibold">DOI: </span><a
-                        class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                        href="https://doi.org/{{ $pub->doi }}">{{ $pub->doi }}
-                    </a>
-                @elseif ($pub->url)
-                    <a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                        href="https://doi.org/{{ $pub->url }}">{{ $pub->url }}
-                    </a>
-                @endif
+                                {{ $pub->authors }} ({{ $pub->pub_year }})
+                                "{{ $pub->title }}",
+                                <span class="italic">{{ $pub->journal }}</span>,
+                                @if ($pub->volume)
+                                    {{ $pub->volume }},
+                                @endif
+                                @if ($pub->issue)
+                                    {{ $pub->issue }},
+                                @endif
+                                @if ($pub->pages)
+                                    {{ $pub->pages }},
+                                @endif
+                                @if ($pub->doi)
+                                    <span class="font-semibold">DOI: </span><a
+                                        class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                                        href="https://doi.org/{{ $pub->doi }}">{{ $pub->doi }}
+                                    </a>
+                                @elseif ($pub->url)
+                                    <a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                                        href="https://doi.org/{{ $pub->url }}">{{ $pub->url }}
+                                    </a>
+                                @endif
 
-
-            </li>
+                            </li>
+                        @endif
+                    @endforeach
+                </ul>
+            @endif
         @endforeach
-    </ul>
+    @endforeach
 </div>
