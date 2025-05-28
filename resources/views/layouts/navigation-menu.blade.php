@@ -1,7 +1,7 @@
 <nav class="border-b-8 border-b-nw-blue-600 bg-nw-blue-50" x-data="{ open: false }">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">{{-- Primary Navigation Menu  --}}
         <div class="flex h-20 justify-between">
-            <div class="flex shrink-0 items-center">{{-- Logo - click on LOGO - GO Home--}}
+            <div class="flex shrink-0 items-center">{{-- Logo - click on LOGO - GO Home --}}
                 <a href="{{ route('home') }}">
                     <x-application-logo class="block h-12" />
                 </a>
@@ -26,7 +26,8 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'information']) }}">
                             {{ __('Known Issues and Workarounds') }}
                         </x-dropdown-link>
-                        <x-dropdown-link href="http://exadcon.rothamsted.ac.uk/livedata/collection.jsf?template=weather&node=4826&units=metric">
+                        <x-dropdown-link
+                            href="http://exadcon.rothamsted.ac.uk/livedata/collection.jsf?template=weather&node=4826&units=metric">
                             {{ __('Met Data Live') }}
                         </x-dropdown-link>
 
@@ -51,7 +52,7 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'key_findings']) }}">
                             {{ __('Key Findings') }}
                         </x-dropdown-link>
-                        
+
                     </x-slot>
                 </x-dropdown2>
                 <x-dropdown2> {{--  --------- Engage --------- --}}
@@ -97,6 +98,22 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
+                <x-dropdown2 href="{{ route('content.with.page', ['page' => 'news']) }}">
+                    <x-slot name="trigger">
+                        {{ __('News') }}
+                    </x-slot>
+                    <x-slot name="content">
+
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'news']) }}">
+                            {{ __('News and Press Releases') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="https://bsky.app/profile/thefarmplatform.bsky.social">
+                            {{ __('thefarmplatform.bsky') }}
+                        </x-dropdown-link>
+
+                    </x-slot>
+
+                </x-dropdown2>
                 {{-- ---------  Search that has not been implemented yet !  ---------
                 <x-dropdown2>
                     <x-slot name="trigger">
@@ -129,70 +146,68 @@
                 --}}
                 @if (Route::has('login') && env('FILAMENT_USE') == true) {{--  ---------  Profile Picture of the logged in person --------- --}}
                     @auth
-                            <x-dropdown2>
-                                <x-slot name="trigger">
-                                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                        <x-dropdown2>
+                            <x-slot name="trigger">
+                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                                    <button
+                                        class="flex rounded-full border-2 border-transparent text-sm transition focus:border-nw-blue-200 focus:outline-none">
+                                        <img class="aspect-square h-16 rounded-full border-4 border-nw-blue-600 object-scale-down p-1"
+                                            src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                                    </button>
+                                @else
+                                    <span class="inline-flex rounded-md">
                                         <button
-                                            class="flex rounded-full border-2 border-transparent text-sm transition focus:border-nw-blue-200 focus:outline-none">
-                                            <img class="aspect-square h-16 rounded-full border-4 border-nw-blue-600 object-scale-down p-1"
-                                                src="{{ Auth::user()->profile_photo_url }}"
-                                                alt="{{ Auth::user()->name }}" />
+                                            class="inline-flex items-center rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:bg-gray-50 focus:outline-none active:bg-gray-50"
+                                            type="button">
+                                            {{ Auth::user()->name }}
+
+                                            <svg class="-me-0.5 ms-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                            </svg>
                                         </button>
-                                    @else
-                                        <span class="inline-flex rounded-md">
-                                            <button
-                                                class="inline-flex items-center rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:bg-gray-50 focus:outline-none active:bg-gray-50"
-                                                type="button">
-                                                {{ Auth::user()->name }}
+                                    </span>
+                                @endif
+                            </x-slot>
+                            <x-slot name="content">
+                                <x-dropdown-link href="{{ route('dashboard') }}">
+                                    {{ __('My Platform') }}
+                                </x-dropdown-link>
+                                <!-- Account Management
+                                                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                                                {{ __('Manage Account') }}
+                                                            </div>
+                                                        -->
 
-                                                <svg class="-me-0.5 ms-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                                    fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                                    stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                </svg>
-                                            </button>
-                                        </span>
-                                    @endif
-                                </x-slot>
-                                <x-slot name="content">
-                                    <x-dropdown-link href="{{ route('dashboard') }}">
-                                        {{ __('My Platform') }}
+                                <x-dropdown-link href="{{ route('profile.show') }}">
+                                    {{ __('Profile') }}
+                                </x-dropdown-link>
+                                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                                    <x-dropdown-link href="{{ route('api-tokens.index') }}">
+                                        {{ __('API Tokens') }}
                                     </x-dropdown-link>
-                                    <!-- Account Management
-                                                        <div class="block px-4 py-2 text-xs text-gray-400">
-                                                            {{ __('Manage Account') }}
-                                                        </div>
-                                                    -->
+                                @endif
+                                <div class="border-t border-nw-blue-700"></div>
+                                <x-dropdown-link href="{{ env('FILAMENT_PATH') }}">
+                                    {{ __('Admin') }}
+                                </x-dropdown-link>
+                                <div class="border-t border-nw-blue-700"></div>
 
-                                    <x-dropdown-link href="{{ route('profile.show') }}">
-                                        {{ __('Profile') }}
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}" x-data>
+                                    @csrf
+
+                                    <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                        {{ __('Log Out') }}
                                     </x-dropdown-link>
-                                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                        <x-dropdown-link href="{{ route('api-tokens.index') }}">
-                                            {{ __('API Tokens') }}
-                                        </x-dropdown-link>
-                                    @endif
-                                    <div class="border-t border-nw-blue-700"></div>
-                                    <x-dropdown-link href="{{ env('FILAMENT_PATH') }}">
-                                        {{ __('Admin') }}
-                                    </x-dropdown-link>
-                                    <div class="border-t border-nw-blue-700"></div>
-
-                                    <!-- Authentication -->
-                                    <form method="POST" action="{{ route('logout') }}" x-data>
-                                        @csrf
-
-                                        <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                                            {{ __('Log Out') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </x-slot>
-                            </x-dropdown2>
+                                </form>
+                            </x-slot>
+                        </x-dropdown2>
                     @endauth
                 @endif
             </div>
-            <div class="-me-2 flex items-center sm:hidden">{{--  Hamberger Menu Don't gorget to update--}}
+            <div class="-me-2 flex items-center sm:hidden">{{--  Hamberger Menu Don't gorget to update --}}
                 <button
                     class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 transition duration-150 ease-in-out hover:bg-gray-100 hover:text-gray-500 focus:bg-gray-100 focus:text-gray-500 focus:outline-none"
                     @click="open = ! open">
