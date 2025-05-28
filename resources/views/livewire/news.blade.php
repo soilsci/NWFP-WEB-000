@@ -52,7 +52,7 @@
             <div class="group w-100 mx-2 mt-4 rounded-lg  bg-gray-200 hover:bg-gray-100 shadow-xl md:flex-row" v-for="card in cards">
                 <!-- media -->
 
-                    <img class="w-full h-48 object-cover overflow-hidden rounded-lg transition-transform transform scale-100" src="{{ $item -> pages }}" />
+                    <img class="w-full h-48 object-cover overflow-hidden rounded-lg transition-transform transform scale-100" src="{{ $item -> image }}" />
 
                 <!-- content -->
                 <div class="flex w-full flex-col justify-between px-6 py-4 text-gray-800">
