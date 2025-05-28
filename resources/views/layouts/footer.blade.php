@@ -1,5 +1,5 @@
 <div class="bg-nw-blue-900 text-nw-blue-50">
-    <div class="flex justify-center px-8 py-2">
+    <div class="flex justify-center px-8 py-2 print:hidden">
         <div class="overflow-visible px-20 text-left text-sm">
             <h2 class="font-mono text-2xl font-semibold">Our sponsors</h2>
             <div class="rounded-full bg-white">
@@ -68,7 +68,7 @@
     @if (env('FILAMENT_USE'))
 
 
-    <div class="border-1 mx-auto border-t border-nw-blue-50 bg-nw-blue-900 p-4 text-nw-blue-50 sm:p-6 lg:p-8">
+    <div class="border-1 mx-auto border-t border-nw-blue-50 bg-nw-blue-900 p-4 text-nw-blue-50 sm:p-6 lg:p-8 print:hidden">
         <div class="flex justify-end">
 
             @if (Route::has('login'))
