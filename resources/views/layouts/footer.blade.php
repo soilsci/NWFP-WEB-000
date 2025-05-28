@@ -35,7 +35,7 @@
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="/contact">Contact us</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
-                    href="/news">News</a></p>
+                    href="{{ route('content.with.page', ['page' => 'news']) }}">News</a></p>
 
             <p class="inline-block align middle"><a target="_blank"  class="inline-block align middle hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                 href="https://bsky.app/profile/thefarmplatform.bsky.social"> <img src="/logos/bluesky-LOGO.svg" class="inline-block align middle"> thefarmplatform.bsky</a></p>
