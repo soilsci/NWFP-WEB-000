@@ -26,6 +26,7 @@ class Testimonies extends Component
     public $student;
     public $testimonies;
     public $testimony;
+    public $count;
 
     public $view = 'livewire.testimonies';
     public $style; // a variable to choose the kind of display
