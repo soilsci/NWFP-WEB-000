@@ -54,6 +54,7 @@ class TestimonyResource extends Resource
             ->columnSpan(2),
             TextInput::make('URL')->label('URL to outside video, blog or poster')->columnSpan(2) ,
             TextInput::make('video_id')->label('CODE to YOUTUBE video')->columnSpan(2) ,
+            TextInput::make('video_file')->label('Filename for a video, with extension')->columnSpan(2) ,
 
         ]);
     }
@@ -71,6 +72,7 @@ class TestimonyResource extends Resource
                 TextColumn::make('title')->limit(50),
                 TextColumn::make('URL')->label('URL')->limit(50),
                 TextColumn::make('video_id')->label('Video')->limit(50),
+                TextColumn::make('video_file')->label('Video File')->limit(50),
                 TextColumn::make('short')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('long')->limit(50)->lineClamp(2)->html(),
                 TextColumn::make('student.first_name'),
