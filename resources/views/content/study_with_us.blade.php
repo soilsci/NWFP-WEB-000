@@ -160,7 +160,7 @@
 
             <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
                 Student Publications </h2>
-            <livewire:publications keyref="keyRefStudent" />
+            <livewire:publications keyref="keyRefStudent"  />
         </section>
         </section>
 

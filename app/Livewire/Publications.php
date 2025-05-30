@@ -11,13 +11,12 @@ class Publications extends Component
     public $ref_type;
 
     public $keyref;
-    public $hasSearch = 1;
-    public $hasButtons = 1;
+
     public $order = 'ASC';
     public string $searchRef = "";
     public $publications;
     public string $searchAuth = "";
-    public $guides=1;
+    public $guides = 1;
     public $years;
     public $types= [
         'rf1'=>'Journal Article',
@@ -37,7 +36,6 @@ Web Page
 Report
 
  */
-
     public function render()
     {
 
@@ -55,8 +53,7 @@ Report
             'years' => $this->years,
             'types' => $this->types,
             'ref_types' => $this->ref_types,
-            'hasSearch' => $this->hasSearch,
-            'hasButtons' => $this->hasButtons,
+
         ]);
     }
 }

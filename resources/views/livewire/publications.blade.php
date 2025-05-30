@@ -45,13 +45,13 @@
             </form>
         </div>
     </div>
-    @if ($hasButtons == 1)
-        <div class="p-3 border-t-4 border-nw-blue-700">
-            @foreach ($types as $typeID => $type)
-                <x-button-link href="#{{ $typeID }}">{{ $type }}</x-button-link>
-            @endforeach
-        </div>
-    @endif
+
+    <div class="border-t-4 border-nw-blue-700 p-3">
+        @foreach ($types as $typeID => $type)
+            <x-button-link href="#{{ $typeID }}">{{ $type }}</x-button-link>
+        @endforeach
+    </div>
+
     @foreach ($types as $typeID => $type)
         @php
             // this removes the empty ref TYpes headers $j is the number of items that year
