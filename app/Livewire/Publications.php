@@ -17,7 +17,7 @@ class Publications extends Component
     public string $searchAuth = "";
     public $guides=1;
     public $years;
-    public $types= ['Journal Article', 'Conference', 'Dataset', 'Report', 'Web Page'  ];
+    public $types= ['Journal Article', 'Conference', 'Dataset', 'Report', 'Computer Program', 'Web Page'  ];
 
     /* Computer Program
 Journal Article
