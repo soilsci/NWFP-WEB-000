@@ -46,10 +46,22 @@
     </div>
 
     @foreach ($types as $type)
+      @php
+                // this removes the empty ref TYpes headers $j is the number of items that year
+                $j = 0;
+
+                foreach ($publications as $pub) {
+                    if ((strpos($pub->ref_type, $type) !== FALSE) ) {
+                        $j = $j + 1;
+                    }
+                }
+            @endphp
+            @if ($j > 0)
         <h2 class="py-auto mt-4 h-8 bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">{{ $type }}</h2>
+        @endif
         @foreach ($years as $year)
             @php
-                // this removes the empty year headers
+                // this removes the empty year headers $i is the number of items that year
                 $i = 0;
 
                 foreach ($publications as $pub) {
