@@ -20,12 +20,12 @@ class Publications extends Component
     public $guides=1;
     public $years;
     public $types= [
-        '#rf1'=>'Journal Article',
-        '#rf2'=>'Conference',
-        '#rf4'=>'Dataset',
-        '#rf5'=>'Report',
-        '#rf7'=>'Computer Program',
-        '#rf6'=>'Web Page'
+        'rf1'=>'Journal Article',
+        'rf2'=>'Conference',
+        'rf4'=>'Dataset',
+        'rf5'=>'Report',
+        'rf7'=>'Computer Program',
+        'rf6'=>'Web Page'
     ];
     public $ref_types;
 

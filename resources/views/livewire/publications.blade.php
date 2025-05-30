@@ -4,7 +4,8 @@
             {{ __('Publications') }}
         </h2>
     </x-slot>
-    <div class="flex flex-col items-center justify-between space-y-3 p-4 md:flex-row md:space-x-4 md:space-y-0  print:hidden">
+    <div
+        class="flex flex-col items-center justify-between space-y-3 p-4 md:flex-row md:space-x-4 md:space-y-0 print:hidden">
         <div class="w-full md:w-1/2">
             <form class="flex items-center">
                 <label class="sr-only" for="simple-search">Search</label>
@@ -44,20 +45,27 @@
             </form>
         </div>
     </div>
-
+    @if ($hasButtons == 1)
+        <div class="p-3 border-t-4 border-nw-blue-700">
+            @foreach ($types as $typeID => $type)
+                <x-button-link href="#{{ $typeID }}">{{ $type }}</x-button-link>
+            @endforeach
+        </div>
+    @endif
     @foreach ($types as $typeID => $type)
-      @php
-                // this removes the empty ref TYpes headers $j is the number of items that year
-                $j = 0;
+        @php
+            // this removes the empty ref TYpes headers $j is the number of items that year
+            $j = 0;
 
-                foreach ($publications as $pub) {
-                    if ((strpos($pub->ref_type, $type) !== FALSE) ) {
-                        $j = $j + 1;
-                    }
+            foreach ($publications as $pub) {
+                if (strpos($pub->ref_type, $type) !== false) {
+                    $j = $j + 1;
                 }
-            @endphp
-            @if ($j > 0)
-        <h2 class="py-auto mt-4 h-8 bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">{{ $type }}</h2>
+            }
+        @endphp
+        @if ($j > 0)
+            <h2 class="py-auto mt-4 h-8 bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50"
+                id="{{ $typeID }}">{{ $type }}</h2>
         @endif
         @foreach ($years as $year)
             @php
@@ -65,7 +73,7 @@
                 $i = 0;
 
                 foreach ($publications as $pub) {
-                    if ((strpos($pub->ref_type, $type) !== FALSE) && $pub->pub_year == $year->pub_year) {
+                    if (strpos($pub->ref_type, $type) !== false && $pub->pub_year == $year->pub_year) {
                         $i = $i + 1;
                     }
                 }
@@ -75,7 +83,7 @@
                 <ul class="space-y-3 p-3">
 
                     @foreach ($publications as $pub)
-                        @if((strpos($pub->ref_type, $type) !== FALSE) && ($pub->pub_year == $year->pub_year))
+                        @if (strpos($pub->ref_type, $type) !== false && $pub->pub_year == $year->pub_year)
                             <li class="list-inside list-disc">
 
                                 {{ $pub->authors }} ({{ $pub->pub_year }})
@@ -108,6 +116,5 @@
             @endif
         @endforeach
     @endforeach
-
 
 </div>
