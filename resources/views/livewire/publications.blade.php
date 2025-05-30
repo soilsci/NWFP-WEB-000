@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    @foreach ($types as $type)
+    @foreach ($types as $typeID => $type)
       @php
                 // this removes the empty ref TYpes headers $j is the number of items that year
                 $j = 0;

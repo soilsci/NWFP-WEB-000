@@ -11,13 +11,23 @@ class Publications extends Component
     public $ref_type;
 
     public $keyref;
+    public $hasSearch = 1;
+    public $hasButtons = 1;
     public $order = 'ASC';
     public string $searchRef = "";
     public $publications;
     public string $searchAuth = "";
     public $guides=1;
     public $years;
-    public $types= ['Journal Article', 'Conference', 'Dataset', 'Report', 'Computer Program', 'Web Page'  ];
+    public $types= [
+        '#rf1'=>'Journal Article',
+        '#rf2'=>'Conference',
+        '#rf4'=>'Dataset',
+        '#rf5'=>'Report',
+        '#rf7'=>'Computer Program',
+        '#rf6'=>'Web Page'
+    ];
+    public $ref_types;
 
     /* Computer Program
 Journal Article
@@ -38,12 +48,15 @@ Report
         ->orderBy('authors')
         ->get();
         $this -> years = Publication::select('pub_year')->distinct('pub_year')->orderBy('pub_year', 'DESC')->get();
-        #$this -> types = Publication::select('ref_type')->distinct('ref_type')->orderBy('ref_type', 'ASC')->get();
+        $this -> ref_types = Publication::select('ref_type')->distinct('ref_type')->orderBy('ref_type', 'ASC')->get();
 
         return view('livewire.publications', [
             'publications' => $this->publications,
             'years' => $this->years,
             'types' => $this->types,
+            'ref_types' => $this->ref_types,
+            'hasSearch' => $this->hasSearch,
+            'hasButtons' => $this->hasButtons,
         ]);
     }
 }
