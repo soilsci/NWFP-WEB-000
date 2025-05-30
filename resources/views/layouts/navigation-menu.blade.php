@@ -73,8 +73,23 @@
                         </x-dropdown-link>
 
                     </x-slot>
-                </x-dropdown2>
+                </x-dropdown2>  {{--  --------- NEWS --------- --}}
+<x-dropdown2 href="{{ route('content.with.page', ['page' => 'news']) }}">
+                    <x-slot name="trigger">
+                        {{ __('News') }}
+                    </x-slot>
+                    <x-slot name="content">
 
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'news']) }}">
+                            {{ __('News and Press Releases') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="https://bsky.app/profile/thefarmplatform.bsky.social">
+                            {{ __('thefarmplatform.bsky') }}
+                        </x-dropdown-link>
+
+                    </x-slot>
+
+                </x-dropdown2>
                 <x-dropdown2> {{--  --------- ABOUT --------- --}}
                     {{--  the usual contacts, team, maps and so on  --}}
                     <x-slot name="trigger">
@@ -98,22 +113,7 @@
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown2>
-                <x-dropdown2 href="{{ route('content.with.page', ['page' => 'news']) }}">
-                    <x-slot name="trigger">
-                        {{ __('News') }}
-                    </x-slot>
-                    <x-slot name="content">
 
-                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'news']) }}">
-                            {{ __('News and Press Releases') }}
-                        </x-dropdown-link>
-                        <x-dropdown-link href="https://bsky.app/profile/thefarmplatform.bsky.social">
-                            {{ __('thefarmplatform.bsky') }}
-                        </x-dropdown-link>
-
-                    </x-slot>
-
-                </x-dropdown2>
                 {{-- ---------  Search that has not been implemented yet !  ---------
                 <x-dropdown2>
                     <x-slot name="trigger">
