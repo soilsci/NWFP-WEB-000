@@ -6,7 +6,7 @@
     </x-slot>
 
 
-    <livewire:publications  keyref="KeyRefUserGuide" />
+    @livewire('publications', ['keyref' => "KeyRefUserGuide"])
 
 
 </x-guest-layout>

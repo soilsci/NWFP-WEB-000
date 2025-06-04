@@ -161,7 +161,9 @@ class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-se
 
             <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
                 Student Publications </h2>
-            <livewire:publications keyref="keyRefStudent" />
+
+
+            @livewire('publications', ['keyref' => "keyRefStudent", 'hasButtons'=>"NO", 'hasSearch'=> "NO", 'hasYears'=>"NO"])
         </section>
 
 
