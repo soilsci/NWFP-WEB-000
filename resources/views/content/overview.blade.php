@@ -38,13 +38,13 @@
         <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From April 2011 to March 2013:</span></x-li-dot>
             All three pasture-based livestock farming systems were as one (permanent pasture) with no separate treatments in operation. This is the baseline period.
         <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From April 2013 to September 2015:</span></x-li-dot>
-            Two of three systems gradually transitioned into the first post-baseline phase, one re-sown with high sugar grasses (red system), the other
+            Two of three systems gradually transitioned into the first system change period, one re-sown with high sugar grasses (red system), the other
             re-sown with high sugar grass, white clover mix (blue system). The remaining (green) system
             continued as permanent pasture and will always do so, for long-term monitoring.
         <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From September 2015 to April 2019:</span></x-li-dot>
-            The first post-baseline phase is in full operation across all three livestock farming systems and pasture treatments.
+            The first system change is in full operation across all three livestock farming systems and pasture treatments.
         <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From April 2019:</span></x-li-dot>
-            The first post-baseline phase embarked on a transition to a second post-baseline phase, where the red system transitioned 
+            The first system change embarked on a transition to a second system change period, where the red system transitioned 
             to an arable system growing human edible crops. Given the red system transition to an arable system, the livestock linked to this
             system are housed representing a fourth (brown) system (or treatment) for evaluation of more intensive finishing and fine resolution monitoring.
     </ul>

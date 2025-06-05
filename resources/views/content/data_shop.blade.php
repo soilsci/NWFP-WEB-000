@@ -29,7 +29,8 @@
                     <strong>3. Non-core and Worked-up Datasets</strong></h2>
                 <br>
                 <p> A collection of non-core and worked-up datasets are available from the Rothamsted Data Repository powered by CKAN.
-                    The site has a useful search feature to search for various topics.</p>
+                    The site has a useful search feature to search for various topics.<br><br>
+                    Note that the Publications page also contains sources of data under the Dataset category.</p>
             </div>
         </div>
         <div class="grid grid-cols-3 gap-4 rounded-top ">
