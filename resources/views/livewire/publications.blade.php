@@ -4,6 +4,7 @@
             {{ __('Publications') }}
         </h2>
     </x-slot>
+    @if ($hasSearch != "NO")
     <div
         class="flex flex-col items-center justify-between space-y-3 p-4 md:flex-row md:space-x-4 md:space-y-0 print:hidden">
         <div class="w-full md:w-1/2">
@@ -45,13 +46,14 @@
             </form>
         </div>
     </div>
-
+    @endif
+    @if ($hasButtons != "NO")
     <div class="border-t-4 border-nw-blue-700 p-3">
         @foreach ($types as $typeID => $type)
             <x-button-link href="#{{ $typeID }}">{{ $type }}</x-button-link>
         @endforeach
     </div>
-
+    @endif
     @foreach ($types as $typeID => $type)
         @php
             // this removes the empty ref TYpes headers $j is the number of items that year

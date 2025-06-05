@@ -101,17 +101,17 @@
                             <div class="px-6 py-4">
                                 <div class="mb-2 text-xl font-bold">The Farm Platform Data Collection</div>
                                 <p class="text-base text-gray-700">
-                                An overview of the range of data that the North Wyke Farm Platform openly provides
-                                for teaching, learning, and academic studies.
+                                    An overview of the range of data that the North Wyke Farm Platform openly provides
+                                    for teaching, learning, and academic studies.
                                 </p>
                             </div>
                             <!---<div class="px-6 pb-2 pt-4">
                                 <span
-                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#data</span>
+class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#data</span>
                                 <span
-                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#farm</span>
+class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#farm</span>
                                 <span
-                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#experiment</span>
+class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#experiment</span>
                             </div>--->
                         </div>
                     </div>
@@ -126,16 +126,17 @@
                             <div class="px-6 py-4">
                                 <div class="mb-2 text-xl font-bold">The Farm Platform Overview</div>
                                 <p class="text-base text-gray-700">
-                                An overview of the research and facilities on the North Wyke Farm Platform as a resource for post graduate research and training.
+                                    An overview of the research and facilities on the North Wyke Farm Platform as a
+                                    resource for post graduate research and training.
                                 </p>
                             </div>
                             <!---<div class="px-6 pb-2 pt-4">
                                 <span
-                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#this</span>
+class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#this</span>
                                 <span
-                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#could</span>
+class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#could</span>
                                 <span
-                                    class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#disapear</span>
+class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700">#disapear</span>
                             </div>--->
                         </div>
                     </div>
@@ -160,9 +161,11 @@
 
             <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
                 Student Publications </h2>
-            <livewire:publications keyref="keyRefStudent"  />
+
+
+            @livewire('publications', ['keyref' => "keyRefStudent", 'hasButtons'=>"NO", 'hasSearch'=> "NO", 'hasYears'=>"NO"])
         </section>
-        </section>
+
 
         <section class="m-0 bg-gray-100">
             <div class="flex justify-center p-10">

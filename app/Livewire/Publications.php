@@ -8,16 +8,18 @@ use App\Models\Publication;
 
 class Publications extends Component
 {
-    public $ref_type;
+
 
     public $keyref;
-
+    public $hasButtons;
+    public $hasSearch;
     public $order = 'ASC';
     public string $searchRef = "";
-    public $publications;
+
     public string $searchAuth = "";
     public $guides = 1;
     public $years;
+    public $publications;
     public $types= [
         'rf1'=>'Journal Article',
         'rf2'=>'Conference',
@@ -28,14 +30,15 @@ class Publications extends Component
     ];
     public $ref_types;
 
-    /* Computer Program
-Journal Article
-Dataset
-Conference Paper and Conference Proceedings >> Conference
-Web Page
-Report
+    public $data = array();
+    public $view = 'livewire.publications';
+    public $style; // a variable to choose the kind of display
 
- */
+
+    public function mount() {
+
+
+    }
     public function render()
     {
 
@@ -47,13 +50,25 @@ Report
         ->get();
         $this -> years = Publication::select('pub_year')->distinct('pub_year')->orderBy('pub_year', 'DESC')->get();
         $this -> ref_types = Publication::select('ref_type')->distinct('ref_type')->orderBy('ref_type', 'ASC')->get();
-
-        return view('livewire.publications', [
+        $this-> view = 'livewire.publications';
+        if ($this->keyref == 'KeyRefUserGuide') {
+            $this->view = 'livewire.publications.nw_guides';
+        }
+        $this-> data=  [
             'publications' => $this->publications,
             'years' => $this->years,
             'types' => $this->types,
             'ref_types' => $this->ref_types,
+            'hasButton' => $this->hasButtons,
+            'hasSearch' => $this->hasButtons,
 
-        ]);
+        ];
+
+
+        return view (
+            $this -> view, $this
+        -> data )
+        ->layout('layouts.guest');
     }
+
 }
