@@ -10,7 +10,7 @@
               @php
                   $slice = Str::after($pub->title, 'The North Wyke Farm Platform: ');
               @endphp
-                <b>{{ $slice }}</b>, ({{ $pub->pub_year }})
+                <b>{{ $slice }}</b>
                 <div class="px-5 py-0">
                     @if ($pub->abstract)
                     <p class="italic" >{{ $pub->abstract  }}</p>

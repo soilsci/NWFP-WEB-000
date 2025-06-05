@@ -12,6 +12,10 @@
     <link href="https://fonts.bunny.net" rel="preconnect">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/rres-favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/rres-favicon.png">
+
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
