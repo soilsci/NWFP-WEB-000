@@ -18,13 +18,16 @@
                             {{ __('Where to get Data') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'data_collection']) }}">
-                            {{ __('Datasets available and record counts') }}
+                            {{ __('Datasets Available and Record Counts') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('nw-guides') }}">
-                            {{ __('Data Guides') }}
+                            {{ __('Data User Guides') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'filestore']) }}">
+                            {{ __('Supplementary Information') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'information']) }}">
-                            {{ __('Known Issues and Workarounds') }}
+                            {{ __('Known Issues and Workarounds on the Data Portal') }}
                         </x-dropdown-link>
                         <x-dropdown-link
                             href="http://exadcon.rothamsted.ac.uk/livedata/collection.jsf?template=weather&node=4826&units=metric">
