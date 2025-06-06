@@ -145,13 +145,9 @@ class PageResource extends Resource
         return $infolist
             ->schema([
                 Grid::make(1)->schema([
-                    ImageEntry::make('imagefile')->disk('images')->label('Image')
-                        ->checkFileExistence(false),
                     TextEntry::make('title')->label(''),
                     TextEntry::make('description')->label(''),
                     TextEntry::make('full_URL')->label('Go to Page')->html()->color('success'),
-
-
                 ])
             ]);
     }
