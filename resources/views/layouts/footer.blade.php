@@ -17,18 +17,14 @@
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
             <h2 class="font-mono text-2xl font-semibold">Official Links</h2>
-
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
-                    href="">Legal Notice</a></p>
+                    href="/documents/NWFP Portal Data Terms of Use.pdf">Legal Notice - Data Portal</a></p>
+            <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
+                    href="/documents/NWFP API Data Licence Statement v1.pdf">Legal Notice - API</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="https://www.rothamsted.ac.uk/privacy-and-cookies">Privacy and Cookies</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
-                    href="/documents/NWFP Data Access Policy Summary Final 26-2-2016.pdf">Data Access Policy</a></p>
-            <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="/documents/Modern-Slavery-Act 2015-2019.pdf">Modern Slavery</a></p>
-            <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
-                    href="">Compassionate Farming</p>
-
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
             <h2 class="font-mono text-2xl font-semibold">Connect with us</h2>
@@ -36,10 +32,8 @@
                     href="/contact">Contact us</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="{{ route('content.with.page', ['page' => 'news']) }}">News</a></p>
-
             <p class="inline-block align middle"><a target="_blank"  class="inline-block align middle hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                 href="https://bsky.app/profile/thefarmplatform.bsky.social"> <img src="/logos/bluesky-LOGO.svg" class="inline-block align middle"> thefarmplatform.bsky</a></p>
-
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
             <h2 class="font-mono text-2xl font-semibold">Other NBRIs</h2>

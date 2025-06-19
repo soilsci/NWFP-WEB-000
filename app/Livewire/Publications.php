@@ -26,7 +26,7 @@ class Publications extends Component
         'rf4'=>'Dataset',
         'rf5'=>'Report',
         'rf7'=>'Computer Program',
-        'rf9'=>'RPub'
+        'rf9'=>'RPubs'
     ];
     public $ref_types;
 
