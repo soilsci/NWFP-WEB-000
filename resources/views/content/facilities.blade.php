@@ -25,18 +25,25 @@
                         title="Farm Platform Archived Sample Request Form.docx">Farm Platform Archive Sample Request
                         Form</a>
                 </x-li-dot>
-            </ul>
+            </ul><br>
+            <p>Our facilities are part-funded by CIEL<a class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                href="https://www.cielivestock.co.uk/"
+                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">(https://www.cielivestock.co.uk/).</a>
+                
+                As such, if you are considering applying for funding to conduct an NWFP or SRF experiment, then please
+                contact us so that we can ensure a small charge (typically 2%) is captured in the funding application reflecting CIEL's
+                investment.</p><br>
         </div>
     </div>
 
-    <div class="flex items-center justify-between gap-4">
+    <div class="flex items-center justify-between gap-2 sticky top-0">
         <div class="p-3">
-            <div style="text-align:justify" class="border-2 border-red-700 bg-red-50 p-2">
-                <p>The unique facility is located in the South West of the UK and offers the research
+            <div style="text-align:justify" class="p-4">
+                <p>This unique facility is located in the South West of the UK and offers the research
                     community access to a range of <i>in-situ</i> state-of-the-art instrumentation installed over three hydrologically 
                     isolated farming systems or farmlets.
                 </p>
-                <br >
+                <br>
                 <p>The facility also has an instrumented indoor cattle system for evaluation of more intensive finishing.
                 </p>
                 <br>
@@ -44,8 +51,7 @@
                     national and international research users and collaborators via our
                     <a class="px-0 text-nw-blue-800 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                         href="https://nwfp.rothamsted.ac.uk/"
-                        onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,
-                        fullscreen=no,scrollbars=yes,dependent=no'); return false;">Data Portal.
+                        onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">Data Portal.
                     </a>
                 </p>
             </div>
@@ -55,37 +61,45 @@
             <p><img src="/images/facilities01.png" alt ="Location"width="900"/></p>
         </div>
         <div class="p-3">
-            <p><img src="/images/facilities02.png" alt="Map of the site" width="900"/></p>
+            <p><img src="/images/facilities02.png" alt="Map of the site" width="700"/></p>
         </div>
-
     </div>
+    
     <br>
-    <div class="flex items-center justify-between gap-4">
+    
+    <div class="flex items-center justify-between gap-4 sticky top-0 border-b-4 border-nw-blue-700">
         <div class="p-3">
-            <div style="text-align:justify" class="border-2 border-green-700 bg-green-50 p-2">
-            <p>Each outdoor farmlet consists of five component sub-catchments comprising just over 20 ha in
-                total per farmlet.</p>
-            <br>
-            <p>They are currently managed as beef cattle, sheep and arable enterprises with a high degree of
-                control over inputs.</p>
-            <br>   
-            <p>The key concept of the Farm Platform is to explore different ways of managing sustainable and
-                resilient grazing livestock production alongside a wide range of agro-ecosystem attributes at farm
-                scale. Opportunities also exist for investigating net zero strategies.</p>
-            <br>
-            <p>The facility attracts researchers from different communities and disciplines to promote new
-                ideas or tackle old challenges in novel ways to better address key issues in sustainable and resilient
-                agriculture.</p>
-            </div>
+            <div style="text-align:justify" class="p-4">
+                <ul>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <p>Each outdoor farmlet consists of five component sub-catchments comprising just over 20 ha in total per farmlet.</p>
+                    </x-li-dot><br>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <p>They are currently managed as beef cattle, sheep and arable enterprises with a high degree of
+                            control over inputs.</p>
+                    </x-li-dot><br>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <p>The key concept of the Farm Platform is to explore different ways of managing sustainable and
+                            resilient grazing livestock production alongside a wide range of agro-ecosystem attributes at farm
+                            scale. Opportunities also exist for investigating net zero strategies.</p>
+                    </x-li-dot><br>
+                    <x-li-dot class="bg-nw-blue-700">
+                        <p>The facility attracts researchers from different communities and disciplines to promote new
+                            ideas or tackle old challenges in novel ways to better address key issues in sustainable and resilient
+                            agriculture.</p>
+                    </x-li-dot>
+            </ul>
+            </div>  
         </div>
     </div>
     <br>
     <div class="p-3">
-        <div style="text-align:justify" class="border-2 border-blue-700 bg-blue-50 p-2">
+        <div style="text-align:justify" class="p-4">
             <p class="p-3">We have dedicated laboratories to handle soil, herbage, air and water samples and have a 
             wide range of analytical techniques available in our Analytical Laboratories.</p>
             
-            <h2 style = "text-align:center;font-weight:bold;font-size:23px;" class="h-8 content-center px-4 text-lg font-medium text-black">Analytical Laboratories</h2>
+            <h2 style = "text-align:center;font-weight:bold;font-size:23px;" class="h-8 content-center px-4 text-lg font-medium text-black">
+                Analytical Laboratories</h2>
             <p><img class="mx-auto p-4" src="/images/facilities03.png" /></p>
             <br>
             <br>
@@ -95,25 +109,26 @@
             available for studies concerning animal health, welfare and performance. Some pens within the facility have also been
             specifically designed to accommodate goat housing.</p>
 
-            <h2 style = "text-align:center;font-weight:bold;font-size:23px;" class="h-8 content-center px-4 text-lg font-medium text-black">Small Ruminant Facility and Biocontrol Units</h2>
+            <h2 style = "text-align:center;font-weight:bold;font-size:23px;" class="h-8 content-center px-4 text-lg font-medium text-black">
+                Small Ruminant Facility and Biocontrol Units</h2>
             <p><img class="mx-auto p-4" src="/images/SmallRuminantFacility.png" /></p>
         </div>
     </div>
     <br>
-    <br>
-    <br>
-    <div class="items-top justify-beween flex border-y-4 border-nw-blue-700 p-3">
-        <div style="text-align:justify;padding-right:20px" class="size-2/3">
+    
+    <div class="items-top justify-beween flex p-4">
+        <div style="text-align:justify;padding-right:20px" class="size-2/3 p-4">
             <p>We welcome opportunities for co-development of projects on the platform.
                 Project proposals can be of any size and through any funding body.</p>
             <br>
             <p>If you are interested in proposing or conducting a research project
-                using the Farm Platform facilities, please contact the North Wyke Farm Platform team
-                <a class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                href="mailto:nw.farmplatform@rothamsted.ac.uk">(nw.farmplatform@rothamsted.ac.uk)</a>for initial
+                using the Farm Platform facilities, please contact the Farm Platform team at
+                <a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                href="mailto:nw.farmplatform@rothamsted.ac.uk">nw.farmplatform@rothamsted.ac.uk</a> for initial
                 discussions, where we will align you with the contacts and expertise to facilitate your proposal or project. 
                 Following initial consultation the next step is to download and complete a
                 'Farm Platform Access Request Form' available on the right or at the top of this page and submit for approval.</p>
+                <br>
                 <p>You can also request soil or herbage samples from our archive store using the 
                     'Farm Platform Archive Sample Request Form' also available on the right or at the top of this page.
                 </p>
@@ -135,8 +150,7 @@
                             type="application/vnd.openxmlformats-officedocument.wordprocessingml.document; length=37292"
                             href="/documents/Farm Platform Archived Sample Request Form.docx"
                             title="Farm Platform Archived Sample Request Form.docx">Farm Platform Archive Sample
-                            Request
-                            Form</a>
+                            Request Form</a>
                     </x-li-dot>
                 </ul>
             </div>
@@ -146,16 +160,13 @@
     <br>
     <br>
     <br>
-    <h2 class="h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Funding</h2>
+    <!---<h2 class="h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Funding</h2>
     <div class="p-3">
         <p>Our facilities are part-funded by CIEL<a class="px-2 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                 href="https://www.cielivestock.co.uk/"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,
-                scrollbars=yes,dependent=no'); return false;">(https://www.cielivestock.co.uk/).</a>
+                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">(https://www.cielivestock.co.uk/).</a>
             As such, if you are considering applying for funding to conduct an NWFP or SRF experiment, then please
-            contact
-            us so that we can ensure a small charge (typically 2%) is captured in the funding application reflecting
-            CIEL's
+            contact us so that we can ensure a small charge (typically 2%) is captured in the funding application reflecting CIEL's
             investment.</p>
     </div>
     <br>
@@ -189,14 +200,21 @@
             <br>
             <x-li-dot class="bg-nw-blue-500">
                 <p class="font-semibold">2. Add that data were downloaded from the Farm Platform Data Portal, with the
-                    URL: </p>
+                    URL:  <a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                    href="https://nwfp.rothamsted.ac.uk/">https://nwfp.rothamsted.ac.uk/</a></p>
             </x-li-dot>
-            <p><a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
-                    href="https://nwfp.rothamsted.ac.uk/">https://nwfp.rothamsted.ac.uk/</a>
-            </p>
+            <br>
+           <x-li-dot class="bg-nw-blue-500">
+                <p class="font-semibold">3. For the datasets used, please cite the latest version of the relevant User Guide PDF document(s), 
+                    that describe the establishment and development of the NWFP, and the various datasets produced in detail. 
+                    These are listed on the <a class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                    href="{{ route('nw-guides') }}"><span class="font-semibold">Data User Guides</span></a> webpage.<br>
+                    Note that the User Guide entitled "NWFP_UG_Design_Develop.pdf" should be cited irrespective of the dataset used.
+                </p>
+            </x-li-dot>
             <br>
             <x-li-dot class="bg-nw-blue-500">
-                <p class="font-semibold">3. Add the following to your acknowledgments section:</p>
+                <p class="font-semibold">4. Add the following to your acknowledgments section:</p>
             </x-li-dot>
             <div class="border-2 border-red-700 bg-red-50 p-2">
                 <p>The North Wyke Farm Platform is a National Bioscience Research Infrastructure (NBRI) supported by the Biotechnology and
@@ -206,6 +224,6 @@
                     includes the experiment on which this research was conducted.</p>
             </div>
         </ul>
-    </div>
+    </div>--->
 
 </x-guest-layout>
