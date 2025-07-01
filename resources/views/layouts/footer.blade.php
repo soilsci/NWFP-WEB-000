@@ -1,7 +1,7 @@
 <div class="bg-nw-blue-900 text-nw-blue-50">
     <div class="flex justify-center px-8 py-2 print:hidden">
         <div class="overflow-visible px-20 text-left text-sm">
-            <h2 class="font-mono text-2xl font-semibold">Our sponsors</h2>
+            <h2 class="font-mono text-xl font-semibold">Our sponsors</h2>
             <div class="rounded-full bg-white">
                 <a href="https://www.rothamsted.ac.uk">
                     <img class="-p-1 block h-12 object-fill" src="/logos/rothamsted-logo.png" />
@@ -16,7 +16,7 @@
 
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
-            <h2 class="font-mono text-2xl font-semibold">Official Links</h2>
+            <h2 class="font-mono text-xl font-semibold">Official Links</h2>
 
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="">Legal Notice</a></p>
@@ -31,7 +31,7 @@
 
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
-            <h2 class="font-mono text-2xl font-semibold">Connect with us</h2>
+            <h2 class="font-mono text-xl font-semibold">Connect With Us</h2>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
                     href="/contact">Contact us</a></p>
             <p><a class="hover:font-semibold hover:text-yellow-300 hover:shadow-lg active:text-orange-600 active:shadow-lg"
@@ -42,7 +42,7 @@
 
         </div>
         <div class="overflow-visible px-20 text-left text-sm">
-            <h2 class="font-mono text-2xl font-semibold">Other NBRIs</h2>
+            <h2 class="font-mono text-xl font-semibold">Other NBRIs</h2>
             <div>
                 <a href="https://www.era.rothamsted.ac.uk">
                     <img class="h-16 w-auto object-scale-down py-2" src="/logos/2024-RLTE-LOGO.png" />
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="border-1 mx-auto border-t border-nw-blue-50 bg-nw-blue-900 p-4 text-nw-blue-50 sm:p-6 lg:p-8">
+    <div class="border-1 mx-auto border-t border-nw-blue-50 bg-nw-blue-900 p-4 text-nw-blue-50 sm:p-6 lg:p-4">
 
         <div class="flex justify-between">
 

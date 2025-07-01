@@ -1,0 +1,2 @@
+<!---<a href="https://bsky.app/profile/thefarmplatform.bsky.social"><img src="/logos/bluesky-LOGO.svg" class="inline-block align middle">Bluesky</a>--->
+<a href="https://bsky.app/profile/thefarmplatform.bsky.social"><x-application-bluesky-svg class="block h-12 w-auto"/></a>

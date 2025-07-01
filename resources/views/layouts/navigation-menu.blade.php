@@ -106,7 +106,10 @@
                             {{ __('Overview and Hypothesis') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'map']) }}">
-                            {{ __('Map of the platform') }}
+                            {{ __('Map of the Farm Platform') }}
+                        </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'timeline']) }}">
+                            {{ __('Timeline of Events') }}
                         </x-dropdown-link>
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'facilities']) }}">
                             {{ __('Facilities') }}

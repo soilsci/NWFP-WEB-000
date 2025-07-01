@@ -106,9 +106,13 @@
                                         href="https://doi.org/{{ $pub->doi }}">{{ $pub->doi }}
                                     </a>
                                 @elseif ($pub->url)
-                                    <a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                                    <!---<a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                                         href="https://doi.org/{{ $pub->url }}">{{ $pub->url }}
+                                    </a>--->
+                                    <a class="text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
+                                        href="{{ $pub->url }}">{{ $pub->url }}
                                     </a>
+
                                 @endif
 
                             </li>

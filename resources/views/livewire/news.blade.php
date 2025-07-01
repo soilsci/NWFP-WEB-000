@@ -63,7 +63,7 @@
                     <h4> {{ $item->authors }} ({{ $item->issue_date }})
                     </h4>
                     <p class="mt-2 text-sm tracking-wide text-gray-700"> <span
-                            class="italic">{{ $item->journal }}</span>,
+                            class="italic">{{ $item->journal }}</span>
 
                     </p>
                     <p class="mt-2 text-sm tracking-wide text-gray-700">

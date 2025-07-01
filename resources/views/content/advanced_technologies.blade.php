@@ -5,7 +5,7 @@
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 {{ __('North Wyke and the Farm Platform as a Test-Bed For Advances in Sensor Technologies') }}
             </h2>
-            <x-share-on-x></x-share-on-x>
+           <!--- <x-share-on-x></x-share-on-x> --->
         </div>
     </x-slot>
 
