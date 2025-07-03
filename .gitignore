@@ -9,6 +9,8 @@
 .env
 .env.curation
 .env.production
+.env.burrows
+.env.orchard
 .phpactor.json
 .phpunit.result.cache
 Homestead.json
