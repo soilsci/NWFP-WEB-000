@@ -74,6 +74,10 @@
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'site_visits']) }}">
                             {{ __('Visit us') }}
                         </x-dropdown-link>
+                        <x-dropdown-link href="{{ route('content.with.page', ['page' => 'hackathon']) }}">
+                            {{ __('Rothamsted Data Hackathon') }}
+                        </x-dropdown-link>
+
 
                     </x-slot>
                 </x-dropdown2>  {{--  --------- NEWS --------- --}}
