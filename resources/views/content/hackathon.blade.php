@@ -50,7 +50,7 @@
                 </x-button-link>
         </div>
         <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
-                NWFP Datasets </h2>
+                NWFP Published Datasets </h2>
 
 
             @livewire('publications', ['keyref' => "keyRefDataSet", 'hasButtons'=>"NO", 'hasSearch'=> "YES", 'hasYears'=>"NO"])
