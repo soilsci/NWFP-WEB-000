@@ -82,14 +82,14 @@
                         {{ __('News') }}
                     </x-slot>
                     <x-slot name="content">
-
                         <x-dropdown-link href="{{ route('content.with.page', ['page' => 'news']) }}">
-                            {{ __('News and Press Releases') }}
+                            {{ __('News & Press Releases') }}
                         </x-dropdown-link>
+                       
                         <x-dropdown-link href="https://bsky.app/profile/thefarmplatform.bsky.social">
-                            {{ __('thefarmplatform.bsky') }}
+                        <img src="{{ asset('logos/bluesky-logo-blue.svg') }}" alt="blueskylogo" class="h-4 inline-block align-middle">
+                            {{ __('Follow us on Bluesky') }}
                         </x-dropdown-link>
-
                     </x-slot>
 
                 </x-dropdown2>
