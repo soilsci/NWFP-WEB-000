@@ -20,7 +20,7 @@ class News extends Component
         $this -> news = Publication::where('ref_type', 'ilike', '%News%')
         ->when($this->searchRef !== '', fn(Builder $query) => $query->where('title', 'ilike', '%'. $this->searchRef .'%'))
         ->when($this->searchAuth !== '', fn(Builder $query) => $query->where('authors', 'ilike', '%'. $this->searchAuth .'%'))
-        -> orderBy('pub_year','DESC')
+        -> orderBy('issue_date','DESC')
           ->get();
         $this -> years = Publication::select('pub_year')->distinct('pub_year')->orderBy('pub_year', 'DESC')->get();
         return view('livewire.news', [
