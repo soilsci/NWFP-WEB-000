@@ -1,11 +1,13 @@
 <x-guest-layout>
-
+    @php
+        $title = "North Wyke and the Farm Platform as a Test-Bed For Advances in Sensor Technologies";
+    @endphp
     <x-slot name="header">
         <div class="flex justify-between">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                {{ __('North Wyke and the Farm Platform as a Test-Bed For Advances in Sensor Technologies') }}
+                {{ __($title) }}
             </h2>
-           <!--- <x-share-on-x></x-share-on-x> --->
+           <x-share-on-bluesky>{{$title . ' -  '. app('request')->url() }}</x-share-on-bluesky>
         </div>
     </x-slot>
 
