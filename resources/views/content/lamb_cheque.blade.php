@@ -1,10 +1,14 @@
 <x-guest-layout>
-    <x-slot name="header">
+
+        <x-slot name="header">
+        @php
+            $title = 'Trial finds ewe data is route to bigger lamb cheque';
+        @endphp
         <div class="flex justify-between">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                {{ __('Trial finds ewe data is route to bigger lamb cheque') }}
+                {{ __($title) }}
             </h2>
-            <!--- <x-share-on-x></x-share-on-x> --->
+            <x-share-on-bluesky>{{ urlencode($title) . ' -  ' . app('request')->url() }}</x-share-on-bluesky>
         </div>
     </x-slot>
 

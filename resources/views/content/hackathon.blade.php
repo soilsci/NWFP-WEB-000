@@ -1,18 +1,25 @@
 <x-guest-layout>
+
     <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Rothamsted Data Hackathon: Communicating Science Through Data') }}
-        </h2>
+        @php
+            $title = 'Rothamsted Data Hackathon: Communicating Science Through Data';
+        @endphp
+        <div class="flex justify-between">
+            <h2 class="text-xl font-semibold leading-tight text-gray-800">
+                {{ __($title) }}
+            </h2>
+            <x-share-on-bluesky>{{ urlencode($title) . ' -  ' . app('request')->url() }}</x-share-on-bluesky>
+        </div>
     </x-slot>
 
-    <div><p class="m-8 font-semibold  text-nw-blue-700 text-center">
-                    "Hackathon: an integration of the words hack and marathon, is traditionally an event in which a
-                    large number of people meet to engage in collaborative computer programming."
-                </p>
+    <div>
+        <p class="m-8 text-center font-semibold text-nw-blue-700">
+            "Hackathon: an integration of the words hack and marathon, is traditionally an event in which a
+            large number of people meet to engage in collaborative computer programming."
+        </p>
         <div class="container mx-auto flex flex-col items-center px-10 py-10 md:flex-row">
             <div
                 class="mb-16 flex flex-col items-center text-center md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24">
-
 
                 <p>
                     Under the guidance of our experts, you will have access to our data and APIs (Application
@@ -43,16 +50,15 @@
                     <x-li-arrow><b>Cost: </b> FREE </x-li-arrow>
             </div>
         </div>
-        <div class="content-center text-center w-100">
-        <x-button-link class="btn-primary  mx-auto my-4"
-                    href="https://www.tickettailor.com/events/rothamstedresearch6/1692961">
-                    More information and Registration
-                </x-button-link>
+        <div class="w-100 content-center text-center">
+            <x-button-link class="btn-primary mx-auto my-4"
+                href="https://www.tickettailor.com/events/rothamstedresearch6/1692961">
+                More information and Registration
+            </x-button-link>
         </div>
         <h2 class="h-16 content-center bg-nw-blue-700 text-center text-2xl font-medium text-nw-blue-50">
-                NWFP Published Datasets </h2>
+            NWFP Published Datasets </h2>
 
-
-            @livewire('publications', ['keyref' => "keyRefDataSet", 'hasButtons'=>"NO", 'hasSearch'=> "YES", 'hasYears'=>"NO"])
+        @livewire('publications', ['keyref' => 'keyRefDataSet', 'hasButtons' => 'NO', 'hasSearch' => 'YES', 'hasYears' => 'NO'])
 
 </x-guest-layout>
