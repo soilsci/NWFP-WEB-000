@@ -1,9 +1,16 @@
 <x-guest-layout>
     <x-slot name="header">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Where to get Data') }}
-        </h2>
+        @php
+        $title = "A NICE TITLE";
+    @endphp
+        <div class="flex justify-between">
+            <h2 class="text-xl font-semibold leading-tight text-gray-800">
+                {{ __($title) }}
+            </h2>
+            <x-share-on-bluesky>{{$title . ' -  '. app('request')->url() }}</x-share-on-bluesky>
+        </div>
     </x-slot>
+
 
     <div>
         <h1 class="mt-0 h-12 content-center bg-nw-blue-50 px-4 text-2xl font-bold text-nw-blue-900">Heading 1</h1>

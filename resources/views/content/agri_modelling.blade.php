@@ -1,14 +1,15 @@
 <x-guest-layout>
+@php
+        $title = "Agri-Modelling";
+    @endphp
     <x-slot name="header">
         <div class="flex justify-between">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
-                {{ __('Agri-Modelling') }}
+                {{ __($title) }}
             </h2>
-            <!--- <x-share-on-x></x-share-on-x> --->
+           <x-share-on-bluesky>{{$title . ' -  '. app('request')->url() }}</x-share-on-bluesky>
         </div>
-
     </x-slot>
-
     <div class="p-3">
         <x-button-link href="#data_use">Data Use</x-button-link>
         <x-button-link href="#input_data">Input Data</x-button-link>
@@ -141,19 +142,19 @@
             </ul><br>
 
         <p>First look at the datasets (both downloaded datasets and metadata) and assess if they
-            would be relevant for input to your model. 
+            would be relevant for input to your model.
         </p>
             <x-li-dot class="bg-nw-blue-700">
             These
             <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
             href="https://nwfp.rothamsted.ac.uk/fpdownload/QC_Reports/15_minute_Data_Reports_External/Annual_Reports/showfiles.aspx"
-            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); 
-            return false;"><span class="font-semibold">Annual Reports</span></a> 
+            onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no');
+            return false;"><span class="font-semibold">Annual Reports</span></a>
             <a> containing statistical summaries might help you.</a>
             </x-li-dot>
             <x-li-dot class="bg-nw-blue-700">
                 Input to your model one dataset at a time from the data portal (information on
-                datasets are supplied 
+                datasets are supplied
                 <a class="px-1 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                     href="/content/data_collection"><span class="font-semibold">here</span>).
                 </a>
@@ -495,35 +496,35 @@
                     (https://doi.org/10.2166/nh.2016.195)</a>
             </p>
         </div><br>
-        
+
         <h3 class="mt-4 text-lg font-medium text-nw-blue-900 underline underline-offset-4">
             The Landscape Model
         </h3>
         <div class="ms-10 pt-5">
-            <p>This first version of the model integrates agricultural production, water movement and nutrient flow in a landscape. 
-                The model combines aspects of several published models [RothC (Coleman and Jenkinson, 2014), LINTUL (Wolf, 2012), 
-                SUCROS (van Laar et al., 1997), and Century (Parton et al., 1994)], but also includes novel factors that have been implemented 
-                to capture potential improvements in yield that result from management actions. These include coupling the RothC model to 
-                include the dynamics of N and P and responses to changes in bulk-density that 
-                result from changes in soil organic matter. The model is evaluated against data on crop growth and nutrient uptake for 
-                cereals and for grass, and the integration in space of water and nutrients leaving agricultural fields. 
-                The model can be used to explore trade-offs between production and environment with a scenario based on a wheat crop grown 
+            <p>This first version of the model integrates agricultural production, water movement and nutrient flow in a landscape.
+                The model combines aspects of several published models [RothC (Coleman and Jenkinson, 2014), LINTUL (Wolf, 2012),
+                SUCROS (van Laar et al., 1997), and Century (Parton et al., 1994)], but also includes novel factors that have been implemented
+                to capture potential improvements in yield that result from management actions. These include coupling the RothC model to
+                include the dynamics of N and P and responses to changes in bulk-density that
+                result from changes in soil organic matter. The model is evaluated against data on crop growth and nutrient uptake for
+                cereals and for grass, and the integration in space of water and nutrients leaving agricultural fields.
+                The model can be used to explore trade-offs between production and environment with a scenario based on a wheat crop grown
                 in conditions typical of arable England.
             </p>
             <p>
-                The model was validated using data from the Broadbalk and Park Grass long-term experiments at Rothamsted Research, in Harpenden, SE England, and 
+                The model was validated using data from the Broadbalk and Park Grass long-term experiments at Rothamsted Research, in Harpenden, SE England, and
                 spatial interactions were tested on data from the North Wyke Farm Platform.
             </p><br>
-            
-            <p>Coleman, K. and Jenkinson, D. S. 2014. RothC - A model for the turnover of carbon in soil. 
+
+            <p>Coleman, K. and Jenkinson, D. S. 2014. RothC - A model for the turnover of carbon in soil.
                 Model description and users guide (Windows version) (updated June 2014). pp. 1-44. <a
                     class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                     href="https://repository.rothamsted.ac.uk/item/98xv8/rothc-a-model-for-the-turnover-of-carbon-in-soil-model-description-and-users-guide-windows-version-updated-june-2014"
                     onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
                     (https://repository.rothamsted.ac.uk/item/98xv8/rothc-a-model-for-the-turnover-of-carbon-in-soil-model-description-and-users-guide-windows-version-updated-june-2014)</a>
             </p><br>
-            
-            <p>Laar, H. V., Goudriaan, J. V., & Keulen, H. V. (1997). SUCROS97: Simulation of crop growth for potential and water-limited production situations as applied to spring wheat. 
+
+            <p>Laar, H. V., Goudriaan, J. V., & Keulen, H. V. (1997). SUCROS97: Simulation of crop growth for potential and water-limited production situations as applied to spring wheat.
                     Quantitative Approaches in Systems Analysis, ab-dlo, Netherlands (1997). <a
                     class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                     href="https://agris.fao.org/search/en/providers/122575/records/64746b7179cbb2c2c1afb54f"
@@ -531,7 +532,7 @@
                     (https://agris.fao.org/search/en/providers/122575/records/64746b7179cbb2c2c1afb54f)</a>
             </p><br>
 
-            <p>Parton, W. J., Hartman, M., Ojima, D., & Schimel, D. S. (1994). DAYCENT and its land surface submodel: description and testing. 
+            <p>Parton, W. J., Hartman, M., Ojima, D., & Schimel, D. S. (1994). DAYCENT and its land surface submodel: description and testing.
                 Global Change Biology, 1(2), 101-109. <a
                     class="px-0 text-nw-blue-700 visited:text-amber-900 hover:text-orange-700 active:text-orange-900"
                     href="https://acsess.onlinelibrary.wiley.com/doi/abs/10.2136/sssaspecpub39.c9"

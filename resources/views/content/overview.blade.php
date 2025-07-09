@@ -1,10 +1,13 @@
 <x-guest-layout>
     <x-slot name="header">
+        @php
+            $title = 'Overview & Hypotheses';
+        @endphp
         <div class="flex justify-between">
-        <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Overview & Hypotheses') }}
-        </h2>
-        <!--- <x-share-on-x></x-share-on-x> --->
+            <h2 class="text-xl font-semibold leading-tight text-gray-800">
+                {{ __($title) }}
+            </h2>
+            <x-share-on-bluesky>{{ $title . ' -  ' . app('request')->url() }}</x-share-on-bluesky>
         </div>
     </x-slot>
 
@@ -44,7 +47,7 @@
         <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From September 2015 to April 2019:</span></x-li-dot>
             The first system change is in full operation across all three livestock farming systems and pasture treatments.
         <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From April 2019:</span></x-li-dot>
-            The first system change embarked on a transition to a second system change period, where the red system transitioned 
+            The first system change embarked on a transition to a second system change period, where the red system transitioned
             to an arable system growing human edible crops. Given the red system transition to an arable system, the livestock linked to this
             system are housed representing a fourth (brown) system (or treatment) for evaluation of more intensive finishing and fine resolution monitoring.
     </ul>
