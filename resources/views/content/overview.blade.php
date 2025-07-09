@@ -1,13 +1,14 @@
 <x-guest-layout>
     <x-slot name="header">
         @php
-            $title = "Overview &amp; Hypotheses";
+            // we don't like & here ! sorry - it messes up the share button
+            $title = "Overview & Hypotheses";
         @endphp
         <div class="flex justify-between">
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 {{ __($title) }}
             </h2>
-            <x-share-on-bluesky>{{ $title . ' -  ' . app('request')->url() }}</x-share-on-bluesky>
+            <x-share-on-bluesky>{{ urlencode($title) ' -  ' . app('request')->url() }}</x-share-on-bluesky>
         </div>
     </x-slot>
 
