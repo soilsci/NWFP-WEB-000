@@ -71,8 +71,11 @@
                 Soil and Hydrology Reports</h2>
     <div class="p-3">
         <ul class="list-disc pl-5">
-            <li><a href="/documents/Harrod and Hogan 2008.pdf" style="color: blue; text-decoration: underline">
-                Soils of North Wyke  [Harrod and Hogan, 2008]</a>
+            <li><a href="https://repository.rothamsted.ac.uk/item/96xqw/the-soils-of-north-wyke-and-rowden"
+                    style="color: blue; text-decoration: underline",
+                    onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
+                    Soils of North Wyke  [Harrod and Hogan, 2008]
+                </a>
             </li>
 
             <li><a href="/documents/AssessmentDraft report v5 (31 Oct 08).pdf" style="color: blue; text-decoration: underline">
