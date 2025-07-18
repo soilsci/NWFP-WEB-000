@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('pages', function (Blueprint $table) {
-            $table->integer('rank')->default(0)->after('title'); 
+            $table->integer('rank_pinned')->default(null)->after('title')->nullable();
+            $table->integer('rank_focus')->default(null)->before('status')->nullable();
         });
     }
 
@@ -22,7 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('pages', function (Blueprint $table) {
-            $table->dropColumn('rank');
+            $table->dropColumn('rank_pinned');
+            $table->dropColumn('rank_focus');
         });
     }
 };
