@@ -38,7 +38,7 @@
 
         </div>
         <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4"> Co-Investigators:</h3>
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4"> Co-Investigator:</h3>
 
             <!-- ------------------------ One People Card -------------------   -->
             <a
@@ -57,23 +57,7 @@
                     </div>
                 </div>
             </a>
-            <!-- ------------------------ One People Card -------------------   -->
-            <a href="https://www.rothamsted.ac.uk/people/phil-le-grice"
-                onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;">
-                <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50"><img
-                        class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                        src="/profile-photos/phil-le-grice.jpg">
-                    <div class="font-medium dark:text-white">
-                        <div>
-                            Phil Le Grice
-
-                        </div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">
-                            Agriculture, Corporate Leadership of Sustainability
-                        </div>
-                    </div>
-                </div>
-            </a>
+            
         </div>
     </div>
 
@@ -208,21 +192,22 @@
                     </div>
                 </div>
             </a>
-            <!-- ------------------------ One People Card -------------------   -->
-        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
-            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                    src="/profile-photos/louise-olde.jpg">
+        
+        <!-- ------------------------ One People Card With Initials -------------------   -->
+            <div class="flex items-center gap-4 p-3">
+                <div
+                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
+                    <span class="font-medium text-gray-600 dark:text-gray-300">VP</span>
+                </div>
                 <div class="font-medium dark:text-white">
-                    <div>Louise Olde
+                    <div>
+                        Vacant Position
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Science Technician
+
                     </div>
                 </div>
             </div>
-
-        </a>
 
 
         </div>
@@ -263,22 +248,22 @@
 
         <div>
             <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Remote Sensing</h3>
-            <!-- ------------------------ One People Card With Initials -------------------   -->
+            <!-- ------------------------ One People Card -------------------   -->
 
-            <div class="flex items-center gap-4 p-3">
-                <div
-                    class="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600">
-                    <span class="font-medium text-gray-600 dark:text-gray-300">VP</span>
-                </div>
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/chris-powe">
+            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
+                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                    src="/profile-photos/chris-powe.jpg">
                 <div class="font-medium dark:text-white">
-                    <div>
-                        Vacant Position
+                    <div>Chris Powe
                     </div>
                     <div class="text-sm text-gray-500 dark:text-gray-400">
-
+                        <p>Drone Pilot &amp; Science Technician</p>
                     </div>
                 </div>
             </div>
+
+        </a>
         </div>
 
         <div>
@@ -293,7 +278,7 @@
                         <div>Hadewij Sint
                         </div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
-                            <p>GIS &amp;</p><p> Data Specialist</p>
+                            <p>GIS &amp; Data Specialist</p>
                         </div>
                     </div>
                 </div>
@@ -309,13 +294,32 @@
                         <div>Jane Hawkins
                         </div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
-                            <p>Biogeochemist &amp;</p> <p>Data Specialist</>
+                            <p>Biogeochemist &amp; Data Specialist</>
                         </div>
                     </div>
                 </div>
             </a>
             <!-- ------------------------ One People Card -------------------   -->
+        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/louise-olde">
+            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
+                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
+                    src="/profile-photos/louise-olde.jpg">
+                <div class="font-medium dark:text-white">
+                    <div>Louise Olde
+                    </div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                        <p>Sensors &amp; Data Specialist (Water &amp; Gases)</p>
+                    </div>
+                </div>
+            </div>
 
+        </a>
+            
+        </div>
+
+        <div>
+            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Data systems</h3>
+            <!-- ------------------------ One People Card -------------------   -->
             <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/tegan-darch">
 
                 <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
@@ -331,10 +335,6 @@
                 </div>
 
             </a>
-        </div>
-
-        <div>
-            <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Data systems</h3>
             <!-- ------------------------ One People Card With Initials -------------------   -->
 
             <div class="flex items-center gap-4 p-3">
@@ -375,23 +375,6 @@
     <h2 class="mt-4 h-8 content-center bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50">Technical Team</h2>
     <div class="md:grid-col-3 grid gap-4 sm:grid-cols-1 lg:grid-cols-4">
 
-
-        <!-- ------------------------ One People Card -------------------   -->
-
-        <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=yes,toolbar=no,menubar=yes,fullscreen=no,scrollbars=yes,dependent=no'); return false;"href="https://www.rothamsted.ac.uk/people/chris-powe">
-            <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
-                <img class="h-12 w-12 rounded-full p-1 hover:ring-2 hover:ring-nw-blue-700"
-                    src="/profile-photos/chris-powe.jpg">
-                <div class="font-medium dark:text-white">
-                    <div>Chris Powe
-                    </div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
-                        Science Technician
-                    </div>
-                </div>
-            </div>
-
-        </a>
         <!-- ------------------------ One People Card With Initials -------------------   -->
         <div class="flex items-center gap-4 p-3 hover:bg-nw-blue-50">
             <div
