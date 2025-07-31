@@ -5,13 +5,13 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Filament\Resources\PageResource\RelationManagers;
 use App\Models\Page;
-
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Radio;
 use Filament\Forms\Form;
 use Filament\Infolists\Infolist;
 use Filament\Infolists\Components\TextEntry;
@@ -64,8 +64,14 @@ class PageResource extends Resource
                 ->relationship('tags', 'name')
                 ->preload()
                 ->multiple(),
+                //TextInput::make('rank')->numeric()->default(0)->label('Rank (for page display priority)'),//
+                //Radio::make('status')->options(['draft' => 'Draft','scheduled' => 'Scheduled','published' => 'Published']) -> descriptions(['draft' => 'Is not visible.','scheduled' => 'Will be visible.','published' => 'Is visible.']),
                 Toggle::make('is_focus')->label('On home page'),
                 Toggle::make('is_pinned')->label('On top'),
+                Radio::make('rank_focus')->options(['1' => 1,'2' => 2,'3' =>3,'4' =>4,'5' =>5,'6' =>6,'7' =>7,'8' =>8,'9' =>9,'10' =>10]) 
+                ->default(null) -> descriptions(['1' => '','scheduled' => 'Will be visible.','published' => 'Is visible.'])->label('Rank (on Home Page)'),
+                Radio::make('rank_pinned')->options(['1' => 1,'2' => 2,'3' =>3,'4' =>4,'5' =>5]) 
+                ->default(null) -> descriptions(['1' => '','scheduled' => 'Will be visible.','published' => 'Is visible.'])->label('Rank (on Top)'),
                 // the fileupload will not work if the disk is on the public directory. When the storage place is available, we can revisit that!
                 //FileUpload::make('imagefile')
                   //   ->disk('images'),
@@ -94,11 +100,15 @@ class PageResource extends Resource
                         ->trueIcon('heroicon-o-check-badge')
                         ->falseIcon('heroicon-o-x-mark')
                         ->label('on Home Page')->sortable(),
+                    TextColumn::make('rank_focus')->numeric()->sortable()
+                        ->label('Rank (on Home Page)'),   
                     IconColumn::make('is_pinned')
                         ->boolean()
                         ->trueIcon('heroicon-m-bookmark-square')
                         ->falseIcon('heroicon-o-x-mark')
                         ->label('on Top')->sortable(),
+                        TextColumn::make('rank_pinned')->numeric()->sortable()
+                        ->label('Rank (on Top)'),
                     TextColumn::make('name')->label('Filename')->sortable(),
                     #TextColumn::make('full_url')->wrap(50)->label('View Page')->html(),
                     TextColumn::make('tags.name'),
