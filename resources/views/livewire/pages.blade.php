@@ -1,4 +1,20 @@
 <div>
+ 
+    <div class="w-100 container mx-auto grid grid-cols-2 gap-8 p-4">
+        <p style="font-size: 16px; text-align:justify" class="text-gray-900">
+            The North Wyke Farm Platform (NWFP) is a pioneering, large-scale intensively instrumented research facility located in the south west of England, UK.
+            It serves as a UK national capability that is funded by the BBSRC and UKRI, 
+            and managed by Rothamsted Research, North Wyke. The site, established in 2010 – 2011, covers ~60 hectares of grassland and arable land, 
+            and combines real-world farming with rigorous scientific monitoring.
+            <br><br>
+            Our aim is to help develop sustainable agricultural practices that produce healthy food 
+            with minimal environmental footprint and to offer data-driven insights and innovations for the future of grassland and arable farming.
+            We are a founding member of the Global Farm Platform Network, and are recognised by the 
+            UN Food and Agriculture Organisation as an exemplar research facility.
+        </p>
+        <img src="{{ asset('images/nw_buildings2.png') }}" alt="fields" class="shadow-xl rounded-2xl w-48 h-48 border border-gray-200" 
+     alt="Profile Photo" style="width: 100%; height: 300px;">
+    </div>   
 
     <div class="w-100 container mx-auto flex flex-row place-content-between content-evenly justify-center gap-x-10">
 
