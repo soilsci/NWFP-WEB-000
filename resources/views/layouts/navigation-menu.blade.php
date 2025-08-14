@@ -1,4 +1,4 @@
-<nav class="border-b-8 border-b-nw-blue-600 bg-nw-blue-50" x-data="{ open: false }">
+<nav class="sticky w-full top-0 left-0 z-50 border-b-8 border-b-nw-blue-600 bg-nw-blue-50" x-data="{ open: false }">
     <div class="mx-auto px-4 sm:px-6 lg:px-8">{{-- Primary Navigation Menu  --}}
         <div class="flex h-20 justify-between">
             <div class="flex shrink-0 items-center">{{-- Logo - click on LOGO - GO Home --}}
