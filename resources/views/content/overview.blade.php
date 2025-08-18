@@ -35,10 +35,11 @@
 
     <div class="w-100 container mx-auto grid grid-cols-2 gap-8 p-4">
     <div class="flex flex-col items-center">
-        <p>The platform currently consists of three pasture-based livestock farming systems, each consisting of
-            five component catchments over 21 ha. Catchments comprise single or multiple fields, that are
-            heavily monitored to provide fine resolution data on all inputs, outputs and events.
-            The timeline of each system's treatment are as follows: <br><br>
+        <p>The platform consists of three outdoor farming systems, each consisting of five 
+            component catchments over 21 ha. Catchments comprise single or multiple fields, 
+            that are heavily monitored to provide fine resolution data on all inputs, outputs and events. 
+            The farming systems periodically change, where the timeline of each system's treatment change are as follows:
+ <br><br>
             <ul class="space-y-3 p-3">
                 <x-li-dot class="bg-nw-blue-800"><span class="font-semibold">From April 2011 to March 2013:</span></x-li-dot>
                     All three pasture-based livestock farming systems were as one (permanent pasture) with no separate treatments in operation. This is the baseline period.<br><br>
@@ -69,7 +70,7 @@
             thresholds for aquatic biology.</x-li-dot>
         <x-li-dot class="bg-nw-blue-800">Animal performance will be benchmarked within typical UK production levels (sheep and beef).</x-li-dot>
     </ul>
-    <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Hypotheses associated with the first post-baseline period include:</h3>
+    <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Hypotheses associated with the first system change period include:</h3>
     </h3>
     <ul class="space-y-3 p-3">
         <x-li-dot class="bg-nw-blue-800">The re-seeding of permanent grassland with varieties that increase C sequestration and improve
@@ -79,7 +80,7 @@
         <x-li-dot class="bg-nw-blue-800">Re-seeding of permanent pasture will provide greater returns in terms of animal performance than
             permanent pasture and in concert, reduce emission intensity.</x-li-dot>
     </ul>
-    <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Hypotheses associated with the second post-baseline period include:</h3>
+    <h3 class="mt-4 p-3 text-lg font-medium text-nw-blue-700 underline underline-offset-4">Hypotheses associated with the second system change period include:</h3>
     </h3>
     <ul class="space-y-3 p-3">
         <x-li-dot class="bg-nw-blue-800">In agro-ecological zones where the geographical environment does not suit human edible crop
