@@ -67,7 +67,7 @@
         @endphp
         @if ($j > 0)
             <h2 class="py-auto mt-4 h-8 bg-nw-blue-700 px-4 text-lg font-medium text-nw-blue-50"
-                id="{{ $typeID }}">{{ $type }}</h2>
+                id="{{ $typeID }}">{{ $type }} ({{ $counts[$type] ?? 0 }})</h2>
         @endif
         @foreach ($years as $year)
             @php

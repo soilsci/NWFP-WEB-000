@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Illuminate\Database\Eloquent\Builder;
 use App\Models\Publication;
+use Illuminate\Support\Facades\DB;
 
 class Publications extends Component
 {
@@ -22,7 +23,8 @@ class Publications extends Component
     public $publications;
     public $types= [
         'rf1'=>'Journal Article',
-        'rf2'=>'Conference',
+        'rf2'=>'Conference Paper',
+        'rf3'=>'Conference Proceedings',
         'rf4'=>'Dataset',
         'rf5'=>'Report',
         'rf7'=>'Computer Program',
@@ -33,7 +35,7 @@ class Publications extends Component
     public $data = array();
     public $view = 'livewire.publications';
     public $style; // a variable to choose the kind of display
-
+    public $counts = [];
 
     public function mount() {
 
@@ -54,6 +56,12 @@ class Publications extends Component
         if ($this->keyref == 'KeyRefUserGuide') {
             $this->view = 'livewire.publications.nw_guides';
         }
+
+        $this->counts = Publication::select('ref_type', DB::raw('COUNT(*) as total')) 
+        ->groupBy('ref_type')
+        ->pluck('total', 'ref_type')
+        ->toArray();
+
         $this-> data=  [
             'publications' => $this->publications,
             'years' => $this->years,
