@@ -118,6 +118,6 @@
     </ul>
     @endif
     @endforeach
-    @endforeach
+
 
 </div>
